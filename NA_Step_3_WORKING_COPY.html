@@ -1,0 +1,1032 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff"><title>Step Working Guide — Step Three</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f3f5;color:#202124;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.app{max-width:760px;margin:auto;min-height:100vh;background:#fff}header{position:sticky;top:0;z-index:5;background:#fffffff5;backdrop-filter:blur(10px);border-bottom:1px solid #ddd;padding:14px 18px}
+.title{font-size:22px;font-weight:750}.sub{font-size:13px;color:#666;margin-top:2px}.progress{height:4px;background:#eee}.bar{height:100%;background:#444;width:0;transition:.2s}
+main{padding:22px 18px 120px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#666;font-weight:750;margin-bottom:8px}
+h1{font-size:29px;line-height:1.18;margin:0 0 18px}.reading{font-size:17px;line-height:1.68;white-space:pre-line;color:#303238}
+.card{background:#fafafa;border:1px solid #ddd;border-radius:14px;padding:18px;margin-bottom:20px}
+.question{font-size:21px;line-height:1.45;font-weight:650;margin:12px 0 18px}textarea{width:100%;min-height:300px;border:1px solid #aaa;border-radius:12px;padding:15px;font:17px/1.5 inherit;resize:vertical;outline:none}
+textarea:focus{border-color:#333;box-shadow:0 0 0 3px #0001}button{border:0;border-radius:10px;padding:12px 15px;background:#222;color:#fff;font-size:15px;cursor:pointer}
+button.secondary{background:#e8e9ec;color:#222}button:disabled{opacity:.35;cursor:default}.bottom{position:fixed;z-index:10;bottom:0;left:0;right:0;background:#fffffff8;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;justify-content:center}
+.status{font-size:12px;color:#666;margin-top:8px}.resume{border:1px solid #ddd;border-radius:14px;padding:16px;background:#fafafa;margin:18px 0}
+
+.share-panel{display:none;margin-top:16px;padding:16px;border:1px solid #ddd;border-radius:12px;background:#fafafa}
+.share-panel.show{display:block}
+.share-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.share-actions button{min-width:150px}
+.share-status{margin-top:10px;font-size:.92rem;color:#555}
+</style></head><body><div class="app">
+<header><div class="title">An Interactive Working Guide to the 12 Steps of NA</div><div class="sub">Step Three</div></header>
+<div class="progress"><div id="bar" class="bar"></div></div><main id="main"></main>
+<div class="bottom"><button id="home" class="secondary">Home</button><button id="back" class="secondary">← Back</button><button id="next">Begin Step Three →</button></div>
+</div>
+<script>
+const INTRO="\"We made a decision to turn our will and our lives over to the care of God as we understood Him.\"\n\nAs we move on to Step Three, a sense of hope is probably arising within our spirits. Even if we're not new in recovery, we've just reinforced our knowledge that recovery, growth, and change are not just possible but inevitable when we make the effort to work the steps. We can see the possibility of relief from the particular brand of insanity in which we've most recently been gripped by our addiction. We've probably already begun to experience some freedom. We're beginning to be released from the blind pursuit of our insanity. We've explored our insanity and have started to trust a Power greater than ourselves to relieve us from having to continue on the same path. We're beginning to be freed from our illusions. We no longer have to struggle to keep our addiction a secret or isolate ourselves to hide our insanity. We have seen how the program has worked for others, and we have discovered that it is beginning to work for us as well. Through our newfound faith, we achieve the willingness to move into action and work Step Three.";
+const SECTIONS=[{"name": "Making a Decision", "reading": "As we've already discussed, many of us may find ourselves unnerved by the thought of making a big decision. We may feel intimidated or overwhelmed. We may fear the results or the implied commitment. We may think it's a once-and-for-all action and fear that we won't do it right or have the opportunity to do it over again. However, the decision to turn our will and lives over to the care of the God of our understanding is one we can make over and over again daily if need be. In fact, we're likely to find that we must make this decision regularly, or risk losing our recovery because of complacency. It is essential that we involve our hearts and spirits in this decision. Though the word \"decision\" sounds like something that takes place mostly in the mind, we need to do the work necessary to go beyond an intellectual understanding and internalize this choice.\n\nWe need to realize that making a decision without following it up with action is meaningless. For example, we can decide one morning to go somewhere and then sit down and not leave our homes for the rest of that day. Doing so would render our earlier decision meaningless, no more significant than any random thought we may have.", "count": 4}, {"name": "Self-Will", "reading": "Step Three is critical because we've acted on self-will for so long, abusing our right to make choices and decisions. So what exactly is self-will? Sometimes it's total withdrawal and isolation. We end up living a very lonely and self-absorbed existence. Sometimes self-will causes us to act to the exclusion of any considerations other than what we want. We ignore the needs and feelings of others. We barrel through, stampeding over anyone who questions our right to do whatever we want. We become tornadoes, whipping through the lives of family, friends, and even strangers, totally unconscious of the path of destruction we have left behind. If circumstances aren't to our liking, we try to change them by any means necessary to achieve our aims. We try to get our way at all costs. We are so busy aggressively pursuing our impulses that we completely lose touch with our conscience and with a Higher Power. To work this step, each one of us needs to identify the ways in which we have acted on self-will.\n\nSurrendering our self-will doesn't mean we can't pursue goals or try to make changes in our lives and the world. It doesn't mean we have to passively accept injustices to ourselves or to people for whom we're responsible. We need to differentiate between destructive self-will and constructive action.\n\nIf we are new in the program and just beginning to work Step Three, we will probably end up wondering what God's will is for us, thinking that the step asks us to find this out. Actually, we don't formally focus our attention on seeking knowledge of our Higher Power's will for us until the Eleventh Step, but we do begin the process that will lead us to that point in Step Three. God's will for us is something we will gradually come to know as we work the steps. At this point we can come to some very simple conclusions about our Higher Power's will for us that will serve us well for the time being. It is our Higher Power's will for us to stay clean. It is our Higher Power's will for us to do things that will help us stay clean, such as going to meetings and talking to our sponsor regularly.\n\nAt some point in our recovery, we may find that we have somehow shifted from trying to align our will with a Higher Power's to running on self-will. This happens so slowly and subtly that we hardly even notice. It seems as though we're especially vulnerable to self- will when things are going well. We cross the fine line that divides humble and honest pursuit of goals from subtle manipulation and forced results. We find ourselves going just a little too far in a discussion to convince someone that we are right. We find ourselves holding on to something just a little too long. We suddenly realize that we haven't contacted our sponsor in quite a while. We feel a quiet, almost subconscious discomfort that will alert us to this subtle shift away from recovery - if we listen.", "count": 8}, {"name": "The God of Our Understanding", "reading": "Before we delve deeply into the process of turning our will and our lives over to the care of the God of our understanding, we should work on overcoming any negative beliefs or unproductive preconceptions we may have about the word \"God.\"\n\nOur Basic Text suggests that we choose an understanding of our Higher Power that is loving and caring and greater than ourselves. These simple guidelines can encompass as many understandings of God as there are NA members. They don't exclude anyone. If we understand the word \"God\" to mean the Power of the program, these guidelines fit. If we understand the word \"God\" to mean the spiritual principles of the program, these guidelines fit. If we understand the word \"God\" to mean a personal power or being with which we can communicate, these guidelines fit. It is essential that we begin exploring and developing our understanding. Our sponsor can help immeasurably in this process.\n\nAs important as it is to figure out what our Higher Power is to us, it is more important that we develop a relationship with whatever we understand that Power to be. We can do this in a variety of ways. First, we need to somehow communicate with our Higher Power. Some of us call this prayer, and some call it other things. This communication does not have to be formal, or even verbal. Second, we need to be open to communication from our Higher Power. This may be done by paying attention to how we feel, our reactions, and what is going on inside and around us. Or we may have a personal routine that helps us connect with a Power greater than ourselves. It may be that our Higher Power speaks to us or helps us see the right thing to do through our fellow NA members. Third, we need to allow ourselves to have feelings about the God of our understanding. We may get angry. We may feel love. We may feel frightened. We may feel grateful. It's okay to share the entire range of human emotion with our Higher Power. This allows us to feel closer to the Power upon which we rely and helps develop our trust in that Power.\n\nAs many of us stay clean for some time, we work on developing an understanding of God for ourselves. Our growing understanding reflects our experiences. We mature into an understanding of God that gives us peace and serenity. We trust our Higher Power and are optimistic about life. We begin to feel that our lives are touched by something beyond our comprehension, and we are glad and grateful that this is so. Then something happens that challenges everything we believe about our Higher Power or makes us doubt the existence of that Power altogether. It may be a death, or an injustice, or a loss. Whatever it is, it leaves us feeling as though we've been kicked in the stomach. We just can't understand it.\n\nTimes like these are when we need our Higher Power the most, though we probably find ourselves instinctively drawing away. Our understanding of a Higher Power is about to undergo a dramatic change. We need to keep reaching out to our Higher Power, asking for acceptance if not understanding. We need to ask for strength to go on. Eventually we will reestablish our relationship with our Higher Power, although probably on different terms.\n\nAs our understanding of a Higher Power grows and evolves, we'll find that we react differently to what goes on in our lives. We may find ourselves able to courageously face situations that used to strike fear in our hearts. We may deal with frustrations more gracefully. We may find ourselves able to pause and think about a situation before acting. We'll probably be calmer, less compulsive, and more able to see beyond the immediacy of the moment.", "count": 7}, {"name": "Turning It Over", "reading": "The order in which we prepare to surrender our will and our lives to the care of the God of our understanding is significant. Many of us have found that we actually follow the order in the step: First, we turn over our will; then, gradually, we turn over our lives. It seems that it's easier for us to grasp the destructive nature of our self-will and see that it must be surrendered; consequently, it's usually the first to go. Harder for us to grasp is the need to turn over our lives and the process of that surrender. For us to be comfortable with allowing our Higher Power to care for our lives, we will have to develop some trust. We may have no trouble turning over our addiction, but want to remain in control of the rest of our lives. We may trust our Higher Power to care for our work lives, but not our relationships. We may trust our Higher Power to care for our partners1 but not our children. We may trust our Higher Power with our safety, but not our finances. Many of us have trouble letting go completely. We think we trust our Higher Power with certain areas of our lives, but immediately take back control the first time we get scared or things aren't going the way we think they should. It's necessary for us to examine our progress in turning it over.\n\nTo turn our will and our lives over to the care of our Higher Power, we must take some kind of action. Many of us find that it works best for us to make some formal declaration on a regular basis. We may want to use the following quote from our Basic Text: \"Take my will and my life. Guide me in my recovery. Show me how to live.\" This seems to capture the essence of Step Three for many of us. However, we can certainly feel free to find our own words, or to find a more informal way of taking action. Many of us believe that every day we abstain from using, or take suggestions from our sponsor, we are taking practical action on our decision to turn our will and lives over to the care of our Higher Power.", "count": 8}, {"name": "Spiritual Principles", "reading": "In considering the spiritual principles intrinsic to Step Three, we will focus first on surrender and willingness. Then we will look at how hope translates into faith and trust. Finally, we will see how the principle of commitment is fled to the Third Step. Practicing the principle of surrender is easy for us when everything is going along as we'd like-we think. Actually, when things are going smoothly, it's more likely that we are being lulled into a belief that we're in charge, which doesn't require much \"surrender.\" Keeping the principle of surrender to the care of the God of our understanding alive in our spirits is essential, even when things are going well.\n\nWe usually feel most willing immediately following a surrender. Willingness often comes in the wake of despair or a struggle for control. We can practice the principle of willingness, though, before it becomes necessary and possibly save ourselves some pain.\n\nThere is a spiritual progression from hope to faith to trust in the Third Step. As we begin Step Three, we carry with us the sense of hope that was born in us as we worked the Second Step. Hope springs from the knowledge that our life is full of possibilities - there are no hard certainties yet, just the first whispers of anticipation that we just may be able to fulfill our heart's deepest desires. Lingering doubts fade as hope becomes faith. Faith propels us forward into action; we actually do the work that those we have faith in are telling us is necessary if we are to achieve what we want. In the Third Step, faith gives us the capacity to actually make a decision and carry that decision into action. Trust comes into play after faith has been applied. We have probably made significant progress toward\n\nfulfilling our goals; now we have evidence that we can influence the course of our lives through taking positive action.\n\nThe principle of commitment is the culmination of the spiritual process of Step Three. Making the decision to \"turn it over,\" over and over again, even when our decision doesn't seem to be having any positive effect, is what this step is all about. We can practice the spiritual principle of commitment by reaffirming our decision on a regular basis and by continuing to take action that gives our decision substance and meaning-for instance, working the rest of the steps.", "count": 8}, {"name": "Moving On", "reading": "As we get ready to go on to Step Four, we'll want to take a look at what we've gained by working Step Three. Writing about our understanding of each step as we prepare to move on helps us internalize the spiritual principles connected to it.\n\nWe wind up our work on Step Three with an increase in our level of freedom. If we've been thorough with this step, we're profoundly relieved to realize that the world will go along just fine without our intervention. The responsibility of running everything is a huge burden, and we're happy to lay it down. We may feel comforted that a loving God is caring for our will and our lives, letting us know in subtle ways that the path we're on is the right one. We've seen our old ideas for what they were, and we're willing to let go of them and allow change to happen in our lives. We may even find that we're willing to take some risks we never had the courage to take before, because we're secure in the knowledge of our Higher Power's care for us. Some people pause before making major decisions and ground themselves in their own spirituality. We look to the source of our strength, invite our Higher Power to work in our lives, and move forward once we're sure we're on the right track. Now we need to take another step along the path of recovery, a step that makes our Third Step decision real. It's time to make a searching and fearless moral inventory of ourselves.", "count": 4}];
+const QUESTIONS=[{"sectionIndex": 0, "section": "Making a Decision", "number": 1, "count": 4, "text": "Why is making a decision central to working this step?"}, {"sectionIndex": 0, "section": "Making a Decision", "number": 2, "count": 4, "text": "Can I make this decision just for today? Do I have any fears or reservations about it? What are they?"}, {"sectionIndex": 0, "section": "Making a Decision", "number": 3, "count": 4, "text": "What action have I taken to follow through on my decision?"}, {"sectionIndex": 0, "section": "Making a Decision", "number": 4, "count": 4, "text": "What areas of my life are difficult for me to turn over? Why is it important that I turn them over anyway?"}, {"sectionIndex": 1, "section": "Self-Will", "number": 1, "count": 8, "text": "How have I acted on self-will? What were my motives?"}, {"sectionIndex": 1, "section": "Self-Will", "number": 2, "count": 8, "text": "How has acting on self-will affected my life? How has my self-will affected others?"}, {"sectionIndex": 1, "section": "Self-Will", "number": 3, "count": 8, "text": "Will pursuing my goals harm anyone? How?"}, {"sectionIndex": 1, "section": "Self-Will", "number": 4, "count": 8, "text": "In the pursuit of what I want, is it likely that I will end up doing something that adversely affects myself or others? Explain."}, {"sectionIndex": 1, "section": "Self-Will", "number": 5, "count": 8, "text": "Will I have to compromise any of my principles to achieve this goal? (For example: Will I have to be dishonest? Cruel? Disloyal?)"}, {"sectionIndex": 1, "section": "Self-Will", "number": 6, "count": 8, "text": "Describe the times when my will hasn't been enough. (For example, I couldn't stay clean on my own will.)"}, {"sectionIndex": 1, "section": "Self-Will", "number": 7, "count": 8, "text": "What is the difference between my will and God's will?"}, {"sectionIndex": 1, "section": "Self-Will", "number": 8, "count": 8, "text": "Have there been times in my recovery when I've found myself subtly taking back my will and my life? What alerted me? What have I done to recommit myself to the Third Step?"}, {"sectionIndex": 2, "section": "The God of Our Understanding", "number": 1, "count": 7, "text": "Does the word \"God,\" or even the concept itself, make me uncomfortable? What is the source of my discomfort?"}, {"sectionIndex": 2, "section": "The God of Our Understanding", "number": 2, "count": 7, "text": "Have I ever believed that God caused horrible things to happen to me or was punishing me? What were those things?"}, {"sectionIndex": 2, "section": "The God of Our Understanding", "number": 3, "count": 7, "text": "What is my understanding of a Power greater than myself today? How is my Higher Power working in my life?"}, {"sectionIndex": 2, "section": "The God of Our Understanding", "number": 4, "count": 7, "text": "How do I communicate with my Higher Power?"}, {"sectionIndex": 2, "section": "The God of Our Understanding", "number": 5, "count": 7, "text": "How does my Higher Power communicate with me? What feelings do I have about my Higher Power?"}, {"sectionIndex": 2, "section": "The God of Our Understanding", "number": 6, "count": 7, "text": "Am I struggling with changing beliefs about the nature of my Higher Power? Describe."}, {"sectionIndex": 2, "section": "The God of Our Understanding", "number": 7, "count": 7, "text": "Is my current concept of a Higher Power still working? How might it need to change?"}, {"sectionIndex": 3, "section": "Turning It Over", "number": 1, "count": 8, "text": "What does \"to the care of\" mean to me?"}, {"sectionIndex": 3, "section": "Turning It Over", "number": 2, "count": 8, "text": "What does it mean for me to turn my will and my life over to the care of the God of my understanding?"}, {"sectionIndex": 3, "section": "Turning It Over", "number": 3, "count": 8, "text": "How might my life be changed if I make the decision to turn it over to my Higher Power's care?"}, {"sectionIndex": 3, "section": "Turning It Over", "number": 4, "count": 8, "text": "How do I allow my Higher Power to work in my life?"}, {"sectionIndex": 3, "section": "Turning It Over", "number": 5, "count": 8, "text": "How does my Higher Power care for my will and my life?"}, {"sectionIndex": 3, "section": "Turning It Over", "number": 6, "count": 8, "text": "Have there been times when I have been unable to let go and trust God to care for the outcome of a particular situation? Describe."}, {"sectionIndex": 3, "section": "Turning It Over", "number": 7, "count": 8, "text": "Have there been times when I have been able to let go and trust God for the outcome? Describe."}, {"sectionIndex": 3, "section": "Turning It Over", "number": 8, "count": 8, "text": "How do I take action to turn it over? Are there any words I say regularly? What are they?"}, {"sectionIndex": 4, "section": "Spiritual Principles", "number": 1, "count": 8, "text": "What am I doing to reinforce my decision to allow my Higher Power to care for my will and my life?"}, {"sectionIndex": 4, "section": "Spiritual Principles", "number": 2, "count": 8, "text": "How does the Third Step allow me to build on the surrender I've developed in Steps One and Two?"}, {"sectionIndex": 4, "section": "Spiritual Principles", "number": 3, "count": 8, "text": "In what ways have I demonstrated willingness in my recovery so far?"}, {"sectionIndex": 4, "section": "Spiritual Principles", "number": 4, "count": 8, "text": "Am I fighting anything in my recovery? What do I think would happen if I became willing to let recovery prevail in that area of my life?"}, {"sectionIndex": 4, "section": "Spiritual Principles", "number": 5, "count": 8, "text": "How have hope, faith, and trust become positive forces in my life?"}, {"sectionIndex": 4, "section": "Spiritual Principles", "number": 6, "count": 8, "text": "What further action can I take to apply the principles of hope, faith, and trust in my recovery?"}, {"sectionIndex": 4, "section": "Spiritual Principles", "number": 7, "count": 8, "text": "What evidence do I have that I can trust confidently in my recovery?"}, {"sectionIndex": 4, "section": "Spiritual Principles", "number": 8, "count": 8, "text": "What have I done recently that demonstrates my commitment to recovery and to working a program? (For example: Have I taken a service position in NA? Have I agreed to sponsor another recovering addict? Have I continued to go to meetings no matter what I was feeling about them? Have I continued to work with my sponsor even after he or she told me an unpleasant truth or gave me some direction I didn't want to follow? Did I follow that direction?)"}, {"sectionIndex": 5, "section": "Moving On", "number": 1, "count": 4, "text": "Do I have any reservations about my decision to turn my will and my life over to God's care?"}, {"sectionIndex": 5, "section": "Moving On", "number": 2, "count": 4, "text": "Do I feel that I am now ready to turn it over?"}, {"sectionIndex": 5, "section": "Moving On", "number": 3, "count": 4, "text": "How does my surrender in the First Step help me in the Third Step?"}, {"sectionIndex": 5, "section": "Moving On", "number": 4, "count": 4, "text": "What action do I plan to take to follow through on my decision? How does working the remainder of the steps fit into this?"}];
+const PREFIX="step-three-complete-v1-";
+const STATE="step-three-v1-resume-state";
+let mode="intro",si=0,qi=0;
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]})}
+function cleanReading(s){return s.replace(/\s+/g," ").trim();}
+function saveAnswer(){const a=document.getElementById("answer");if(a)localStorage.setItem(PREFIX+qi,a.value)}
+function getState(){try{return JSON.parse(localStorage.getItem(STATE)||"null")}catch(e){return null}}
+function saveState(){localStorage.setItem(STATE,JSON.stringify({mode:mode,si:si,qi:qi}))}
+function hasAnswers(){return QUESTIONS.some((_,i)=>localStorage.getItem(PREFIX+i))}
+function update(){document.getElementById("bar").style.width=(mode==="intro"?0:mode==="reading"?((si)/SECTIONS.length*100):((qi+1)/QUESTIONS.length*100))+"%";}
+
+function getResumeState(){
+ try{
+   const raw=localStorage.getItem(STATE);
+   return raw ? JSON.parse(raw) : null;
+ }catch(e){ return null; }
+}
+function saveResumeState(){
+ if(mode==="question" || mode==="reading"){
+   localStorage.setItem(STATE,JSON.stringify({mode:mode,si:si,qi:qi}));
+ }
+}
+function toc(){
+ mode="toc";
+ main.innerHTML='<div class="eyebrow">Narcotics Anonymous</div><h1>Table of Contents</h1>'+
+   '<div class="card"><div class="reading">Choose a step to begin or continue your work. You can return here at any time.</div></div>'+
+   '<div id="tocList"></div>';
+ const list=document.getElementById("tocList");
+ const steps=["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve"];
+ steps.forEach(function(name,idx){
+   const n=idx+1;
+   const b=document.createElement("button");
+   b.textContent="Step "+name;
+   b.style.cssText="display:block;width:100%;text-align:left;margin:10px 0;padding:16px 18px;font-size:17px";
+   b.onclick=function(){window.location.href="NA_Step_"+n+"_WORKING_COPY.html"};
+   list.appendChild(b);
+ });
+ back.disabled=true;
+ next.textContent="Begin Step Three →";
+ update();
+}
+function intro(){
+ mode="intro";
+  document.querySelector("header .sub").textContent="Step Three";
+  document.title="An Interactive Working Guide to the 12 Steps of NA — Step Three";
+ const saved=getResumeState();
+ let resumeText="";
+ if(saved && saved.mode!=="intro"){
+   if(saved.mode==="question"){
+     const q=QUESTIONS[saved.qi];
+     resumeText=q.section+" — Question "+q.number+" of "+q.count;
+   } else {
+     resumeText=SECTIONS[saved.si].name+" — Reading";
+   }
+ }
+ main.innerHTML=
+   '<div class="eyebrow">Step Three</div><h1>Step Three</h1>'+
+   '<div class="card"><div class="reading">'+esc(cleanReading(INTRO))+'</div></div>'+
+   (resumeText?
+     '<div class="resume" style="border:1px solid #ddd;border-radius:14px;padding:16px;background:#fafafa;margin:18px 0">'+
+       '<div class="eyebrow">Continue Where You Left Off</div>'+
+       '<div style="font-size:17px;line-height:1.4;margin-bottom:12px">'+esc(resumeText)+'</div>'+
+       '<button id="continue">Continue Step Three →</button>'+
+     '</div>':'');
+ if(saved && resumeText){
+   document.getElementById("continue").onclick=function(){
+     mode=saved.mode; si=saved.si; qi=saved.qi; render();
+   };
+ }
+ back.disabled=true;
+ next.textContent=resumeText?"Restart Step Three":"Begin Step Three →";
+ update();
+}
+function reading(){
+ mode="reading";saveResumeState();const s=SECTIONS[si];
+ main.innerHTML='<div class="eyebrow">Section '+(si+1)+' of '+SECTIONS.length+'</div><h1>'+esc(s.name)+'</h1><div class="card"><div class="reading">'+esc(cleanReading(s.reading))+'</div></div><button id="begin">Begin this section’s questions →</button>';
+ document.getElementById("begin").onclick=function(){qi=QUESTIONS.findIndex(q=>q.sectionIndex===si);mode="question";render()};
+ back.disabled=si===0;next.textContent="Questions →";update();
+}
+function question(){
+ mode="question";saveResumeState();const q=QUESTIONS[qi],ans=localStorage.getItem(PREFIX+qi)||"";
+ main.innerHTML='<div class="eyebrow">'+esc(q.section)+' • Question '+q.number+' of '+q.count+'</div><div class="question">• '+esc(q.text)+'</div><textarea id="answer" placeholder="Type your answer here...">'+esc(ans)+'</textarea><div class="status">Saved automatically on this device.</div>';
+ const a=document.getElementById("answer");a.addEventListener("input",function(){localStorage.setItem(PREFIX+qi,a.value);saveState()});
+ back.disabled=qi===0;next.textContent=qi===QUESTIONS.length-1?"Finish Step Three":"Save & Next →";update();
+}
+function render(){
+  if(mode==="welcome")welcome();
+  else if(mode==="toc")toc();
+  else if(mode==="intro")intro();
+  else if(mode==="reading")reading();
+  else question();
+  saveResumeState();
+  update();
+}
+home.onclick=function(){if(mode==="question")saveAnswer();mode="intro";render()};
+back.onclick=function(){
+ if(mode==="question"){saveAnswer();const current=QUESTIONS[qi].sectionIndex,first=QUESTIONS.findIndex(q=>q.sectionIndex===current);if(qi===first){si=current;mode="reading"}else qi--;render()}
+ else if(mode==="reading"){if(si===0)mode="intro";else si--;render()}
+ else if(mode==="toc"){mode="welcome";render()}
+};
+next.onclick=function(){
+  if(mode==="intro"){
+   const saved=getResumeState();
+   if(saved && next.textContent==="Restart Step Three"){
+     if(confirm("Restart Step Three? Your saved answers will remain on this device.")){
+       si=0;qi=0;mode="reading";render();
+     }
+   }else{
+     si=0;qi=0;mode="reading";render();
+   }
+   return;
+}
+ if(mode==="reading"){qi=QUESTIONS.findIndex(q=>q.sectionIndex===si);mode="question";render();return}
+ saveAnswer();
+ if(qi<QUESTIONS.length-1){const old=QUESTIONS[qi].sectionIndex;qi++;if(QUESTIONS[qi].sectionIndex!==old){si=QUESTIONS[qi].sectionIndex;mode="reading"}render()}
+ else{alert("Step Three is complete. Your answers remain saved on this device. Moving to Step 4.");window.location.href="NA_Step_4_WORKING_COPY.html"}
+};
+render();
+</script>
+<script>
+(function(){
+  function reviewAnswers(){
+    var overlay=document.createElement("div");
+    overlay.id="reviewOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99999;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="Step 3 — Review My Answers";
+    overlay.appendChild(h);
+
+    // Review / Share tabs for the Review My Answers page.
+    var tabBar=document.createElement("div");
+    tabBar.style.cssText="display:flex;gap:8px;margin:14px 0 20px;border-bottom:1px solid #ddd;padding-bottom:10px";
+    var reviewTab=document.createElement("button");
+    reviewTab.textContent="Review My Answers";
+    reviewTab.className="secondary";
+    var shareTab=document.createElement("button");
+    shareTab.textContent="Share";
+    shareTab.className="secondary";
+    tabBar.appendChild(reviewTab); tabBar.appendChild(shareTab);
+    overlay.appendChild(tabBar);
+
+    var reviewContent=document.createElement("div");
+    overlay.appendChild(reviewContent);
+
+    var shareContent=document.createElement("div");
+    shareContent.style.display="none";
+    shareContent.className="card";
+    var shareTitle=document.createElement("h2");
+    shareTitle.textContent="Share Step 3 — My Review Answers";
+    shareContent.appendChild(shareTitle);
+    var shareIntro=document.createElement("p");
+    shareIntro.textContent="Choose how you would like to share your saved answers with your sponsor or another person.";
+    shareContent.appendChild(shareIntro);
+    var shareButtons=document.createElement("div");
+    shareButtons.style.cssText="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px";
+    var emailBtn=document.createElement("button"); emailBtn.textContent="Email";
+    var textBtn=document.createElement("button"); textBtn.textContent="Text Message";
+    var clipBtn=document.createElement("button"); clipBtn.textContent="Copy to Clipboard";
+    shareButtons.appendChild(emailBtn); shareButtons.appendChild(textBtn); shareButtons.appendChild(clipBtn);
+    shareContent.appendChild(shareButtons);
+    var shareStatus=document.createElement("div");
+    shareStatus.style.cssText="margin-top:12px;color:#666";
+    shareContent.appendChild(shareStatus);
+    overlay.appendChild(shareContent);
+
+    function buildReviewShareText(){
+      var lines=["An Interactive Working Guide to the 12 Steps of NA","Step 3 — My Review Answers",""];
+      var has=false;
+      SECTIONS.forEach(function(section,si){
+        var sectionHas=false;
+        var sectionLines=[];
+        QUESTIONS.forEach(function(q,index){
+          if(q.sectionIndex===si){
+            var a=localStorage.getItem(PREFIX+index)||"";
+            if(a.trim()!==""){
+              has=true; sectionHas=true;
+              sectionLines.push("• "+q.text);
+              sectionLines.push("My Answer:");
+              sectionLines.push(a.trim());
+              sectionLines.push("");
+            }
+          }
+        });
+        if(sectionHas){ lines.push(section.name.toUpperCase()); lines.push(""); lines=lines.concat(sectionLines); }
+      });
+      if(!has) lines.push("No answers have been saved yet.");
+      return lines.join("\n").trim();
+    }
+
+    reviewTab.onclick=function(){ reviewContent.style.display="block"; shareContent.style.display="none"; };
+    shareTab.onclick=function(){ reviewContent.style.display="none"; shareContent.style.display="block"; };
+    emailBtn.onclick=function(){ window.location.href="mailto:?subject="+encodeURIComponent("NA Step 3 — My Review Answers")+"&body="+encodeURIComponent(buildReviewShareText()); };
+    textBtn.onclick=function(){ window.location.href="sms:?&body="+encodeURIComponent(buildReviewShareText()); };
+    clipBtn.onclick=function(){
+      var txt=buildReviewShareText();
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(function(){shareStatus.textContent="Your review answers have been copied to the clipboard.";}).catch(function(){shareStatus.textContent="Clipboard access was not available on this device.";});
+      } else {
+        var ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.left="-9999px"; document.body.appendChild(ta); ta.select();
+        try{document.execCommand("copy"); shareStatus.textContent="Your review answers have been copied to the clipboard.";}catch(e){shareStatus.textContent="Clipboard access was not available on this device.";}
+        document.body.removeChild(ta);
+      }
+    };
+
+    var found=false;
+
+    SECTIONS.forEach(function(section,si){
+      var answered=[];
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          var a=localStorage.getItem(PREFIX+index)||"";
+          if(a.trim()!=="") answered.push({q:q,index:index,a:a});
+        }
+      });
+
+      if(answered.length){
+        found=true;
+        var sh=document.createElement("div");
+        sh.className="eyebrow";
+        sh.style.marginTop="28px";
+        sh.textContent=section.name;
+        reviewContent.appendChild(sh);
+
+        answered.forEach(function(item){
+          var card=document.createElement("div");
+          card.className="card";
+
+          var q=document.createElement("div");
+          q.className="question";
+          q.textContent="• "+item.q.text;
+          card.appendChild(q);
+
+          var label=document.createElement("div");
+          label.className="status";
+          label.textContent="MY ANSWER";
+          label.style.cssText="font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#666;font-weight:750;margin:10px 0 7px";
+          card.appendChild(label);
+
+          var ans=document.createElement("div");
+          ans.style.cssText="white-space:pre-line;font-size:17px;line-height:1.55;border-top:1px solid #ddd;padding-top:10px";
+          ans.textContent=item.a;
+          card.appendChild(ans);
+
+          var edit=document.createElement("button");
+          edit.className="secondary";
+          edit.textContent="Edit Answer";
+          edit.style.marginTop="14px";
+          edit.onclick=function(){
+            overlay.remove();
+            qi=item.index;
+            si=item.q.sectionIndex;
+            mode="question";
+            render();
+          };
+          card.appendChild(edit);
+
+          reviewContent.appendChild(card);
+        });
+      }
+    });
+
+    if(!found){
+      var empty=document.createElement("div");
+      empty.className="card";
+      empty.textContent="You have not saved any answers yet.";
+      reviewContent.appendChild(empty);
+    }
+
+    document.body.appendChild(overlay);
+  }
+
+  function addButton(){
+    if(document.getElementById("reviewAnswersButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var buttons=document.querySelectorAll(".bottom button");
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="reviewAnswersButton";
+    b.className="secondary";
+    b.textContent="Step 3 — Review My Answers";
+    b.onclick=reviewAnswers;
+
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  // The existing app calls render() dynamically, so observe the Home screen.
+  var observer=new MutationObserver(function(){addButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function showProgress(){
+    var overlay=document.createElement("div");
+    overlay.id="progressOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99998;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="My Progress";
+    overlay.appendChild(h);
+
+    var totalAnswered=0, totalQuestions=QUESTIONS.length;
+
+    SECTIONS.forEach(function(section,si){
+      var count=0,total=0;
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          total++;
+          if((localStorage.getItem(PREFIX+index)||"").trim()!=="") count++;
+        }
+      });
+      totalAnswered+=count;
+
+      var card=document.createElement("div");
+      card.className="card";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:8px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var status=document.createElement("div");
+      status.className="status";
+      status.textContent=count+" / "+total+" questions answered";
+      card.appendChild(status);
+
+      var bar=document.createElement("div");
+      bar.style.cssText="height:7px;background:#eee;border-radius:6px;margin-top:12px;overflow:hidden";
+      var fill=document.createElement("div");
+      fill.style.cssText="height:100%;background:#444;width:"+((count/total)*100)+"%";
+      bar.appendChild(fill);
+      card.appendChild(bar);
+
+      card.onclick=function(){
+        overlay.remove();
+        si = si;
+        mode="reading";
+        render();
+      };
+      overlay.appendChild(card);
+    });
+
+    var summary=document.createElement("div");
+    summary.className="card";
+    summary.style.marginTop="24px";
+    summary.innerHTML="<strong>Overall Progress</strong><div style='font-size:17px;margin-top:8px'>"+
+      totalAnswered+" / "+totalQuestions+" questions answered</div>";
+    overlay.insertBefore(summary, overlay.children[2]);
+
+    document.body.appendChild(overlay);
+  }
+
+  function addProgressButton(){
+    if(document.getElementById("progressAnswersButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="progressAnswersButton";
+    b.className="secondary";
+    b.textContent="My Progress";
+    b.onclick=showProgress;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(addProgressButton);
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addProgressButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function showSections(){
+    var overlay=document.createElement("div");
+    overlay.id="sectionNavOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99997;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="Step Three Sections";
+    overlay.appendChild(h);
+
+    SECTIONS.forEach(function(section, index){
+      var card=document.createElement("div");
+      card.className="card";
+      card.style.cursor="pointer";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:6px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var desc=document.createElement("div");
+      desc.className="status";
+      desc.textContent="Read this section";
+      card.appendChild(desc);
+
+      card.onclick=function(){
+        overlay.remove();
+        si=index;
+        mode="reading";
+        render();
+      };
+      overlay.appendChild(card);
+    });
+
+    document.body.appendChild(overlay);
+  }
+
+  function addSectionButton(){
+    if(document.getElementById("sectionNavButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="sectionNavButton";
+    b.className="secondary";
+    b.textContent="Browse Sections";
+    b.onclick=showSections;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addSectionButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addSectionButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  
+  function restoreAnswers(file){
+    if(!file){
+      alert("No backup file was selected.");
+      return;
+    }
+
+    var reader=new FileReader();
+
+    reader.onerror=function(){
+      alert("Safari could not read that backup file.");
+    };
+
+    reader.onload=function(){
+      try{
+        var data=JSON.parse(reader.result);
+
+        if(!data || !data.answers || typeof data.answers!=="object"){
+          throw new Error("Invalid backup format");
+        }
+
+        var restored=0;
+        if(data.notes && typeof data.notes==="object"){
+          Object.keys(data.notes).forEach(function(si){
+            if(typeof SECTIONS!=="undefined" && SECTIONS[Number(si)]){
+              localStorage.setItem(NOTES_PREFIX+si,String(data.notes[si]||""));
+            }
+          });
+        }
+
+        Object.keys(data.answers).forEach(function(index){
+          var n=Number(index);
+          if(Number.isInteger(n) && typeof QUESTIONS!=="undefined" && QUESTIONS[n]){
+            localStorage.setItem(PREFIX+n,String(data.answers[index]));
+            restored++;
+          }
+        });
+
+        if(restored===0){
+          throw new Error("No matching answers");
+        }
+
+        alert(restored+" saved answer"+(restored===1?"":"s")+" restored.");
+        if(typeof render==="function") render();
+
+      }catch(e){
+        alert("That file could not be restored. Please choose a Step Three backup file created by this app.");
+      }
+    };
+
+    reader.readAsText(file);
+  }
+  function addBackupButtons(){
+    if(typeof mode==="undefined" || mode!=="intro") return;
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+
+    if(!document.getElementById("restoreAnswersWrap")){
+      var wrap=document.createElement("div");
+      wrap.id="restoreAnswersWrap";
+      wrap.style.cssText="margin-top:8px";
+
+      var label=document.createElement("label");
+      label.className="secondary";
+      label.textContent="Restore My Answers";
+      label.style.cssText="display:inline-block;cursor:pointer";
+
+      var input=document.createElement("input");
+      input.type="file";
+      input.accept=".json,application/json,text/plain";
+      input.style.cssText="display:block;margin-top:8px;max-width:100%";
+      input.onchange=function(){
+        if(input.files && input.files.length){
+          restoreAnswers(input.files[0]);
+        }
+      };
+
+      wrap.appendChild(label);
+      wrap.appendChild(input);
+      nextButton.parentNode.insertBefore(wrap,nextButton);
+    }
+  }
+  var observer=new MutationObserver(function(){addBackupButtons()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addBackupButtons,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function addCompletionSystem(){
+    if(typeof SECTIONS==="undefined" || typeof QUESTIONS==="undefined") return;
+
+    function sectionStats(si){
+      var answered=0,total=0;
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          total++;
+          if((localStorage.getItem(PREFIX+index)||"").trim()!=="") answered++;
+        }
+      });
+      return {answered:answered,total:total,complete:total>0 && answered===total};
+    }
+
+    // Enhance the existing My Progress overlay after it is opened.
+    var originalShowProgress=window.showProgress;
+    if(typeof originalShowProgress!=="function" || originalShowProgress.__completionEnhanced) return;
+
+    function enhancedProgress(){
+      originalShowProgress();
+
+      setTimeout(function(){
+        var overlay=document.getElementById("progressOverlay");
+        if(!overlay) return;
+
+        var cards=overlay.querySelectorAll(".card");
+        var sectionCards=[];
+        cards.forEach(function(card){
+          var title=card.querySelector("div");
+          if(title && title.textContent && title.textContent!=="Overall Progress"){
+            sectionCards.push(card);
+          }
+        });
+
+        SECTIONS.forEach(function(section,si){
+          var stats=sectionStats(si);
+          var card=sectionCards[si];
+          if(!card) return;
+
+          var badge=card.querySelector(".completionBadge");
+          if(!badge){
+            badge=document.createElement("div");
+            badge.className="completionBadge";
+            badge.style.cssText="font-size:12px;font-weight:750;letter-spacing:.07em;margin-top:9px";
+            card.appendChild(badge);
+          }
+
+          if(stats.complete){
+            badge.textContent="✓ COMPLETED";
+            badge.style.color="#2f6b3f";
+          }else if(stats.answered>0){
+            badge.textContent="IN PROGRESS";
+            badge.style.color="#666";
+          }else{
+            badge.textContent="NOT STARTED";
+            badge.style.color="#999";
+          }
+        });
+
+        var allComplete=SECTIONS.every(function(_,si){return sectionStats(si).complete;});
+        if(allComplete){
+          var done=document.createElement("div");
+          done.className="card";
+          done.style.marginTop="18px";
+          done.innerHTML="<strong>✓ STEP THREE COMPLETED</strong><div style='margin-top:8px;font-size:16px;line-height:1.5'>You have answered every Step Two question.</div>";
+          overlay.appendChild(done);
+        }
+      },0);
+    }
+
+    enhancedProgress.__completionEnhanced=true;
+    window.showProgress=enhancedProgress;
+  }
+
+  var observer=new MutationObserver(function(){addCompletionSystem()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addCompletionSystem,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  var NOTES_PREFIX="stepOneNotes_";
+
+  function getNotes(si){
+    return localStorage.getItem(NOTES_PREFIX+si)||"";
+  }
+
+  function saveNote(si,text){
+    localStorage.setItem(NOTES_PREFIX+si,text);
+  }
+
+  function showNotes(){
+    var overlay=document.createElement("div");
+    overlay.id="notesOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99996;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="My Step Three Notes";
+    overlay.appendChild(h);
+
+    var intro=document.createElement("div");
+    intro.className="reading";
+    intro.textContent="Use these notes for thoughts, reflections, or anything you want to remember while working through each section.";
+    overlay.appendChild(intro);
+
+    SECTIONS.forEach(function(section,si){
+      var card=document.createElement("div");
+      card.className="card";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:10px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var textarea=document.createElement("textarea");
+      textarea.style.cssText="width:100%;min-height:130px;box-sizing:border-box;padding:12px;border:1px solid #ccc;border-radius:8px;font:16px/1.5 inherit;resize:vertical";
+      textarea.placeholder="Write your notes for this section here...";
+      textarea.value=getNotes(si);
+      card.appendChild(textarea);
+
+      var saved=document.createElement("div");
+      saved.style.cssText="font-size:13px;color:#666;margin-top:8px;min-height:18px";
+      card.appendChild(saved);
+
+      var button=document.createElement("button");
+      button.className="secondary";
+      button.textContent="Save Note";
+      button.style.marginTop="10px";
+      button.onclick=function(){
+        saveNote(si,textarea.value);
+        saved.textContent="Saved.";
+        setTimeout(function(){saved.textContent=""},1800);
+      };
+      card.appendChild(button);
+
+      overlay.appendChild(card);
+    });
+
+    document.body.appendChild(overlay);
+  }
+
+  function addNotesButton(){
+    if(document.getElementById("notesButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="notesButton";
+    b.className="secondary";
+    b.textContent="My Step Three Notes";
+    b.onclick=showNotes;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addNotesButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addNotesButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function confirmClearAnswer(index){
+    if(confirm("Are you sure you want to erase this answer?\n\nThis cannot be undone.")){
+      localStorage.removeItem(PREFIX+index);
+      alert("Answer erased.");
+      if(typeof render==="function") render();
+    }
+  }
+
+  function clearAllNotes(){
+    if(confirm("Are you sure you want to erase ALL of your Step Two notes?\n\nThis cannot be undone.")){
+      SECTIONS.forEach(function(_,si){localStorage.removeItem("stepOneNotes_"+si);});
+      alert("All Step Two notes were erased.");
+      if(typeof render==="function") render();
+    }
+  }
+
+  function addClearAnswerButton(){
+    if(typeof mode==="undefined" || mode!=="question") return;
+    if(document.getElementById("clearAnswerButton")) return;
+
+    var textarea=document.querySelector("textarea");
+    if(!textarea) return;
+
+    var container=textarea.parentNode;
+    var index=(typeof qi!=="undefined") ? qi : null;
+    if(index===null) return;
+
+    var b=document.createElement("button");
+    b.id="clearAnswerButton";
+    b.className="secondary";
+    b.textContent="Clear Answer";
+    b.style.marginTop="10px";
+    b.onclick=function(){confirmClearAnswer(index);};
+    container.appendChild(b);
+  }
+
+  function addClearNotesButton(){
+    if(document.getElementById("clearAllNotesButton")) return;
+    if(!document.getElementById("notesOverlay")) return;
+
+    var buttons=document.querySelectorAll("#notesOverlay button");
+    if(!buttons.length) return;
+
+    var b=document.createElement("button");
+    b.id="clearAllNotesButton";
+    b.className="secondary";
+    b.textContent="Clear All Notes";
+    b.style.marginTop="18px";
+    b.onclick=clearAllNotes;
+    document.getElementById("notesOverlay").appendChild(b);
+  }
+
+  var observer=new MutationObserver(function(){
+    addClearAnswerButton();
+    addClearNotesButton();
+  });
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(function(){
+    addClearAnswerButton();
+    addClearNotesButton();
+  },100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function buildSummary(){
+    var overlay=document.createElement("div");
+    overlay.id="summaryOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99995;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var title=document.createElement("h1");
+    title.textContent="Step Three — Summary";
+    overlay.appendChild(title);
+
+    var answered=0;
+    var total=QUESTIONS.length;
+
+    SECTIONS.forEach(function(section,si){
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si && (localStorage.getItem(PREFIX+index)||"").trim()!=="") answered++;
+      });
+    });
+
+    var completed=answered===total && total>0;
+
+    var status=document.createElement("div");
+    status.className="card";
+    status.innerHTML="<strong>"+(completed?"✓ STEP THREE COMPLETED":"STEP THREE IN PROGRESS")+
+      "</strong><div style='margin-top:8px;font-size:16px'>"+answered+" of "+total+" questions answered.</div>";
+    overlay.appendChild(status);
+
+    var date=document.createElement("div");
+    date.className="card";
+    date.innerHTML="<strong>Summary Date</strong><div style='margin-top:8px'>"+
+      new Date().toLocaleDateString()+"</div>";
+    overlay.appendChild(date);
+
+    SECTIONS.forEach(function(section,si){
+      var card=document.createElement("div");
+      card.className="card";
+
+      var heading=document.createElement("div");
+      heading.style.cssText="font-size:19px;font-weight:700;margin-bottom:12px";
+      heading.textContent=section.name;
+      card.appendChild(heading);
+
+      var hasContent=false;
+
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex!==si) return;
+        var a=(localStorage.getItem(PREFIX+index)||"").trim();
+        if(!a) return;
+
+        hasContent=true;
+
+        var qbox=document.createElement("div");
+        qbox.style.cssText="font-weight:700;margin-top:14px";
+        qbox.textContent="• "+q.text;
+        card.appendChild(qbox);
+
+        var abox=document.createElement("div");
+        abox.style.cssText="white-space:pre-line;margin-top:7px;padding:10px;border-left:3px solid #ddd;line-height:1.5";
+        abox.textContent=a;
+        card.appendChild(abox);
+      });
+
+      var note=localStorage.getItem("stepOneNotes_"+si)||"";
+      if(note.trim()){
+        hasContent=true;
+        var nh=document.createElement("div");
+        nh.style.cssText="font-weight:700;margin-top:20px";
+        nh.textContent="My Notes";
+        card.appendChild(nh);
+
+        var nb=document.createElement("div");
+        nb.style.cssText="white-space:pre-line;margin-top:7px;padding:10px;border-left:3px solid #ddd;line-height:1.5";
+        nb.textContent=note;
+        card.appendChild(nb);
+      }
+
+      if(hasContent) overlay.appendChild(card);
+    });
+
+    var print=document.createElement("button");
+    print.className="secondary";
+    print.textContent="Print / Save as PDF";
+    print.style.marginTop="18px";
+    print.onclick=function(){window.print()};
+    overlay.appendChild(print);
+
+    document.body.appendChild(overlay);
+  }
+
+  function addSummaryButton(){
+    if(document.getElementById("summaryButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="summaryButton";
+    b.className="secondary";
+    b.textContent="Step Three Summary";
+    b.onclick=buildSummary;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addSummaryButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addSummaryButton,100);
+})();
+</script>
+
+
+<button id="shareReview" type="button" onclick="shareReview()" style="margin:10px 0;">Share</button>
+<div id="sharePanel" class="share-panel">
+  <strong>Share Step 3 — Review My Answers</strong>
+  <div class="share-actions">
+    <button type="button" onclick="shareByEmail()">Email</button>
+    <button type="button" onclick="shareByText()">Text Message</button>
+    <button type="button" onclick="copyReviewToClipboard()">Copy to Clipboard</button>
+  </div>
+  <div id="shareStatus" class="share-status"></div>
+</div>
+
+<script>
+function getStepReviewText() {
+  const step = 3;
+  let lines = [];
+  lines.push("An Interactive Working Guide to the 12 Steps of NA");
+  lines.push("Step " + step + " — My Review Answers");
+  lines.push("");
+  const root = document.body;
+  // Collect visible question/answer pairs from the current Step 3 review.
+  // Prefer review containers and textarea/input values, while avoiding navigation controls.
+  const fields = Array.from(root.querySelectorAll("textarea, input[type='text'], input:not([type])"));
+  let q = 0;
+  fields.forEach(el => {
+    if (!el.offsetParent) return;
+    const value = (el.value || "").trim();
+    if (!value) return;
+    const prev = el.closest(".question, .q, .card, .section, div");
+    let label = "";
+    if (prev) {
+      const heading = prev.querySelector("h1,h2,h3,h4,strong,label");
+      if (heading) label = heading.textContent.trim();
+    }
+    if (!label) {
+      q++;
+      label = "Answer " + q;
+    }
+    lines.push(label + ":");
+    lines.push(value);
+    lines.push("");
+  });
+  // If the review page has generated text, include it as a fallback.
+  if (lines.length <= 4) {
+    const review = document.querySelector("#review, .review, [id*='review']");
+    if (review) {
+      const clone = review.cloneNode(true);
+      clone.querySelectorAll("button, script, style").forEach(x => x.remove());
+      const body = clone.innerText.trim();
+      if (body) lines.push(body);
+    }
+  }
+  return lines.join("\n").trim();
+}
+
+function shareReview() {
+  const panel = document.getElementById("sharePanel");
+  if (panel) panel.classList.toggle("show");
+}
+
+function shareByEmail() {
+  const body = encodeURIComponent(getStepReviewText());
+  window.location.href = "mailto:?subject=" + encodeURIComponent("NA Step 3 — My Review Answers") + "&body=" + body;
+}
+
+function shareByText() {
+  const body = encodeURIComponent(getStepReviewText());
+  // sms: works across common iOS/Android configurations; the user selects the recipient.
+  window.location.href = "sms:?&body=" + body;
+}
+
+async function copyReviewToClipboard() {
+  const text = getStepReviewText();
+  try {
+    await navigator.clipboard.writeText(text);
+    const status = document.getElementById("shareStatus");
+    if (status) status.textContent = "Review answers copied to the clipboard.";
+  } catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand("copy");
+      const status = document.getElementById("shareStatus");
+      if (status) status.textContent = "Review answers copied to the clipboard.";
+    } finally {
+      document.body.removeChild(ta);
+    }
+  }
+}
+</script>
+</body></html>

@@ -1,0 +1,1032 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff"><title>An Interactive Working Guide to the 12 Steps of NA — Step 8</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f3f5;color:#202124;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.app{max-width:760px;margin:auto;min-height:100vh;background:#fff}header{position:sticky;top:0;z-index:5;background:#fffffff5;backdrop-filter:blur(10px);border-bottom:1px solid #ddd;padding:14px 18px}
+.title{font-size:22px;font-weight:750}.sub{font-size:13px;color:#666;margin-top:2px}.progress{height:4px;background:#eee}.bar{height:100%;background:#444;width:0;transition:.2s}
+main{padding:22px 18px 120px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#666;font-weight:750;margin-bottom:8px}
+h1{font-size:29px;line-height:1.18;margin:0 0 18px}.reading{font-size:17px;line-height:1.68;white-space:pre-line;color:#303238}
+.card{background:#fafafa;border:1px solid #ddd;border-radius:14px;padding:18px;margin-bottom:20px}
+.question{font-size:21px;line-height:1.45;font-weight:650;margin:12px 0 18px}textarea{width:100%;min-height:300px;border:1px solid #aaa;border-radius:12px;padding:15px;font:17px/1.5 inherit;resize:vertical;outline:none}
+textarea:focus{border-color:#333;box-shadow:0 0 0 3px #0001}button{border:0;border-radius:10px;padding:12px 15px;background:#222;color:#fff;font-size:15px;cursor:pointer}
+button.secondary{background:#e8e9ec;color:#222}button:disabled{opacity:.35;cursor:default}.bottom{position:fixed;z-index:10;bottom:0;left:0;right:0;background:#fffffff8;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;justify-content:center}
+.status{font-size:12px;color:#666;margin-top:8px}.resume{border:1px solid #ddd;border-radius:14px;padding:16px;background:#fafafa;margin:18px 0}
+
+.share-panel{display:none;margin-top:16px;padding:16px;border:1px solid #ddd;border-radius:12px;background:#fafafa}
+.share-panel.show{display:block}
+.share-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.share-actions button{min-width:150px}
+.share-status{margin-top:10px;font-size:.92rem;color:#555}
+</style></head><body><div class="app">
+<header><div class="title">An Interactive Working Guide to the 12 Steps of NA</div><div class="sub"></div></header>
+<div class="progress"><div id="bar" class="bar"></div></div><main id="main"></main>
+<div class="bottom"><button id="home" class="secondary">Home</button><button id="back" class="secondary">← Back</button><button id="next">Begin Step 8 →</button></div>
+</div>
+<script>
+const INTRO="\"We made a list of all persons we had harmed, and became willing to make amends to them all.\" To this point, the steps have focused mostly on repairing ourselves and our relationship with a God of our understanding. Beginning with the Eighth Step, we bring other people into the healing process - people we harmed in our addiction, people we harmed in our recovery, people we meant to harm, people we hurt by accident, people who are no longer in our lives, and people we expect to be close to for the rest of our lives. The Eighth Step is about identifying the damage we caused. It doesn't matter whether we caused it because we were overtaken by rage, carelessness, or because we were afraid. It doesn't matter whether our actions were based in selfishness, arrogance, dishonesty, or any other defect. It doesn't even matter that we didn't intend to cause someone harm. All the damage we caused is material for the Eighth Step. It may turn out that some of the harm we did can't be repaired. It may turn out that we, ourselves, can't directly make the repair. It may even turn out that we're not responsible for something we've placed on our Eighth Step list. Our sponsor will help us sort that out before we go on to the Ninth Step. For now, our task is only to identify who we harmed, what the harm was, and become willing to make amends. It's natural to wonder about the Ninth Step and how we will make our amends while we're working the Eighth Step. What we think about our amends is bound to influence our work in this step. We may need to get some common misconceptions out of our way before we can make our list. It's wonderful that we've already begun repairing our relationships with some of the people m our lives. Our families are probably delighted that we're no longer using drugs. Some of the more overt damage we inflicted on others ceased as soon as we stopped using drugs. If we managed to keep our jobs or stay in school, we're probably already performing better in those places. We're no longer harming our co-workers or employers, teachers or fellow students in certain ways. But is that enough? We have probably heard people in meetings emphasizing that \"amends\" means to change, not just to say \"I'm sorry\" -that what really counts is the way we're treating people now. But this doesn't mean that formal apologies have gone out of fashion in NA. Direct, face- to-face verbal amends are extremely powerful, both as a means of spiritual growth for us and as a long-awaited comfort for the people to whom we make them. What our members are emphasizing is that we can't just offer people lame apologies and then go right back to doing what caused them harm in the first place. Some of us may be feeling a bit weary at this point, especially if our sponsor had us do extensive writing on the first seven steps. We inventoried our behavior in Step Four, and we catalogued our character defects in Step Six; now we have to examine the same situations from yet another angle! It may seem as if we've examined our lives and our addiction in every possible way by the time we're done with these steps. Is all this really necessary? Aren't we just punishing ourselves by going over and over the same thing? No, we're not. The Eighth Step is the beginning of a process that lets us feel equal to others. Instead of feeling shame and guilt, instead of feeling forever \"less than,\" we become able to look people in the eye. We won't have to avoid anyone. We won't have to be afraid we'll be caught and punished for some neglected responsibility. We'll be free. \u0001 Am I hesitating in any way about working the Eighth Step? Why? Some of us go to the other extreme with this step: We can't wait to get right out there and \"make everything okay,\" unaware that we may cause more harm. We blunder forward, confessing infidelities to our spouses and our friends. We sit our families down and make them listen to every detail of our addiction, confirming some of their worst fears about what we were doing out there and filling in some blanks that, until then, had been left mercifully empty. In a state of excitement, we give our children a speech about how we have a disease for which we're not responsible, how we love our recovery, and how wonderful life is going to be from then on, forgetting all the times before when we had made them so many empty promises. We stroll into our employer's office one day and announce that we're addicts, that we've embezzled a great deal of money through ingenious means, but that we're very sorry and we'll never ever do it again. Though our own experiences with rushing out to make amends are probably not this extreme, we can surely grasp the point: If we try to make amends without our sponsor 5 guidance and without a plan, we can end up causing even more harm. \u0001 Do I realize the need to slow down and consult my sponsor before making amends? Have I created more harm in any situation by rushing out to make amends before I was ready? What was the situation? Some of us may still believe that we're just basically nice people who have never truly harmed anyone-except ourselves, that is. If we're truly stumped about who belongs on our amends list, or we have a vague idea that our family belongs there but we're not sure why, it could be that we're overlooking something or that our denial is still pretty thick. Sometimes, we're just not able to see the truth about certain situations, even after many years in recovery. A suggestion that many of us have followed is that if we think of someone to whom we seem to owe amends, but we can't think of the situation that resulted in our owing amends, we put the name on the list anyway. Sometimes we'll think of the \"why\" later on. We should do the best we can with this step for now, contact our sponsor, and keep working on our recovery. As the saying goes, \"more will be revealed.\" We just need to keep an open mind, so that when the knowledge comes we'll be prepared to accept it. Last but not least, many of us delay starting this step because we aren't willing to make amends to certain people. We either resent them, or we feel too afraid to ever imagine ourselves approaching them. We need to start this step and list these people even if we're not sure we'll ever be able to make the amends. If it's truly unsafe to make the amends, our sponsor will help us figure out how to handle the situation. \u0001 List the resentments that are in the way of my willingness to make amends. \u0001 Can I let these resentments go now? If not, can I muster the willingness to add these names to my list anyway, and worry about becoming willing later? \u0001 Are there any people to whom I owe amends that may be a threat to my safety or about whom I'm truly concerned in some other way? What are my fears?";
+const SECTIONS=[{"name": "Preparing To Work Step Eight", "reading": "Step Eight \"We made a list of all persons we had harmed, and became willing to make amends to them all.\" To this point, the steps have focused mostly on repairing ourselves and our relationship with a God of our understanding. Beginning with the Eighth Step, we bring other people into the healing process - people we harmed in our addiction, people we harmed in our recovery, people we meant to harm, people we hurt by accident, people who are no longer in our lives, and people we expect to be close to for the rest of our lives. The Eighth Step is about identifying the damage we caused. It doesn't matter whether we caused it because we were overtaken by rage, carelessness, or because we were afraid. It doesn't matter whether our actions were based in selfishness, arrogance, dishonesty, or any other defect. It doesn't even matter that we didn't intend to cause someone harm. All the damage we caused is material for the Eighth Step. It may turn out that some of the harm we did can't be repaired. It may turn out that we, ourselves, can't directly make the repair. It may even turn out that we're not responsible for something we've placed on our Eighth Step list. Our sponsor will help us sort that out before we go on to the Ninth Step. For now, our task is only to identify who we harmed, what the harm was, and become willing to make amends. It's natural to wonder about the Ninth Step and how we will make our amends while we're working the Eighth Step. What we think about our amends is bound to influence our work in this step. We may need to get some common misconceptions out of our way before we can make our list. It's wonderful that we've already begun repairing our relationships with some of the people m our lives. Our families are probably delighted that we're no longer using drugs. Some of the more overt damage we inflicted on others ceased as soon as we stopped using drugs. If we managed to keep our jobs or stay in school, we're probably already performing better in those places. We're no longer harming our co-workers or employers, teachers or fellow students in certain ways. But is that enough? We have probably heard people in meetings emphasizing that \"amends\" means to change, not just to say \"I'm sorry\" -that what really counts is the way we're treating people now. But this doesn't mean that formal apologies have gone out of fashion in NA. Direct, face- to-face verbal amends are extremely powerful, both as a means of spiritual growth for us and as a long-awaited comfort for the people to whom we make them. What our members are emphasizing is that we can't just offer people lame apologies and then go right back to doing what caused them harm in the first place. Some of us may be feeling a bit weary at this point, especially if our sponsor had us do extensive writing on the first seven steps. We inventoried our behavior in Step Four, and we catalogued our character defects in Step Six; now we have to examine the same situations from yet another angle! It may seem as if we've examined our lives and our addiction in every possible way by the time we're done with these steps. Is all this really necessary? Aren't we just punishing ourselves by going over and over the same thing? No, we're not. The Eighth Step is the beginning of a process that lets us feel equal to others. Instead of feeling shame and guilt, instead of feeling forever \"less than,\" we become able to look people in the eye. We won't have to avoid anyone. We won't have to be afraid we'll be caught and punished for some neglected responsibility. We'll be free.", "count": 4}, {"name": "The People We Harmed and How We Harmed Them", "reading": "Before we actually begin making our list, there's one final concept with which we must familiarize ourselves: the meaning of \"harm\" in this step. We need to strive to understand all the ways in which it is possible to cause harm so that our list can be thorough. Certain types of harm are obvious. For instance, if we stole money or property from a person or a business, that's quite obviously a form of harm. In addition, most of us have no trouble recognizing physical or emotional abuse as a type of harm. Then there are situations where we have no problem recognizing what we did as harmful, but may have difficulty identifying who, in particular, we harmed. For instance, we cheated on a test at school. Did this harm the instructor, we ask ourselves? Our fellow students? Ourselves? The students who came after us and had to pay the price of our instructor's mistrust because of our dishonesty? The answer to this example is that all of these people were harmed, even if only indirectly. They belong on our Eighth Step list. Finally, we get to the deeper types of harm. These types of harm may be the most damaging, for they strike at the most vulnerable places in the human heart. For instance, we had a friend. The friendship was perhaps an old one, spanning many years. Emotions, trust, even personal identity - all these were engaged in the friendship we shared. This relationship really mattered to our friend, and to us as well. Then, without explanation, because of some real or imagined slight, we withdrew from the friendship and never tried to renew it. Losing a friend is painful enough without the added burden of not knowing why, but many of us inflicted just this type of harm on someone. We damaged that person's sense of trust, and it may have taken many years to heal. A variation on this is that we may have allowed someone to take the blame for a relationship ending, making the person feel unlovable, when in reality we had just grown tired of the relationship and were too lazy to maintain it. There are many different ways we can inflict deep emotional harm: neglect, withdrawal, exploitation, manipulation, and humiliation, to name but a few. The \"victims\" and \"nice people\" among us may find that we made others feel inferior when we passed ourselves off as better than everyone else, projecting an attitude of moral superiority. The competent and self-sufficient among us may find names for the Eighth Step list by thinking about the people whose offers of help and gestures of support we rejected. An additional struggle that many of us face when we identify types of harm arises from an automatic tendency to focus only on the time before we stopped using. It's a little easier for us to be rigorously honest about the harm we caused in our active addiction. We were using drugs, we were different people then. However, we have all caused harm during our recovery. (Remember, whether we intended to or not doesn't matter.) In fact, we've probably all caused harm to people with whom we share our recovery - other NA members. We may have gossiped about them, withdrawn from them, responded with insensitivity to their pain, interfered in a sponsorship relationship, tried to control a sponsee's behavior, behaved like an ingrate with a sponsor, stolen Seventh Tradition money, manipulated people by using our clean time as a source of credibility in a service argument, or sexually exploited a newcomer, to name a few relatively common examples. Most of us have an extremely hard time placing these situations on our Eighth Step list because the thought of making the amends makes us so uncomfortable. We hold ourselves accountable to a higher standard of behavior around NA, and we're sure that others expect more from us, also. The fact is that our fellow NA members are likely to be especially forgiving because they know what we're trying to do-but again, we should avoid worrying about the Ninth Step now.", "count": 1}, {"name": "Making Our List", "reading": "The first thing to know is that this is not a list that we can keep in our heads. We need to put each name and what we did to harm the person down on paper. Once it's on paper, it's hard to forget anyone or go back into denial about an amends we'd rather avoid. If for some reason we can't use paper, we can use a tape recorder or any other method our sponsor has agreed will help us get the most out of this step. When we're ready to begin our list, we sit down, recall all we've learned about harm, and start writing. Some names are going to spring to mind immediately. Others may come to mind as we think about the types of harm we have caused. We absolutely need to go back through our Fourth Step and search out any information we can extract from that. We should include every name and situation we think of even if we're relatively, but not entirely, sure that our sponsor is going to tell us we don't owe any amends in that particular situation. It's almost always better to delete names than to try to recall names we should have added, but didn't, when we're going over the list with our sponsor. In addition, there may be times when we remember an incident in which we caused harm, but not the names of the people involved. We can at least list the incident. Putting ourselves on the list may seem awkward to some of us. We may have been informed in our early recovery that making amends to ourselves was a self-centered idea, that we needed to stop thinking about ourselves all the time and start thinking about the people we had harmed. Then, the whole notion of making amends to ourselves may have been confusing. Some of us probably thought that making amends should involve \"rewarding\" ourselves for staying clean or some other accomplishment. We may have tried to do this by buying ourselves things we couldn't afford, or by indulging other compulsions. In reality, the way we make amends to ourselves is by stopping irresponsible or destructive behavior. We need to identify the ways we ve created our own problems - that is, harmed ourselves - through our inability to accept personal responsibility. Then, when we add ourselves to the list, we can list the harm we caused to our finances, our self-image, our health, etc. There is also a delicate situation that many of us have faced: What if we've harmed our sponsor, he or she doesn't know about the harm, and will likely find out when we go over the list? In this situation, we should consult another member whose recovery we respect, perhaps our sponsor's sponsor.", "count": 1}, {"name": "Becoming Willing", "reading": "Now that we have our list, or have added new names to the list we've been keeping since our first time through the Eighth Step, it's time to get willing to make amends. In order to become willing, we have to know at least a little about what \"making amends\" involves. Earlier in this guide, we talked about the need to do more than just change our behavior, but some of us may be afraid that we just aren't capable of changing. We're sincere. We want to refrain from ever repeating the same behavior again, but we think about the times when we've made promises before. Aren't we subject to doing the same thing again? This is when we have to really believe in our recovery. No matter how long we've been clean and the wrongs for which we're making amends, we have to have faith that the God of our understanding will give us the strength and the ability to change.", "count": 4}, {"name": "Spiritual Principles", "reading": "In the Eighth Step, we will focus on honesty, courage, willingness, and compassion. To practice the principle of honesty in the Eighth Step, we need to draw on our experience in the previous steps. We've admitted the nature of our problem-addiction-and affirmed the solution to that problem. This was an act of honesty. We've taken a searching and fearless moral inventory of ourselves; doing so exercised our newfound honesty. Extracting the nature of our wrongs from within the fabric of our personalities took our honesty to an even deeper level. So we have some experience separating our part in things from what others may have done. That's the level of honesty we'll need to call on in Step Eight. We have to forget about resentments, blaming others, believing we were innocent victims, and any other justification for the harm we caused. We simply need to put it on the list!", "count": 6}, {"name": "Moving On", "reading": "Discussing every single one of the amends on our list with our sponsor is essential. It doesn't matter how long we've been clean or how much experience with making amends we have. Every one of us is liable to misjudge a situation when working alone, but we often find that we can see things more clearly when we look at situations from another point of view. We need our sponsor's insight. We need our sponsor's encouragement. We need our sponsor's vision and hope. It's amazing how much a simple discussion with our sponsor can do to help us tap into the quiet strength that lives in each one of us. When we've stripped away the distracting influences and have exposed that solid core of serenity, humility, and forgiveness, we're ready for the Ninth Step.", "count": 0}];
+const QUESTIONS=[{"sectionIndex": 0, "text": "Am I hesitating in any way about working the Eighth Step? Why?"}, {"sectionIndex": 0, "text": "Do I realize the need to slow down and consult my sponsor before making amends? Have I created more harm in any situation by rushing out to make amends before I was ready? What was the situation?"}, {"sectionIndex": 0, "text": "Can I let these resentments go now? If not, can I muster the willingness to add these names to my list anyway, and worry about becoming willing later?"}, {"sectionIndex": 0, "text": "Are there any people to whom I owe amends that may be a threat to my safety or about whom I'm truly concerned in some other way? What are my fears?"}, {"sectionIndex": 1, "text": "List the people I've harmed and the specific ways I harmed each one."}, {"sectionIndex": 2, "text": "Why is saying \"I'm sorry\" alone not sufficient to repair the damage I've caused?"}, {"sectionIndex": 3, "text": "Why is only changing my behavior not sufficient to repair the damage I've caused?"}, {"sectionIndex": 3, "text": "Do I have financial amends that I don't want to make? What would my life be like if I had already made these amends?"}, {"sectionIndex": 3, "text": "Do I owe amends to people who have also harmed me? What have I done to become willing to make these amends?"}, {"sectionIndex": 3, "text": "How is determining the exact nature of my wrongs valuable in the Eighth Step? Why is it so essential that I'm clear about my responsibility?"}, {"sectionIndex": 4, "text": "What are some examples of my experience with honesty from the previous steps? How will I translate that experience into this step?"}, {"sectionIndex": 4, "text": "What are some examples of my experience with courage from the previous steps? How will I translate that experience into this step?"}, {"sectionIndex": 4, "text": "Are there any names I haven't yet added to my list? Am I willing to add them now? Have I completed my list?"}, {"sectionIndex": 4, "text": "What are some of the things I've done to increase my willingness? How do I feel about having to pray for willingness?"}, {"sectionIndex": 4, "text": "Am I beginning to feel connected with others?"}, {"sectionIndex": 4, "text": "Am I beginning to feel compassion and empathy for others?"}];
+const PREFIX="step-eight-v1-";
+const STATE="step-eight-v1-resume-state";
+let mode="intro",si=0,qi=0;
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]})}
+function cleanReading(s){return s.replace(/\s+/g," ").trim();}
+function saveAnswer(){const a=document.getElementById("answer");if(a)localStorage.setItem(PREFIX+qi,a.value)}
+function getState(){try{return JSON.parse(localStorage.getItem(STATE)||"null")}catch(e){return null}}
+function saveState(){localStorage.setItem(STATE,JSON.stringify({mode:mode,si:si,qi:qi}))}
+function hasAnswers(){return QUESTIONS.some((_,i)=>localStorage.getItem(PREFIX+i))}
+function update(){document.getElementById("bar").style.width=(mode==="intro"?0:mode==="reading"?((si)/SECTIONS.length*100):((qi+1)/QUESTIONS.length*100))+"%";}
+
+function getResumeState(){
+ try{
+   const raw=localStorage.getItem(STATE);
+   return raw ? JSON.parse(raw) : null;
+ }catch(e){ return null; }
+}
+function saveResumeState(){
+ if(mode==="question" || mode==="reading"){
+   localStorage.setItem(STATE,JSON.stringify({mode:mode,si:si,qi:qi}));
+ }
+}
+function toc(){
+ mode="toc";
+ main.innerHTML='<div class="eyebrow">Narcotics Anonymous</div><h1>Table of Contents</h1>'+
+   '<div class="card"><div class="reading">Choose a step to begin or continue your work. You can return here at any time.</div></div>'+
+   '<div id="tocList"></div>';
+ const list=document.getElementById("tocList");
+ const steps=["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve"];
+ steps.forEach(function(name,idx){
+   const n=idx+1;
+   const b=document.createElement("button");
+   b.textContent="Step "+name;
+   b.style.cssText="display:block;width:100%;text-align:left;margin:10px 0;padding:16px 18px;font-size:17px";
+   b.onclick=function(){window.location.href="NA_Step_"+n+"_WORKING_COPY.html"};
+   list.appendChild(b);
+ });
+ back.disabled=true;
+ next.textContent="Begin Step Eight →";
+ update();
+}
+function intro(){
+ mode="intro";
+  document.querySelector("header .sub").textContent="Step Eight";
+  document.title="An Interactive Working Guide to the 12 Steps of NA — Step Eight";
+ const saved=getResumeState();
+ let resumeText="";
+ if(saved && saved.mode!=="intro"){
+   if(saved.mode==="question"){
+     const q=QUESTIONS[saved.qi];
+     const first=QUESTIONS.findIndex(x=>x.sectionIndex===saved.si); resumeText=SECTIONS[q.sectionIndex].name+" — Question "+(saved.qi-first+1)+" of "+SECTIONS[q.sectionIndex].count;
+   } else {
+     resumeText=SECTIONS[saved.si].name+" — Reading";
+   }
+ }
+ main.innerHTML=
+   '<div class="eyebrow">Step 8</div><h1>Step 8</h1>'+
+   '<div class="card"><div class="reading">'+esc(cleanReading(INTRO))+'</div></div>'+
+   (resumeText?
+     '<div class="resume" style="border:1px solid #ddd;border-radius:14px;padding:16px;background:#fafafa;margin:18px 0">'+
+       '<div class="eyebrow">Continue Where You Left Off</div>'+
+       '<div style="font-size:17px;line-height:1.4;margin-bottom:12px">'+esc(resumeText)+'</div>'+
+       '<button id="continue">Continue Step 8 →</button>'+
+     '</div>':'');
+ if(saved && resumeText){
+   document.getElementById("continue").onclick=function(){
+     mode=saved.mode; si=saved.si; qi=saved.qi; render();
+   };
+ }
+ back.disabled=true;
+ next.textContent=resumeText?"Restart Step 8":"Begin Step 8 →";
+ update();
+}
+function reading(){
+ mode="reading";saveResumeState();const s=SECTIONS[si];
+ main.innerHTML='<div class="eyebrow">Section '+(si+1)+' of '+SECTIONS.length+'</div><h1>'+esc(s.name)+'</h1><div class="card"><div class="reading">'+esc(cleanReading(s.reading))+'</div></div><button id="begin">Begin this section’s questions →</button>';
+ document.getElementById("begin").onclick=function(){qi=QUESTIONS.findIndex(q=>q.sectionIndex===si);mode="question";render()};
+ back.disabled=si===0;next.textContent="Questions →";update();
+}
+function question(){
+ mode="question";saveResumeState();const q=QUESTIONS[qi],ans=localStorage.getItem(PREFIX+qi)||"";
+ const sec=SECTIONS[q.sectionIndex]; const first=QUESTIONS.findIndex(x=>x.sectionIndex===q.sectionIndex); const num=qi-first+1; main.innerHTML='<div class="eyebrow">'+esc(sec.name)+' • Question '+num+' of '+sec.count+'</div><div class="question">• '+esc(q.text)+'</div><textarea id="answer" placeholder="Type your answer here...">'+esc(ans)+'</textarea><div class="status">Saved automatically on this device.</div>';
+ const a=document.getElementById("answer");a.addEventListener("input",function(){localStorage.setItem(PREFIX+qi,a.value);saveState()});
+ back.disabled=qi===0;next.textContent=qi===QUESTIONS.length-1?"Finish Step 8":"Save & Next →";update();
+}
+function render(){
+  if(mode==="welcome")welcome();
+  else if(mode==="toc")toc();
+  else if(mode==="intro")intro();
+  else if(mode==="reading")reading();
+  else question();
+  saveResumeState();
+  update();
+}
+home.onclick=function(){if(mode==="question")saveAnswer();mode="intro";render()};
+back.onclick=function(){
+ if(mode==="question"){saveAnswer();const current=QUESTIONS[qi].sectionIndex,first=QUESTIONS.findIndex(q=>q.sectionIndex===current);if(qi===first){si=current;mode="reading"}else qi--;render()}
+ else if(mode==="reading"){if(si===0)mode="intro";else si--;render()}
+ else if(mode==="toc"){mode="welcome";render()}
+};
+next.onclick=function(){
+  if(mode==="intro"){
+   const saved=getResumeState();
+   if(saved && next.textContent==="Restart Step 8"){
+     if(confirm("Restart Step 8? Your saved answers will remain on this device.")){
+       si=0;qi=0;mode="reading";render();
+     }
+   }else{
+     si=0;qi=0;mode="reading";render();
+   }
+   return;
+}
+ if(mode==="reading"){qi=QUESTIONS.findIndex(q=>q.sectionIndex===si);mode="question";render();return}
+ saveAnswer();
+ if(qi<QUESTIONS.length-1){const old=QUESTIONS[qi].sectionIndex;qi++;if(QUESTIONS[qi].sectionIndex!==old){si=QUESTIONS[qi].sectionIndex;mode="reading"}render()}
+ else{alert("Step 8 is complete. Your answers remain saved on this device. Moving to Step 9.");window.location.href="NA_Step_9_WORKING_COPY.html"}
+};
+render();
+</script>
+<script>
+(function(){
+  function reviewAnswers(){
+    var overlay=document.createElement("div");
+    overlay.id="reviewOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99999;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="Step 8 — Review My Answers";
+    overlay.appendChild(h);
+
+    // Review / Share tabs for the Review My Answers page.
+    var tabBar=document.createElement("div");
+    tabBar.style.cssText="display:flex;gap:8px;margin:14px 0 20px;border-bottom:1px solid #ddd;padding-bottom:10px";
+    var reviewTab=document.createElement("button");
+    reviewTab.textContent="Review My Answers";
+    reviewTab.className="secondary";
+    var shareTab=document.createElement("button");
+    shareTab.textContent="Share";
+    shareTab.className="secondary";
+    tabBar.appendChild(reviewTab); tabBar.appendChild(shareTab);
+    overlay.appendChild(tabBar);
+
+    var reviewContent=document.createElement("div");
+    overlay.appendChild(reviewContent);
+
+    var shareContent=document.createElement("div");
+    shareContent.style.display="none";
+    shareContent.className="card";
+    var shareTitle=document.createElement("h2");
+    shareTitle.textContent="Share Step 8 — My Review Answers";
+    shareContent.appendChild(shareTitle);
+    var shareIntro=document.createElement("p");
+    shareIntro.textContent="Choose how you would like to share your saved answers with your sponsor or another person.";
+    shareContent.appendChild(shareIntro);
+    var shareButtons=document.createElement("div");
+    shareButtons.style.cssText="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px";
+    var emailBtn=document.createElement("button"); emailBtn.textContent="Email";
+    var textBtn=document.createElement("button"); textBtn.textContent="Text Message";
+    var clipBtn=document.createElement("button"); clipBtn.textContent="Copy to Clipboard";
+    shareButtons.appendChild(emailBtn); shareButtons.appendChild(textBtn); shareButtons.appendChild(clipBtn);
+    shareContent.appendChild(shareButtons);
+    var shareStatus=document.createElement("div");
+    shareStatus.style.cssText="margin-top:12px;color:#666";
+    shareContent.appendChild(shareStatus);
+    overlay.appendChild(shareContent);
+
+    function buildReviewShareText(){
+      var lines=["An Interactive Working Guide to the 12 Steps of NA","Step 8 — My Review Answers",""];
+      var has=false;
+      SECTIONS.forEach(function(section,si){
+        var sectionHas=false;
+        var sectionLines=[];
+        QUESTIONS.forEach(function(q,index){
+          if(q.sectionIndex===si){
+            var a=localStorage.getItem(PREFIX+index)||"";
+            if(a.trim()!==""){
+              has=true; sectionHas=true;
+              sectionLines.push("• "+q.text);
+              sectionLines.push("My Answer:");
+              sectionLines.push(a.trim());
+              sectionLines.push("");
+            }
+          }
+        });
+        if(sectionHas){ lines.push(section.name.toUpperCase()); lines.push(""); lines=lines.concat(sectionLines); }
+      });
+      if(!has) lines.push("No answers have been saved yet.");
+      return lines.join("\n").trim();
+    }
+
+    reviewTab.onclick=function(){ reviewContent.style.display="block"; shareContent.style.display="none"; };
+    shareTab.onclick=function(){ reviewContent.style.display="none"; shareContent.style.display="block"; };
+    emailBtn.onclick=function(){ window.location.href="mailto:?subject="+encodeURIComponent("NA Step 8 — My Review Answers")+"&body="+encodeURIComponent(buildReviewShareText()); };
+    textBtn.onclick=function(){ window.location.href="sms:?&body="+encodeURIComponent(buildReviewShareText()); };
+    clipBtn.onclick=function(){
+      var txt=buildReviewShareText();
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(function(){shareStatus.textContent="Your review answers have been copied to the clipboard.";}).catch(function(){shareStatus.textContent="Clipboard access was not available on this device.";});
+      } else {
+        var ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.left="-9999px"; document.body.appendChild(ta); ta.select();
+        try{document.execCommand("copy"); shareStatus.textContent="Your review answers have been copied to the clipboard.";}catch(e){shareStatus.textContent="Clipboard access was not available on this device.";}
+        document.body.removeChild(ta);
+      }
+    };
+
+    var found=false;
+
+    SECTIONS.forEach(function(section,si){
+      var answered=[];
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          var a=localStorage.getItem(PREFIX+index)||"";
+          if(a.trim()!=="") answered.push({q:q,index:index,a:a});
+        }
+      });
+
+      if(answered.length){
+        found=true;
+        var sh=document.createElement("div");
+        sh.className="eyebrow";
+        sh.style.marginTop="28px";
+        sh.textContent=section.name;
+        reviewContent.appendChild(sh);
+
+        answered.forEach(function(item){
+          var card=document.createElement("div");
+          card.className="card";
+
+          var q=document.createElement("div");
+          q.className="question";
+          q.textContent="• "+item.q.text;
+          card.appendChild(q);
+
+          var label=document.createElement("div");
+          label.className="status";
+          label.textContent="MY ANSWER";
+          label.style.cssText="font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#666;font-weight:750;margin:10px 0 7px";
+          card.appendChild(label);
+
+          var ans=document.createElement("div");
+          ans.style.cssText="white-space:pre-line;font-size:17px;line-height:1.55;border-top:1px solid #ddd;padding-top:10px";
+          ans.textContent=item.a;
+          card.appendChild(ans);
+
+          var edit=document.createElement("button");
+          edit.className="secondary";
+          edit.textContent="Edit Answer";
+          edit.style.marginTop="14px";
+          edit.onclick=function(){
+            overlay.remove();
+            qi=item.index;
+            si=item.q.sectionIndex;
+            mode="question";
+            render();
+          };
+          card.appendChild(edit);
+
+          reviewContent.appendChild(card);
+        });
+      }
+    });
+
+    if(!found){
+      var empty=document.createElement("div");
+      empty.className="card";
+      empty.textContent="You have not saved any answers yet.";
+      reviewContent.appendChild(empty);
+    }
+
+    document.body.appendChild(overlay);
+  }
+
+  function addButton(){
+    if(document.getElementById("reviewAnswersButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var buttons=document.querySelectorAll(".bottom button");
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="reviewAnswersButton";
+    b.className="secondary";
+    b.textContent="Step 8 — Review My Answers";
+    b.onclick=reviewAnswers;
+
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  // The existing app calls render() dynamically, so observe the Home screen.
+  var observer=new MutationObserver(function(){addButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function showProgress(){
+    var overlay=document.createElement("div");
+    overlay.id="progressOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99998;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="My Progress";
+    overlay.appendChild(h);
+
+    var totalAnswered=0, totalQuestions=QUESTIONS.length;
+
+    SECTIONS.forEach(function(section,si){
+      var count=0,total=0;
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          total++;
+          if((localStorage.getItem(PREFIX+index)||"").trim()!=="") count++;
+        }
+      });
+      totalAnswered+=count;
+
+      var card=document.createElement("div");
+      card.className="card";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:8px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var status=document.createElement("div");
+      status.className="status";
+      status.textContent=count+" / "+total+" questions answered";
+      card.appendChild(status);
+
+      var bar=document.createElement("div");
+      bar.style.cssText="height:7px;background:#eee;border-radius:6px;margin-top:12px;overflow:hidden";
+      var fill=document.createElement("div");
+      fill.style.cssText="height:100%;background:#444;width:"+((count/total)*100)+"%";
+      bar.appendChild(fill);
+      card.appendChild(bar);
+
+      card.onclick=function(){
+        overlay.remove();
+        si = si;
+        mode="reading";
+        render();
+      };
+      overlay.appendChild(card);
+    });
+
+    var summary=document.createElement("div");
+    summary.className="card";
+    summary.style.marginTop="24px";
+    summary.innerHTML="<strong>Overall Progress</strong><div style='font-size:17px;margin-top:8px'>"+
+      totalAnswered+" / "+totalQuestions+" questions answered</div>";
+    overlay.insertBefore(summary, overlay.children[2]);
+
+    document.body.appendChild(overlay);
+  }
+
+  function addProgressButton(){
+    if(document.getElementById("progressAnswersButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="progressAnswersButton";
+    b.className="secondary";
+    b.textContent="My Progress";
+    b.onclick=showProgress;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(addProgressButton);
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addProgressButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function showSections(){
+    var overlay=document.createElement("div");
+    overlay.id="sectionNavOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99997;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="Step 8 Sections";
+    overlay.appendChild(h);
+
+    SECTIONS.forEach(function(section, index){
+      var card=document.createElement("div");
+      card.className="card";
+      card.style.cursor="pointer";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:6px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var desc=document.createElement("div");
+      desc.className="status";
+      desc.textContent="Read this section";
+      card.appendChild(desc);
+
+      card.onclick=function(){
+        overlay.remove();
+        si=index;
+        mode="reading";
+        render();
+      };
+      overlay.appendChild(card);
+    });
+
+    document.body.appendChild(overlay);
+  }
+
+  function addSectionButton(){
+    if(document.getElementById("sectionNavButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="sectionNavButton";
+    b.className="secondary";
+    b.textContent="Browse Sections";
+    b.onclick=showSections;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addSectionButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addSectionButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  
+  function restoreAnswers(file){
+    if(!file){
+      alert("No backup file was selected.");
+      return;
+    }
+
+    var reader=new FileReader();
+
+    reader.onerror=function(){
+      alert("Safari could not read that backup file.");
+    };
+
+    reader.onload=function(){
+      try{
+        var data=JSON.parse(reader.result);
+
+        if(!data || !data.answers || typeof data.answers!=="object"){
+          throw new Error("Invalid backup format");
+        }
+
+        var restored=0;
+        if(data.notes && typeof data.notes==="object"){
+          Object.keys(data.notes).forEach(function(si){
+            if(typeof SECTIONS!=="undefined" && SECTIONS[Number(si)]){
+              localStorage.setItem(NOTES_PREFIX+si,String(data.notes[si]||""));
+            }
+          });
+        }
+
+        Object.keys(data.answers).forEach(function(index){
+          var n=Number(index);
+          if(Number.isInteger(n) && typeof QUESTIONS!=="undefined" && QUESTIONS[n]){
+            localStorage.setItem(PREFIX+n,String(data.answers[index]));
+            restored++;
+          }
+        });
+
+        if(restored===0){
+          throw new Error("No matching answers");
+        }
+
+        alert(restored+" saved answer"+(restored===1?"":"s")+" restored.");
+        if(typeof render==="function") render();
+
+      }catch(e){
+        alert("That file could not be restored. Please choose a Step 8 backup file created by this app.");
+      }
+    };
+
+    reader.readAsText(file);
+  }
+  function addBackupButtons(){
+    if(typeof mode==="undefined" || mode!=="intro") return;
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+
+    if(!document.getElementById("restoreAnswersWrap")){
+      var wrap=document.createElement("div");
+      wrap.id="restoreAnswersWrap";
+      wrap.style.cssText="margin-top:8px";
+
+      var label=document.createElement("label");
+      label.className="secondary";
+      label.textContent="Restore My Answers";
+      label.style.cssText="display:inline-block;cursor:pointer";
+
+      var input=document.createElement("input");
+      input.type="file";
+      input.accept=".json,application/json,text/plain";
+      input.style.cssText="display:block;margin-top:8px;max-width:100%";
+      input.onchange=function(){
+        if(input.files && input.files.length){
+          restoreAnswers(input.files[0]);
+        }
+      };
+
+      wrap.appendChild(label);
+      wrap.appendChild(input);
+      nextButton.parentNode.insertBefore(wrap,nextButton);
+    }
+  }
+  var observer=new MutationObserver(function(){addBackupButtons()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addBackupButtons,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function addCompletionSystem(){
+    if(typeof SECTIONS==="undefined" || typeof QUESTIONS==="undefined") return;
+
+    function sectionStats(si){
+      var answered=0,total=0;
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          total++;
+          if((localStorage.getItem(PREFIX+index)||"").trim()!=="") answered++;
+        }
+      });
+      return {answered:answered,total:total,complete:total>0 && answered===total};
+    }
+
+    // Enhance the existing My Progress overlay after it is opened.
+    var originalShowProgress=window.showProgress;
+    if(typeof originalShowProgress!=="function" || originalShowProgress.__completionEnhanced) return;
+
+    function enhancedProgress(){
+      originalShowProgress();
+
+      setTimeout(function(){
+        var overlay=document.getElementById("progressOverlay");
+        if(!overlay) return;
+
+        var cards=overlay.querySelectorAll(".card");
+        var sectionCards=[];
+        cards.forEach(function(card){
+          var title=card.querySelector("div");
+          if(title && title.textContent && title.textContent!=="Overall Progress"){
+            sectionCards.push(card);
+          }
+        });
+
+        SECTIONS.forEach(function(section,si){
+          var stats=sectionStats(si);
+          var card=sectionCards[si];
+          if(!card) return;
+
+          var badge=card.querySelector(".completionBadge");
+          if(!badge){
+            badge=document.createElement("div");
+            badge.className="completionBadge";
+            badge.style.cssText="font-size:12px;font-weight:750;letter-spacing:.07em;margin-top:9px";
+            card.appendChild(badge);
+          }
+
+          if(stats.complete){
+            badge.textContent="✓ COMPLETED";
+            badge.style.color="#2f6b3f";
+          }else if(stats.answered>0){
+            badge.textContent="IN PROGRESS";
+            badge.style.color="#666";
+          }else{
+            badge.textContent="NOT STARTED";
+            badge.style.color="#999";
+          }
+        });
+
+        var allComplete=SECTIONS.every(function(_,si){return sectionStats(si).complete;});
+        if(allComplete){
+          var done=document.createElement("div");
+          done.className="card";
+          done.style.marginTop="18px";
+          done.innerHTML="<strong>✓ STEP EIGHT COMPLETED</strong><div style='margin-top:8px;font-size:16px;line-height:1.5'>You have answered every Step 8 question.</div>";
+          overlay.appendChild(done);
+        }
+      },0);
+    }
+
+    enhancedProgress.__completionEnhanced=true;
+    window.showProgress=enhancedProgress;
+  }
+
+  var observer=new MutationObserver(function(){addCompletionSystem()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addCompletionSystem,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  var NOTES_PREFIX="step8Notes_";
+
+  function getNotes(si){
+    return localStorage.getItem(NOTES_PREFIX+si)||"";
+  }
+
+  function saveNote(si,text){
+    localStorage.setItem(NOTES_PREFIX+si,text);
+  }
+
+  function showNotes(){
+    var overlay=document.createElement("div");
+    overlay.id="notesOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99996;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="My Step 8 Notes";
+    overlay.appendChild(h);
+
+    var intro=document.createElement("div");
+    intro.className="reading";
+    intro.textContent="Use these notes for thoughts, reflections, or anything you want to remember while working through each section.";
+    overlay.appendChild(intro);
+
+    SECTIONS.forEach(function(section,si){
+      var card=document.createElement("div");
+      card.className="card";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:10px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var textarea=document.createElement("textarea");
+      textarea.style.cssText="width:100%;min-height:130px;box-sizing:border-box;padding:12px;border:1px solid #ccc;border-radius:8px;font:16px/1.5 inherit;resize:vertical";
+      textarea.placeholder="Write your notes for this section here...";
+      textarea.value=getNotes(si);
+      card.appendChild(textarea);
+
+      var saved=document.createElement("div");
+      saved.style.cssText="font-size:13px;color:#666;margin-top:8px;min-height:18px";
+      card.appendChild(saved);
+
+      var button=document.createElement("button");
+      button.className="secondary";
+      button.textContent="Save Note";
+      button.style.marginTop="10px";
+      button.onclick=function(){
+        saveNote(si,textarea.value);
+        saved.textContent="Saved.";
+        setTimeout(function(){saved.textContent=""},1800);
+      };
+      card.appendChild(button);
+
+      overlay.appendChild(card);
+    });
+
+    document.body.appendChild(overlay);
+  }
+
+  function addNotesButton(){
+    if(document.getElementById("notesButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="notesButton";
+    b.className="secondary";
+    b.textContent="My Step 8 Notes";
+    b.onclick=showNotes;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addNotesButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addNotesButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function confirmClearAnswer(index){
+    if(confirm("Are you sure you want to erase this answer?\n\nThis cannot be undone.")){
+      localStorage.removeItem(PREFIX+index);
+      alert("Answer erased.");
+      if(typeof render==="function") render();
+    }
+  }
+
+  function clearAllNotes(){
+    if(confirm("Are you sure you want to erase ALL of your Step 8 notes?\n\nThis cannot be undone.")){
+      SECTIONS.forEach(function(_,si){localStorage.removeItem("step8Notes_"+si);});
+      alert("All Step 8 notes were erased.");
+      if(typeof render==="function") render();
+    }
+  }
+
+  function addClearAnswerButton(){
+    if(typeof mode==="undefined" || mode!=="question") return;
+    if(document.getElementById("clearAnswerButton")) return;
+
+    var textarea=document.querySelector("textarea");
+    if(!textarea) return;
+
+    var container=textarea.parentNode;
+    var index=(typeof qi!=="undefined") ? qi : null;
+    if(index===null) return;
+
+    var b=document.createElement("button");
+    b.id="clearAnswerButton";
+    b.className="secondary";
+    b.textContent="Clear Answer";
+    b.style.marginTop="10px";
+    b.onclick=function(){confirmClearAnswer(index);};
+    container.appendChild(b);
+  }
+
+  function addClearNotesButton(){
+    if(document.getElementById("clearAllNotesButton")) return;
+    if(!document.getElementById("notesOverlay")) return;
+
+    var buttons=document.querySelectorAll("#notesOverlay button");
+    if(!buttons.length) return;
+
+    var b=document.createElement("button");
+    b.id="clearAllNotesButton";
+    b.className="secondary";
+    b.textContent="Clear All Notes";
+    b.style.marginTop="18px";
+    b.onclick=clearAllNotes;
+    document.getElementById("notesOverlay").appendChild(b);
+  }
+
+  var observer=new MutationObserver(function(){
+    addClearAnswerButton();
+    addClearNotesButton();
+  });
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(function(){
+    addClearAnswerButton();
+    addClearNotesButton();
+  },100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function buildSummary(){
+    var overlay=document.createElement("div");
+    overlay.id="summaryOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99995;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var title=document.createElement("h1");
+    title.textContent="Step 8 — Summary";
+    overlay.appendChild(title);
+
+    var answered=0;
+    var total=QUESTIONS.length;
+
+    SECTIONS.forEach(function(section,si){
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si && (localStorage.getItem(PREFIX+index)||"").trim()!=="") answered++;
+      });
+    });
+
+    var completed=answered===total && total>0;
+
+    var status=document.createElement("div");
+    status.className="card";
+    status.innerHTML="<strong>"+(completed?"✓ STEP EIGHT COMPLETED":"STEP EIGHT IN PROGRESS")+
+      "</strong><div style='margin-top:8px;font-size:16px'>"+answered+" of "+total+" questions answered.</div>";
+    overlay.appendChild(status);
+
+    var date=document.createElement("div");
+    date.className="card";
+    date.innerHTML="<strong>Summary Date</strong><div style='margin-top:8px'>"+
+      new Date().toLocaleDateString()+"</div>";
+    overlay.appendChild(date);
+
+    SECTIONS.forEach(function(section,si){
+      var card=document.createElement("div");
+      card.className="card";
+
+      var heading=document.createElement("div");
+      heading.style.cssText="font-size:19px;font-weight:700;margin-bottom:12px";
+      heading.textContent=section.name;
+      card.appendChild(heading);
+
+      var hasContent=false;
+
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex!==si) return;
+        var a=(localStorage.getItem(PREFIX+index)||"").trim();
+        if(!a) return;
+
+        hasContent=true;
+
+        var qbox=document.createElement("div");
+        qbox.style.cssText="font-weight:700;margin-top:14px";
+        qbox.textContent="• "+q.text;
+        card.appendChild(qbox);
+
+        var abox=document.createElement("div");
+        abox.style.cssText="white-space:pre-line;margin-top:7px;padding:10px;border-left:3px solid #ddd;line-height:1.5";
+        abox.textContent=a;
+        card.appendChild(abox);
+      });
+
+      var note=localStorage.getItem("step8Notes_"+si)||"";
+      if(note.trim()){
+        hasContent=true;
+        var nh=document.createElement("div");
+        nh.style.cssText="font-weight:700;margin-top:20px";
+        nh.textContent="My Notes";
+        card.appendChild(nh);
+
+        var nb=document.createElement("div");
+        nb.style.cssText="white-space:pre-line;margin-top:7px;padding:10px;border-left:3px solid #ddd;line-height:1.5";
+        nb.textContent=note;
+        card.appendChild(nb);
+      }
+
+      if(hasContent) overlay.appendChild(card);
+    });
+
+    var print=document.createElement("button");
+    print.className="secondary";
+    print.textContent="Print / Save as PDF";
+    print.style.marginTop="18px";
+    print.onclick=function(){window.print()};
+    overlay.appendChild(print);
+
+    document.body.appendChild(overlay);
+  }
+
+  function addSummaryButton(){
+    if(document.getElementById("summaryButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="summaryButton";
+    b.className="secondary";
+    b.textContent="Step 8 Summary";
+    b.onclick=buildSummary;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addSummaryButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addSummaryButton,100);
+})();
+</script>
+
+
+<button id="shareReview" type="button" onclick="shareReview()" style="margin:10px 0;">Share</button>
+<div id="sharePanel" class="share-panel">
+  <strong>Share Step 8 — Review My Answers</strong>
+  <div class="share-actions">
+    <button type="button" onclick="shareByEmail()">Email</button>
+    <button type="button" onclick="shareByText()">Text Message</button>
+    <button type="button" onclick="copyReviewToClipboard()">Copy to Clipboard</button>
+  </div>
+  <div id="shareStatus" class="share-status"></div>
+</div>
+
+<script>
+function getStepReviewText() {
+  const step = 8;
+  let lines = [];
+  lines.push("An Interactive Working Guide to the 12 Steps of NA");
+  lines.push("Step " + step + " — My Review Answers");
+  lines.push("");
+  const root = document.body;
+  // Collect visible question/answer pairs from the current Step 8 review.
+  // Prefer review containers and textarea/input values, while avoiding navigation controls.
+  const fields = Array.from(root.querySelectorAll("textarea, input[type='text'], input:not([type])"));
+  let q = 0;
+  fields.forEach(el => {
+    if (!el.offsetParent) return;
+    const value = (el.value || "").trim();
+    if (!value) return;
+    const prev = el.closest(".question, .q, .card, .section, div");
+    let label = "";
+    if (prev) {
+      const heading = prev.querySelector("h1,h2,h3,h4,strong,label");
+      if (heading) label = heading.textContent.trim();
+    }
+    if (!label) {
+      q++;
+      label = "Answer " + q;
+    }
+    lines.push(label + ":");
+    lines.push(value);
+    lines.push("");
+  });
+  // If the review page has generated text, include it as a fallback.
+  if (lines.length <= 4) {
+    const review = document.querySelector("#review, .review, [id*='review']");
+    if (review) {
+      const clone = review.cloneNode(true);
+      clone.querySelectorAll("button, script, style").forEach(x => x.remove());
+      const body = clone.innerText.trim();
+      if (body) lines.push(body);
+    }
+  }
+  return lines.join("\n").trim();
+}
+
+function shareReview() {
+  const panel = document.getElementById("sharePanel");
+  if (panel) panel.classList.toggle("show");
+}
+
+function shareByEmail() {
+  const body = encodeURIComponent(getStepReviewText());
+  window.location.href = "mailto:?subject=" + encodeURIComponent("NA Step 8 — My Review Answers") + "&body=" + body;
+}
+
+function shareByText() {
+  const body = encodeURIComponent(getStepReviewText());
+  // sms: works across common iOS/Android configurations; the user selects the recipient.
+  window.location.href = "sms:?&body=" + body;
+}
+
+async function copyReviewToClipboard() {
+  const text = getStepReviewText();
+  try {
+    await navigator.clipboard.writeText(text);
+    const status = document.getElementById("shareStatus");
+    if (status) status.textContent = "Review answers copied to the clipboard.";
+  } catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand("copy");
+      const status = document.getElementById("shareStatus");
+      if (status) status.textContent = "Review answers copied to the clipboard.";
+    } finally {
+      document.body.removeChild(ta);
+    }
+  }
+}
+</script>
+</body></html>

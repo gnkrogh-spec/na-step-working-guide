@@ -1,0 +1,1032 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff"><title>An Interactive Working Guide to the 12 Steps of NA — Step 10</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f3f5;color:#202124;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.app{max-width:760px;margin:auto;min-height:100vh;background:#fff}header{position:sticky;top:0;z-index:5;background:#fffffff5;backdrop-filter:blur(10px);border-bottom:1px solid #ddd;padding:14px 18px}
+.title{font-size:22px;font-weight:750}.sub{font-size:13px;color:#666;margin-top:2px}.progress{height:4px;background:#eee}.bar{height:100%;background:#444;width:0;transition:.2s}
+main{padding:22px 18px 120px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#666;font-weight:750;margin-bottom:8px}
+h1{font-size:29px;line-height:1.18;margin:0 0 18px}.reading{font-size:17px;line-height:1.68;white-space:pre-line;color:#303238}
+.card{background:#fafafa;border:1px solid #ddd;border-radius:14px;padding:18px;margin-bottom:20px}
+.question{font-size:21px;line-height:1.45;font-weight:650;margin:12px 0 18px}textarea{width:100%;min-height:300px;border:1px solid #aaa;border-radius:12px;padding:15px;font:17px/1.5 inherit;resize:vertical;outline:none}
+textarea:focus{border-color:#333;box-shadow:0 0 0 3px #0001}button{border:0;border-radius:10px;padding:12px 15px;background:#222;color:#fff;font-size:15px;cursor:pointer}
+button.secondary{background:#e8e9ec;color:#222}button:disabled{opacity:.35;cursor:default}.bottom{position:fixed;z-index:10;bottom:0;left:0;right:0;background:#fffffff8;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;justify-content:center}
+.status{font-size:12px;color:#666;margin-top:8px}.resume{border:1px solid #ddd;border-radius:14px;padding:16px;background:#fafafa;margin:18px 0}
+
+.share-panel{display:none;margin-top:16px;padding:16px;border:1px solid #ddd;border-radius:12px;background:#fafafa}
+.share-panel.show{display:block}
+.share-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.share-actions button{min-width:150px}
+.share-status{margin-top:10px;font-size:.92rem;color:#555}
+</style></head><body><div class="app">
+<header><div class="title">An Interactive Working Guide to the 12 Steps of NA</div><div class="sub"></div></header>
+<div class="progress"><div id="bar" class="bar"></div></div><main id="main"></main>
+<div class="bottom"><button id="home" class="secondary">Home</button><button id="back" class="secondary">← Back</button><button id="next">Begin Step 10 →</button></div>
+</div>
+<script>
+const INTRO="\"We continued to take personal inventory and when we were wrong promptly admitted it.\" Through working the first nine steps, our lives have changed dramatically - way beyond what we expected when we first came to Narcotics Anonymous. We've become more honest, humble, and concerned about others, less fearful, selfish, and resentful. But even such profound changes aren't guaranteed to be permanent. Because we have the disease of addiction, we can always return to what we were before. Recovery has a price - it demands our vigilance. We have to continue doing all the things we have been doing for our recovery so far. We have to continue to be honest, to have trust and faith, to pay attention to our actions and reactions and to assess how those are working for us or against us. We also have to pay attention to how our actions affect others, and when the effects are negative or harmful, promptly step forward and take responsibility for the harm caused and for repairing it. In short, we have to continue to take personal inventory and promptly admit our wrongs. As you can see, the Tenth Step has us repeat much of the work we did in Steps Four through Nine, though in a much-shortened format. The format suggested in this guide is one that covers in a general way the elements of a personal inventory. Some of us may find that we need to add questions that focus on specific areas that are affecting our individual recovery to the questions already in this guide. We may find some additional areas upon which to focus from IP #9, Living the Program. Our sponsor may have specific direction for us on this point. As noted before, this guide is meant to be a starting point, not the final word on any of the steps. \u0001 Why is a Tenth Step necessary? \u0001 What is the purpose of continuing to take personal inventory? \u0001 How can my sponsor help me?";
+const SECTIONS=[{"name": "Feeling versus Doing", "reading": "We use Step Ten to create and maintain a continuous awareness of what we're feeling, thinking, and, even more importantly, what we're doing. Before we begin a regular pattern of personal inventory, it's imperative that we understand what we are assessing. It won't do much good to make a list of our feelings without tying them to the actions that they generate or fail to generate. We may often be feeling very badly though behaving very well, or vice versa. For instance, an NA member walks into her home group. \"How are you?\" someone asks. \"Terrible,\" she replies. Of course, this member is referring to the way she feels. She can't possibly be referring to what she's doing, because she is behaving very well indeed: She's going to a meeting, honestly expressing how she feels, and reaching out to another member who will be supportive. On the other hand, we may be busy indulging our impulses and acting on character defects. On the surface, we may feel very good. It usually takes a while before we notice the emptiness that goes along with living this way. We're avoiding the work that will help us stay clean. We're indulging our impulses, and taking the easy way out. And we know where this will take us! The Tenth Step will keep us aware of ourselves so we don't end up going to either extreme. We don't have to beat ourselves up because we feel badly. We can instead focus on the positive action we're taking. It may even turn out that by shifting our focus this way, we'll wind up feeling better, too. Staying aware of what we're doing helps us see patterns of destruction long before they become entrenched, so we don't wind up feeling good at the cost of what's good for us. We as addicts also tend to make judgments about what we are feeling. Anything that feels bad we immediately want to stop. We often don't take into account that the way we're feeling makes perfect sense when we consider the circumstances. For instance, many of us have problems being angry. We don't like the way it feels. We judge it, concluding we have no right to feel that way, and then we do our very best to suppress our angry feelings. Yet, we may be experiencing a situation that would make anyone angry. Perhaps we're in a relationship with someone who constantly fails to treat us with respect. Perhaps we've been passed over for several well-deserved promotions at work. Our response to these situations is anger. We've been treated poorly - of course we're angry. Now comes the moment when our recovery can propel us forward into greater self-respect or our disease can drag us down into a thick fog of depression and resentment. It all has to do with how we respond to our anger. If we scream and curse and throw things, we'll destroy any possibility of making our relationship or job situation better. If we do nothing and bury our feelings of anger, we'll become depressed and resentful, and that won't improve our situation either. But if we take positive action aimed at improving the situation, it may get better; at the very least, we'll know when it's time to leave and be able to do so without regrets. Sometimes the only thing we need to do with our feelings is feel them. We don't need to react to them. For instance, if we've lost someone, we are going to feel sorrow. Our sorrow may go on for a long time. It will lift when we've grieved sufficiently. We can't afford to let our sorrow drag us down to the point where we can't go on with our lives, but we should expect to be affected. We may be easily distracted or have a hard time participating in activities that are supposed to be enjoyable. We need to strike a balance between being in denial of our feelings and letting them overwhelm us; we don't want to go to either extreme. This seems like a simple concept- almost as if it could go without saying-but many of our members share that it takes years of recovery before we're able to achieve a balance most of the time. So the Tenth Step grants us the freedom to feel our feelings by helping us see the difference between feeling and doing.", "count": 4}, {"name": "Right and Wrong", "reading": "The Tenth Step tells us that we have to promptly admit when we're wrong. The step seems to assume that we know when we're wrong, but the fact is that most of us don't-at least not right away. It takes the consistent practice of taking a personal inventory for us to become proficient at figuring out when we're wrong. Let's face it. When we were new in recovery, we had been at odds with the rest of the world for some time. As the Basic Text says, our \"living skills were reduced to the animal level.\" We didn't know how to communicate with others well. We began to learn in recovery, but in the process1 we made a lot of mistakes. Many of us went through a period of time when we became very rigid about the values we had developed in recovery. We applied that rigidity not only to ourselves, but to everyone around us. We thought it was principled and correct to confront those whose behavior was \"unacceptable.\" In truth, it was our behavior that was unacceptable. We were self- righteous and overbearing. We were wrong. Or some of us, after years of serving as a doormat for everyone to walk across, decided our recovery required that we become assertive. But we went too far. We demanded that everyone treat us perfectly all the time. No one could have a bad day and fail to return our phone call. No one was allowed to be emotionally unavailable to us for any length of time. We angrily demanded perfect service at the places we did business. We weren't being assertive. We were being immature and belligerent. We were wrong. We can even end up being wrong if someone hurts us. How? Say our sponsor says something very hurtful to us. Instead of taking it up with our sponsor, we talk to ten or twelve of our closest friends at the next three meetings we go to. Before the week is through, half our local NA community is talking about the rotten thing so-and-so said to one of his sponsees -and that's if the story stayed as it was originally! So the situation started out with us having done no wrong, but ended up with us being responsible for damaging our sponsor's reputation in the program-the place where he needs, as much as we do, to be allowed to make mistakes and recover at his own pace.", "count": 6}, {"name": "A Personal Inventory", "reading": "? It Works: How and Why tells us that while our goal is to maintain continuous awareness of ourselves throughout each day, it's very helpful to sit down at the end of each day and \"work\" this step. We need the consistency of doing something every day for it to become a habit and to internalize the spiritual principles of the activity. As we stay clean and our days of continuous abstinence turn into weeks and months and years, we'll find that taking a personal inventory has become second nature. We'll find that keeping track of our spiritual fitness comes naturally, without our having to think too much about it. We'll notice right away when we're headed in a direction we don't want to go or about to engage in a behavior that's sure to cause harm. We become able to correct it. So, the frequency of our formal efforts to take personal inventory may depend on our experience with recovery. In the beginning, some of us sat down at the beginning of our day, the end of our day, or even both times and went through IP #9, Living the Program, or something similar and \"took our spiritual temperature.\" The point is that we want to keep at it until it becomes a habit, until it's second nature to continuously monitor our recovery and our spiritual state, notice when we're going off-course right away, and work to change it.", "count": 36}, {"name": "Spiritual Principles", "reading": "In the Tenth Step, we will focus on self-discipline, honesty and integrity. Self-discipline is essential to our recovery. When we were using, we were self-seeking and self-absorbed. We always took the easy way out, giving in to our impulses, ignoring any opportunity for personal growth. If there was anything in our lives that required a regular commitment, chances are that we only followed through if it wasn't too hard, if it didn't get in the way of our self-indulgence, or if we happened to feel like it. The self-discipline of recovery calls on us to do certain things regardless of how we feel. We need to go to meetings regularly even if we're tired, busy at work, having fun, or filled with despair; we need to go regularly even when - especially when -we re feeling hostile toward the demands that recovery makes on us. We go to meetings, call our sponsor, and work with others because we have decided we want recovery in NA, and those things are the actions that will help assure our continued recovery. Sometimes we're enthusiastic about these activities. Sometimes it takes every bit of willingness we possess to continue with them. Sometimes they become so woven into our daily existence, we're hardly aware that we're doing them.", "count": 4}, {"name": "Moving On", "reading": "One of the most wonderful things about the Tenth Step is that the more we work it, the less we'll need the second half of it. In other words, we won't find ourselves in the wrong as often. When we come to recovery, most of us have never been able to have any kind of long-term relationship, certainly not any in which we resolved our conflicts in a healthy and mutually respectful way. Some of us had raging fights with people and, once they were over, never spoke of the underlying problems that caused the fights. Some of us went to another extreme, never disagreeing at all with the people who were supposed to be our closest friends and relatives. It seemed easier to keep our distance than to risk creating a conflict that we may then have had to deal with. Finally, some of us just walked away from any relationship in which conflict arose. It didn't matter how much we were hurting the other person; it seemed easier than working through a problem and building a stronger relationship. The Tenth Step makes it possible for us to have long-term relationships - and we need to have long-term relationships, especially in NA. After all, we depend on each other for our very lives. Many of us feel deeply connected to the people who came to NA when we did and have stayed around. We've done service work with one another, shared apartments with one another, married one another, and sometimes divorced one another. We've celebrated milestones in each other's lives: births, graduations, buying homes, promotions, and recovery anniversaries. We've mourned losses together, and we've comforted one another through the painful times in life. We've touched each other's lives and formed a shared history. We are a community. Along with learning to admit when we're wrong comes a freedom that is unlike any we’ve ever experienced before. It becomes so much more natural for us to admit when we re wrong that we wonder why we ever found it so terrifying. Perhaps because we felt so \"less than\" in so many ways, an admission of a mistake felt like we were revealing our deepest secret: our inferiority. But when we found out through working the steps that we weren't inferior at all, that we had just as much value as anyone else, it no longer seemed so crushing to admit we were wrong. We began to feel whole.", "count": 2}];
+const QUESTIONS=[{"sectionIndex": 0, "text": "Why is a Tenth Step necessary?"}, {"sectionIndex": 0, "text": "What is the purpose of continuing to take personal inventory?"}, {"sectionIndex": 0, "text": "How can my sponsor help me?"}, {"sectionIndex": 0, "text": "Are there times in my life when I am confused about the difference between my feelings and my actions? Expand on this."}, {"sectionIndex": 1, "text": "Have there been some times in my recovery when I've been wrong and not been aware of it until later? What were they?"}, {"sectionIndex": 1, "text": "How do my wrongs affect my own life? Others' lives?"}, {"sectionIndex": 1, "text": "\"When we were wrong promptly admitted it\" -what does this mean to me?"}, {"sectionIndex": 1, "text": "Have there been times in my recovery when I've made situations worse by talking to someone before I should have or blaming my behavior on someone else? What were they?"}, {"sectionIndex": 1, "text": "How does promptly admitting my wrongs help me change my behavior?"}, {"sectionIndex": 1, "text": "Have there been situations in my recovery in which I felt uncomfortable about acknowledging something I had done well? Describe."}, {"sectionIndex": 2, "text": "Why is it important to continue to take personal inventory until it becomes second nature?"}, {"sectionIndex": 2, "text": "Have I reaffirmed my faith in a loving, caring God today?"}, {"sectionIndex": 2, "text": "Have I sought out the guidance of my Higher Power today? How?"}, {"sectionIndex": 2, "text": "What have I done to be of service to God and the people around me?"}, {"sectionIndex": 2, "text": "Has God given me anything to be grateful for today?"}, {"sectionIndex": 2, "text": "Do I believe that my Higher Power can show me how to live and better align myself with the will of that power?"}, {"sectionIndex": 2, "text": "Do I see any \"old patterns\" in my life today? If so, which ones?"}, {"sectionIndex": 2, "text": "Have I been resentful, selfish, dishonest, or afraid?"}, {"sectionIndex": 2, "text": "Have I set myself up for disappointment?"}, {"sectionIndex": 2, "text": "Have I been kind and loving toward all?"}, {"sectionIndex": 2, "text": "Have I been worrying about yesterday or tomorrow?"}, {"sectionIndex": 2, "text": "Did I allow myself to become obsessed about anything?"}, {"sectionIndex": 2, "text": "Have I allowed myself to become too hungry, angry, lonely, or tired?"}, {"sectionIndex": 2, "text": "Am I taking myself too seriously in any area of my life?"}, {"sectionIndex": 2, "text": "Do I suffer from any physical, mental, or spiritual problems?"}, {"sectionIndex": 2, "text": "Have I kept something to myself that I should have discussed with my sponsor?"}, {"sectionIndex": 2, "text": "Did I have any extreme feelings today? What were they and why did I have them?"}, {"sectionIndex": 2, "text": "What are the problem areas in my life today?"}, {"sectionIndex": 2, "text": "Which defects played a part in my life today? How?"}, {"sectionIndex": 2, "text": "Was there fear in my life today?"}, {"sectionIndex": 2, "text": "What did I do today that I wish I hadn't done?"}, {"sectionIndex": 2, "text": "What didn't I do today that I wish I had done?"}, {"sectionIndex": 2, "text": "Am I willing to change?"}, {"sectionIndex": 2, "text": "Has there been conflict in any of my relationships today? What?"}, {"sectionIndex": 2, "text": "Am I maintaining personal integrity in my relations with others?"}, {"sectionIndex": 2, "text": "Have I harmed myself or others, either directly or indirectly, today? How?"}, {"sectionIndex": 2, "text": "Do I owe any apologies or amends?"}, {"sectionIndex": 2, "text": "Where was I wrong? If I could do it over again, what would I do differently? How might I do better next time?"}, {"sectionIndex": 2, "text": "Did I stay clean today?"}, {"sectionIndex": 2, "text": "Was I good to myself today?"}, {"sectionIndex": 2, "text": "What were the feelings I had today? How did I use them to choose principle-centered action?"}, {"sectionIndex": 2, "text": "What did I do to be of service to others today? What have I done today about which I feel positive?"}, {"sectionIndex": 2, "text": "What has given me satisfaction today?"}, {"sectionIndex": 2, "text": "What did I do today that I want to be sure I repeat?"}, {"sectionIndex": 2, "text": "Did I go to a meeting or talk to another recovering addict today?"}, {"sectionIndex": 2, "text": "What do I have to be grateful for today?"}, {"sectionIndex": 3, "text": "Why is the principle of self-discipline necessary in this step?"}, {"sectionIndex": 3, "text": "How can practicing the principle of self-discipline in this step affect my entire recovery?"}, {"sectionIndex": 3, "text": "How does being aware of my wrongs (self-honesty) help me change my behavior?"}, {"sectionIndex": 3, "text": "What situations in my recovery have called on me to practice the principle of integrity? How have I responded? Which times have I felt good about my response, and which times have I not?"}, {"sectionIndex": 4, "text": "How does the Tenth Step help me live in the present?"}, {"sectionIndex": 4, "text": "What am I doing differently as a result of working Step Ten?"}];
+const PREFIX="step-ten-v1-";
+const STATE="step-ten-v1-resume-state";
+let mode="intro",si=0,qi=0;
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]})}
+function cleanReading(s){return s.replace(/\s+/g," ").trim();}
+function saveAnswer(){const a=document.getElementById("answer");if(a)localStorage.setItem(PREFIX+qi,a.value)}
+function getState(){try{return JSON.parse(localStorage.getItem(STATE)||"null")}catch(e){return null}}
+function saveState(){localStorage.setItem(STATE,JSON.stringify({mode:mode,si:si,qi:qi}))}
+function hasAnswers(){return QUESTIONS.some((_,i)=>localStorage.getItem(PREFIX+i))}
+function update(){document.getElementById("bar").style.width=(mode==="intro"?0:mode==="reading"?((si)/SECTIONS.length*100):((qi+1)/QUESTIONS.length*100))+"%";}
+
+function getResumeState(){
+ try{
+   const raw=localStorage.getItem(STATE);
+   return raw ? JSON.parse(raw) : null;
+ }catch(e){ return null; }
+}
+function saveResumeState(){
+ if(mode==="question" || mode==="reading"){
+   localStorage.setItem(STATE,JSON.stringify({mode:mode,si:si,qi:qi}));
+ }
+}
+function toc(){
+ mode="toc";
+ main.innerHTML='<div class="eyebrow">Narcotics Anonymous</div><h1>Table of Contents</h1>'+
+   '<div class="card"><div class="reading">Choose a step to begin or continue your work. You can return here at any time.</div></div>'+
+   '<div id="tocList"></div>';
+ const list=document.getElementById("tocList");
+ const steps=["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve"];
+ steps.forEach(function(name,idx){
+   const n=idx+1;
+   const b=document.createElement("button");
+   b.textContent="Step "+name;
+   b.style.cssText="display:block;width:100%;text-align:left;margin:10px 0;padding:16px 18px;font-size:17px";
+   b.onclick=function(){window.location.href="NA_Step_"+n+"_WORKING_COPY.html"};
+   list.appendChild(b);
+ });
+ back.disabled=true;
+ next.textContent="Begin Step Ten →";
+ update();
+}
+function intro(){
+ mode="intro";
+  document.querySelector("header .sub").textContent="Step Ten";
+  document.title="An Interactive Working Guide to the 12 Steps of NA — Step Ten";
+ const saved=getResumeState();
+ let resumeText="";
+ if(saved && saved.mode!=="intro"){
+   if(saved.mode==="question"){
+     const q=QUESTIONS[saved.qi];
+     const first=QUESTIONS.findIndex(x=>x.sectionIndex===saved.si); resumeText=SECTIONS[q.sectionIndex].name+" — Question "+(saved.qi-first+1)+" of "+SECTIONS[q.sectionIndex].count;
+   } else {
+     resumeText=SECTIONS[saved.si].name+" — Reading";
+   }
+ }
+ main.innerHTML=
+   '<div class="eyebrow">Step 10</div><h1>Step 10</h1>'+
+   '<div class="card"><div class="reading">'+esc(cleanReading(INTRO))+'</div></div>'+
+   (resumeText?
+     '<div class="resume" style="border:1px solid #ddd;border-radius:14px;padding:16px;background:#fafafa;margin:18px 0">'+
+       '<div class="eyebrow">Continue Where You Left Off</div>'+
+       '<div style="font-size:17px;line-height:1.4;margin-bottom:12px">'+esc(resumeText)+'</div>'+
+       '<button id="continue">Continue Step 10 →</button>'+
+     '</div>':'');
+ if(saved && resumeText){
+   document.getElementById("continue").onclick=function(){
+     mode=saved.mode; si=saved.si; qi=saved.qi; render();
+   };
+ }
+ back.disabled=true;
+ next.textContent=resumeText?"Restart Step 10":"Begin Step 10 →";
+ update();
+}
+function reading(){
+ mode="reading";saveResumeState();const s=SECTIONS[si];
+ main.innerHTML='<div class="eyebrow">Section '+(si+1)+' of '+SECTIONS.length+'</div><h1>'+esc(s.name)+'</h1><div class="card"><div class="reading">'+esc(cleanReading(s.reading))+'</div></div><button id="begin">Begin this section’s questions →</button>';
+ document.getElementById("begin").onclick=function(){qi=QUESTIONS.findIndex(q=>q.sectionIndex===si);mode="question";render()};
+ back.disabled=si===0;next.textContent="Questions →";update();
+}
+function question(){
+ mode="question";saveResumeState();const q=QUESTIONS[qi],ans=localStorage.getItem(PREFIX+qi)||"";
+ const sec=SECTIONS[q.sectionIndex]; const first=QUESTIONS.findIndex(x=>x.sectionIndex===q.sectionIndex); const num=qi-first+1; main.innerHTML='<div class="eyebrow">'+esc(sec.name)+' • Question '+num+' of '+sec.count+'</div><div class="question">• '+esc(q.text)+'</div><textarea id="answer" placeholder="Type your answer here...">'+esc(ans)+'</textarea><div class="status">Saved automatically on this device.</div>';
+ const a=document.getElementById("answer");a.addEventListener("input",function(){localStorage.setItem(PREFIX+qi,a.value);saveState()});
+ back.disabled=qi===0;next.textContent=qi===QUESTIONS.length-1?"Finish Step 10":"Save & Next →";update();
+}
+function render(){
+  if(mode==="welcome")welcome();
+  else if(mode==="toc")toc();
+  else if(mode==="intro")intro();
+  else if(mode==="reading")reading();
+  else question();
+  saveResumeState();
+  update();
+}
+home.onclick=function(){if(mode==="question")saveAnswer();mode="intro";render()};
+back.onclick=function(){
+ if(mode==="question"){saveAnswer();const current=QUESTIONS[qi].sectionIndex,first=QUESTIONS.findIndex(q=>q.sectionIndex===current);if(qi===first){si=current;mode="reading"}else qi--;render()}
+ else if(mode==="reading"){if(si===0)mode="intro";else si--;render()}
+ else if(mode==="toc"){mode="welcome";render()}
+};
+next.onclick=function(){
+  if(mode==="intro"){
+   const saved=getResumeState();
+   if(saved && next.textContent==="Restart Step 10"){
+     if(confirm("Restart Step 10? Your saved answers will remain on this device.")){
+       si=0;qi=0;mode="reading";render();
+     }
+   }else{
+     si=0;qi=0;mode="reading";render();
+   }
+   return;
+}
+ if(mode==="reading"){qi=QUESTIONS.findIndex(q=>q.sectionIndex===si);mode="question";render();return}
+ saveAnswer();
+ if(qi<QUESTIONS.length-1){const old=QUESTIONS[qi].sectionIndex;qi++;if(QUESTIONS[qi].sectionIndex!==old){si=QUESTIONS[qi].sectionIndex;mode="reading"}render()}
+ else{alert("Step 10 is complete. Your answers remain saved on this device. Moving to Step 11.");window.location.href="NA_Step_11_WORKING_COPY.html"}
+};
+render();
+</script>
+<script>
+(function(){
+  function reviewAnswers(){
+    var overlay=document.createElement("div");
+    overlay.id="reviewOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99999;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="Step 10 — Review My Answers";
+    overlay.appendChild(h);
+
+    // Review / Share tabs for the Review My Answers page.
+    var tabBar=document.createElement("div");
+    tabBar.style.cssText="display:flex;gap:8px;margin:14px 0 20px;border-bottom:1px solid #ddd;padding-bottom:10px";
+    var reviewTab=document.createElement("button");
+    reviewTab.textContent="Review My Answers";
+    reviewTab.className="secondary";
+    var shareTab=document.createElement("button");
+    shareTab.textContent="Share";
+    shareTab.className="secondary";
+    tabBar.appendChild(reviewTab); tabBar.appendChild(shareTab);
+    overlay.appendChild(tabBar);
+
+    var reviewContent=document.createElement("div");
+    overlay.appendChild(reviewContent);
+
+    var shareContent=document.createElement("div");
+    shareContent.style.display="none";
+    shareContent.className="card";
+    var shareTitle=document.createElement("h2");
+    shareTitle.textContent="Share Step 10 — My Review Answers";
+    shareContent.appendChild(shareTitle);
+    var shareIntro=document.createElement("p");
+    shareIntro.textContent="Choose how you would like to share your saved answers with your sponsor or another person.";
+    shareContent.appendChild(shareIntro);
+    var shareButtons=document.createElement("div");
+    shareButtons.style.cssText="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px";
+    var emailBtn=document.createElement("button"); emailBtn.textContent="Email";
+    var textBtn=document.createElement("button"); textBtn.textContent="Text Message";
+    var clipBtn=document.createElement("button"); clipBtn.textContent="Copy to Clipboard";
+    shareButtons.appendChild(emailBtn); shareButtons.appendChild(textBtn); shareButtons.appendChild(clipBtn);
+    shareContent.appendChild(shareButtons);
+    var shareStatus=document.createElement("div");
+    shareStatus.style.cssText="margin-top:12px;color:#666";
+    shareContent.appendChild(shareStatus);
+    overlay.appendChild(shareContent);
+
+    function buildReviewShareText(){
+      var lines=["An Interactive Working Guide to the 12 Steps of NA","Step 10 — My Review Answers",""];
+      var has=false;
+      SECTIONS.forEach(function(section,si){
+        var sectionHas=false;
+        var sectionLines=[];
+        QUESTIONS.forEach(function(q,index){
+          if(q.sectionIndex===si){
+            var a=localStorage.getItem(PREFIX+index)||"";
+            if(a.trim()!==""){
+              has=true; sectionHas=true;
+              sectionLines.push("• "+q.text);
+              sectionLines.push("My Answer:");
+              sectionLines.push(a.trim());
+              sectionLines.push("");
+            }
+          }
+        });
+        if(sectionHas){ lines.push(section.name.toUpperCase()); lines.push(""); lines=lines.concat(sectionLines); }
+      });
+      if(!has) lines.push("No answers have been saved yet.");
+      return lines.join("\n").trim();
+    }
+
+    reviewTab.onclick=function(){ reviewContent.style.display="block"; shareContent.style.display="none"; };
+    shareTab.onclick=function(){ reviewContent.style.display="none"; shareContent.style.display="block"; };
+    emailBtn.onclick=function(){ window.location.href="mailto:?subject="+encodeURIComponent("NA Step 10 — My Review Answers")+"&body="+encodeURIComponent(buildReviewShareText()); };
+    textBtn.onclick=function(){ window.location.href="sms:?&body="+encodeURIComponent(buildReviewShareText()); };
+    clipBtn.onclick=function(){
+      var txt=buildReviewShareText();
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(function(){shareStatus.textContent="Your review answers have been copied to the clipboard.";}).catch(function(){shareStatus.textContent="Clipboard access was not available on this device.";});
+      } else {
+        var ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.left="-9999px"; document.body.appendChild(ta); ta.select();
+        try{document.execCommand("copy"); shareStatus.textContent="Your review answers have been copied to the clipboard.";}catch(e){shareStatus.textContent="Clipboard access was not available on this device.";}
+        document.body.removeChild(ta);
+      }
+    };
+
+    var found=false;
+
+    SECTIONS.forEach(function(section,si){
+      var answered=[];
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          var a=localStorage.getItem(PREFIX+index)||"";
+          if(a.trim()!=="") answered.push({q:q,index:index,a:a});
+        }
+      });
+
+      if(answered.length){
+        found=true;
+        var sh=document.createElement("div");
+        sh.className="eyebrow";
+        sh.style.marginTop="28px";
+        sh.textContent=section.name;
+        reviewContent.appendChild(sh);
+
+        answered.forEach(function(item){
+          var card=document.createElement("div");
+          card.className="card";
+
+          var q=document.createElement("div");
+          q.className="question";
+          q.textContent="• "+item.q.text;
+          card.appendChild(q);
+
+          var label=document.createElement("div");
+          label.className="status";
+          label.textContent="MY ANSWER";
+          label.style.cssText="font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#666;font-weight:750;margin:10px 0 7px";
+          card.appendChild(label);
+
+          var ans=document.createElement("div");
+          ans.style.cssText="white-space:pre-line;font-size:17px;line-height:1.55;border-top:1px solid #ddd;padding-top:10px";
+          ans.textContent=item.a;
+          card.appendChild(ans);
+
+          var edit=document.createElement("button");
+          edit.className="secondary";
+          edit.textContent="Edit Answer";
+          edit.style.marginTop="14px";
+          edit.onclick=function(){
+            overlay.remove();
+            qi=item.index;
+            si=item.q.sectionIndex;
+            mode="question";
+            render();
+          };
+          card.appendChild(edit);
+
+          reviewContent.appendChild(card);
+        });
+      }
+    });
+
+    if(!found){
+      var empty=document.createElement("div");
+      empty.className="card";
+      empty.textContent="You have not saved any answers yet.";
+      reviewContent.appendChild(empty);
+    }
+
+    document.body.appendChild(overlay);
+  }
+
+  function addButton(){
+    if(document.getElementById("reviewAnswersButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var buttons=document.querySelectorAll(".bottom button");
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="reviewAnswersButton";
+    b.className="secondary";
+    b.textContent="Step 10 — Review My Answers";
+    b.onclick=reviewAnswers;
+
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  // The existing app calls render() dynamically, so observe the Home screen.
+  var observer=new MutationObserver(function(){addButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function showProgress(){
+    var overlay=document.createElement("div");
+    overlay.id="progressOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99998;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="My Progress";
+    overlay.appendChild(h);
+
+    var totalAnswered=0, totalQuestions=QUESTIONS.length;
+
+    SECTIONS.forEach(function(section,si){
+      var count=0,total=0;
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          total++;
+          if((localStorage.getItem(PREFIX+index)||"").trim()!=="") count++;
+        }
+      });
+      totalAnswered+=count;
+
+      var card=document.createElement("div");
+      card.className="card";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:8px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var status=document.createElement("div");
+      status.className="status";
+      status.textContent=count+" / "+total+" questions answered";
+      card.appendChild(status);
+
+      var bar=document.createElement("div");
+      bar.style.cssText="height:7px;background:#eee;border-radius:6px;margin-top:12px;overflow:hidden";
+      var fill=document.createElement("div");
+      fill.style.cssText="height:100%;background:#444;width:"+((count/total)*100)+"%";
+      bar.appendChild(fill);
+      card.appendChild(bar);
+
+      card.onclick=function(){
+        overlay.remove();
+        si = si;
+        mode="reading";
+        render();
+      };
+      overlay.appendChild(card);
+    });
+
+    var summary=document.createElement("div");
+    summary.className="card";
+    summary.style.marginTop="24px";
+    summary.innerHTML="<strong>Overall Progress</strong><div style='font-size:17px;margin-top:8px'>"+
+      totalAnswered+" / "+totalQuestions+" questions answered</div>";
+    overlay.insertBefore(summary, overlay.children[2]);
+
+    document.body.appendChild(overlay);
+  }
+
+  function addProgressButton(){
+    if(document.getElementById("progressAnswersButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="progressAnswersButton";
+    b.className="secondary";
+    b.textContent="My Progress";
+    b.onclick=showProgress;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(addProgressButton);
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addProgressButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function showSections(){
+    var overlay=document.createElement("div");
+    overlay.id="sectionNavOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99997;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="Step 10 Sections";
+    overlay.appendChild(h);
+
+    SECTIONS.forEach(function(section, index){
+      var card=document.createElement("div");
+      card.className="card";
+      card.style.cursor="pointer";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:6px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var desc=document.createElement("div");
+      desc.className="status";
+      desc.textContent="Read this section";
+      card.appendChild(desc);
+
+      card.onclick=function(){
+        overlay.remove();
+        si=index;
+        mode="reading";
+        render();
+      };
+      overlay.appendChild(card);
+    });
+
+    document.body.appendChild(overlay);
+  }
+
+  function addSectionButton(){
+    if(document.getElementById("sectionNavButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="sectionNavButton";
+    b.className="secondary";
+    b.textContent="Browse Sections";
+    b.onclick=showSections;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addSectionButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addSectionButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  
+  function restoreAnswers(file){
+    if(!file){
+      alert("No backup file was selected.");
+      return;
+    }
+
+    var reader=new FileReader();
+
+    reader.onerror=function(){
+      alert("Safari could not read that backup file.");
+    };
+
+    reader.onload=function(){
+      try{
+        var data=JSON.parse(reader.result);
+
+        if(!data || !data.answers || typeof data.answers!=="object"){
+          throw new Error("Invalid backup format");
+        }
+
+        var restored=0;
+        if(data.notes && typeof data.notes==="object"){
+          Object.keys(data.notes).forEach(function(si){
+            if(typeof SECTIONS!=="undefined" && SECTIONS[Number(si)]){
+              localStorage.setItem(NOTES_PREFIX+si,String(data.notes[si]||""));
+            }
+          });
+        }
+
+        Object.keys(data.answers).forEach(function(index){
+          var n=Number(index);
+          if(Number.isInteger(n) && typeof QUESTIONS!=="undefined" && QUESTIONS[n]){
+            localStorage.setItem(PREFIX+n,String(data.answers[index]));
+            restored++;
+          }
+        });
+
+        if(restored===0){
+          throw new Error("No matching answers");
+        }
+
+        alert(restored+" saved answer"+(restored===1?"":"s")+" restored.");
+        if(typeof render==="function") render();
+
+      }catch(e){
+        alert("That file could not be restored. Please choose a Step 10 backup file created by this app.");
+      }
+    };
+
+    reader.readAsText(file);
+  }
+  function addBackupButtons(){
+    if(typeof mode==="undefined" || mode!=="intro") return;
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+
+    if(!document.getElementById("restoreAnswersWrap")){
+      var wrap=document.createElement("div");
+      wrap.id="restoreAnswersWrap";
+      wrap.style.cssText="margin-top:8px";
+
+      var label=document.createElement("label");
+      label.className="secondary";
+      label.textContent="Restore My Answers";
+      label.style.cssText="display:inline-block;cursor:pointer";
+
+      var input=document.createElement("input");
+      input.type="file";
+      input.accept=".json,application/json,text/plain";
+      input.style.cssText="display:block;margin-top:8px;max-width:100%";
+      input.onchange=function(){
+        if(input.files && input.files.length){
+          restoreAnswers(input.files[0]);
+        }
+      };
+
+      wrap.appendChild(label);
+      wrap.appendChild(input);
+      nextButton.parentNode.insertBefore(wrap,nextButton);
+    }
+  }
+  var observer=new MutationObserver(function(){addBackupButtons()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addBackupButtons,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function addCompletionSystem(){
+    if(typeof SECTIONS==="undefined" || typeof QUESTIONS==="undefined") return;
+
+    function sectionStats(si){
+      var answered=0,total=0;
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          total++;
+          if((localStorage.getItem(PREFIX+index)||"").trim()!=="") answered++;
+        }
+      });
+      return {answered:answered,total:total,complete:total>0 && answered===total};
+    }
+
+    // Enhance the existing My Progress overlay after it is opened.
+    var originalShowProgress=window.showProgress;
+    if(typeof originalShowProgress!=="function" || originalShowProgress.__completionEnhanced) return;
+
+    function enhancedProgress(){
+      originalShowProgress();
+
+      setTimeout(function(){
+        var overlay=document.getElementById("progressOverlay");
+        if(!overlay) return;
+
+        var cards=overlay.querySelectorAll(".card");
+        var sectionCards=[];
+        cards.forEach(function(card){
+          var title=card.querySelector("div");
+          if(title && title.textContent && title.textContent!=="Overall Progress"){
+            sectionCards.push(card);
+          }
+        });
+
+        SECTIONS.forEach(function(section,si){
+          var stats=sectionStats(si);
+          var card=sectionCards[si];
+          if(!card) return;
+
+          var badge=card.querySelector(".completionBadge");
+          if(!badge){
+            badge=document.createElement("div");
+            badge.className="completionBadge";
+            badge.style.cssText="font-size:12px;font-weight:750;letter-spacing:.07em;margin-top:9px";
+            card.appendChild(badge);
+          }
+
+          if(stats.complete){
+            badge.textContent="✓ COMPLETED";
+            badge.style.color="#2f6b3f";
+          }else if(stats.answered>0){
+            badge.textContent="IN PROGRESS";
+            badge.style.color="#666";
+          }else{
+            badge.textContent="NOT STARTED";
+            badge.style.color="#999";
+          }
+        });
+
+        var allComplete=SECTIONS.every(function(_,si){return sectionStats(si).complete;});
+        if(allComplete){
+          var done=document.createElement("div");
+          done.className="card";
+          done.style.marginTop="18px";
+          done.innerHTML="<strong>✓ STEP TEN COMPLETED</strong><div style='margin-top:8px;font-size:16px;line-height:1.5'>You have answered every Step 10 question.</div>";
+          overlay.appendChild(done);
+        }
+      },0);
+    }
+
+    enhancedProgress.__completionEnhanced=true;
+    window.showProgress=enhancedProgress;
+  }
+
+  var observer=new MutationObserver(function(){addCompletionSystem()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addCompletionSystem,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  var NOTES_PREFIX="step10Notes_";
+
+  function getNotes(si){
+    return localStorage.getItem(NOTES_PREFIX+si)||"";
+  }
+
+  function saveNote(si,text){
+    localStorage.setItem(NOTES_PREFIX+si,text);
+  }
+
+  function showNotes(){
+    var overlay=document.createElement("div");
+    overlay.id="notesOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99996;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="My Step 10 Notes";
+    overlay.appendChild(h);
+
+    var intro=document.createElement("div");
+    intro.className="reading";
+    intro.textContent="Use these notes for thoughts, reflections, or anything you want to remember while working through each section.";
+    overlay.appendChild(intro);
+
+    SECTIONS.forEach(function(section,si){
+      var card=document.createElement("div");
+      card.className="card";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:10px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var textarea=document.createElement("textarea");
+      textarea.style.cssText="width:100%;min-height:130px;box-sizing:border-box;padding:12px;border:1px solid #ccc;border-radius:8px;font:16px/1.5 inherit;resize:vertical";
+      textarea.placeholder="Write your notes for this section here...";
+      textarea.value=getNotes(si);
+      card.appendChild(textarea);
+
+      var saved=document.createElement("div");
+      saved.style.cssText="font-size:13px;color:#666;margin-top:8px;min-height:18px";
+      card.appendChild(saved);
+
+      var button=document.createElement("button");
+      button.className="secondary";
+      button.textContent="Save Note";
+      button.style.marginTop="10px";
+      button.onclick=function(){
+        saveNote(si,textarea.value);
+        saved.textContent="Saved.";
+        setTimeout(function(){saved.textContent=""},1800);
+      };
+      card.appendChild(button);
+
+      overlay.appendChild(card);
+    });
+
+    document.body.appendChild(overlay);
+  }
+
+  function addNotesButton(){
+    if(document.getElementById("notesButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="notesButton";
+    b.className="secondary";
+    b.textContent="My Step 10 Notes";
+    b.onclick=showNotes;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addNotesButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addNotesButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function confirmClearAnswer(index){
+    if(confirm("Are you sure you want to erase this answer?\n\nThis cannot be undone.")){
+      localStorage.removeItem(PREFIX+index);
+      alert("Answer erased.");
+      if(typeof render==="function") render();
+    }
+  }
+
+  function clearAllNotes(){
+    if(confirm("Are you sure you want to erase ALL of your Step 10 notes?\n\nThis cannot be undone.")){
+      SECTIONS.forEach(function(_,si){localStorage.removeItem("step10Notes_"+si);});
+      alert("All Step 10 notes were erased.");
+      if(typeof render==="function") render();
+    }
+  }
+
+  function addClearAnswerButton(){
+    if(typeof mode==="undefined" || mode!=="question") return;
+    if(document.getElementById("clearAnswerButton")) return;
+
+    var textarea=document.querySelector("textarea");
+    if(!textarea) return;
+
+    var container=textarea.parentNode;
+    var index=(typeof qi!=="undefined") ? qi : null;
+    if(index===null) return;
+
+    var b=document.createElement("button");
+    b.id="clearAnswerButton";
+    b.className="secondary";
+    b.textContent="Clear Answer";
+    b.style.marginTop="10px";
+    b.onclick=function(){confirmClearAnswer(index);};
+    container.appendChild(b);
+  }
+
+  function addClearNotesButton(){
+    if(document.getElementById("clearAllNotesButton")) return;
+    if(!document.getElementById("notesOverlay")) return;
+
+    var buttons=document.querySelectorAll("#notesOverlay button");
+    if(!buttons.length) return;
+
+    var b=document.createElement("button");
+    b.id="clearAllNotesButton";
+    b.className="secondary";
+    b.textContent="Clear All Notes";
+    b.style.marginTop="18px";
+    b.onclick=clearAllNotes;
+    document.getElementById("notesOverlay").appendChild(b);
+  }
+
+  var observer=new MutationObserver(function(){
+    addClearAnswerButton();
+    addClearNotesButton();
+  });
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(function(){
+    addClearAnswerButton();
+    addClearNotesButton();
+  },100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function buildSummary(){
+    var overlay=document.createElement("div");
+    overlay.id="summaryOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99995;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var title=document.createElement("h1");
+    title.textContent="Step 10 — Summary";
+    overlay.appendChild(title);
+
+    var answered=0;
+    var total=QUESTIONS.length;
+
+    SECTIONS.forEach(function(section,si){
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si && (localStorage.getItem(PREFIX+index)||"").trim()!=="") answered++;
+      });
+    });
+
+    var completed=answered===total && total>0;
+
+    var status=document.createElement("div");
+    status.className="card";
+    status.innerHTML="<strong>"+(completed?"✓ STEP TEN COMPLETED":"STEP NINE IN PROGRESS")+
+      "</strong><div style='margin-top:8px;font-size:16px'>"+answered+" of "+total+" questions answered.</div>";
+    overlay.appendChild(status);
+
+    var date=document.createElement("div");
+    date.className="card";
+    date.innerHTML="<strong>Summary Date</strong><div style='margin-top:8px'>"+
+      new Date().toLocaleDateString()+"</div>";
+    overlay.appendChild(date);
+
+    SECTIONS.forEach(function(section,si){
+      var card=document.createElement("div");
+      card.className="card";
+
+      var heading=document.createElement("div");
+      heading.style.cssText="font-size:19px;font-weight:700;margin-bottom:12px";
+      heading.textContent=section.name;
+      card.appendChild(heading);
+
+      var hasContent=false;
+
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex!==si) return;
+        var a=(localStorage.getItem(PREFIX+index)||"").trim();
+        if(!a) return;
+
+        hasContent=true;
+
+        var qbox=document.createElement("div");
+        qbox.style.cssText="font-weight:700;margin-top:14px";
+        qbox.textContent="• "+q.text;
+        card.appendChild(qbox);
+
+        var abox=document.createElement("div");
+        abox.style.cssText="white-space:pre-line;margin-top:7px;padding:10px;border-left:3px solid #ddd;line-height:1.5";
+        abox.textContent=a;
+        card.appendChild(abox);
+      });
+
+      var note=localStorage.getItem("step10Notes_"+si)||"";
+      if(note.trim()){
+        hasContent=true;
+        var nh=document.createElement("div");
+        nh.style.cssText="font-weight:700;margin-top:20px";
+        nh.textContent="My Notes";
+        card.appendChild(nh);
+
+        var nb=document.createElement("div");
+        nb.style.cssText="white-space:pre-line;margin-top:7px;padding:10px;border-left:3px solid #ddd;line-height:1.5";
+        nb.textContent=note;
+        card.appendChild(nb);
+      }
+
+      if(hasContent) overlay.appendChild(card);
+    });
+
+    var print=document.createElement("button");
+    print.className="secondary";
+    print.textContent="Print / Save as PDF";
+    print.style.marginTop="18px";
+    print.onclick=function(){window.print()};
+    overlay.appendChild(print);
+
+    document.body.appendChild(overlay);
+  }
+
+  function addSummaryButton(){
+    if(document.getElementById("summaryButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="summaryButton";
+    b.className="secondary";
+    b.textContent="Step 10 Summary";
+    b.onclick=buildSummary;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addSummaryButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addSummaryButton,100);
+})();
+</script>
+
+
+<button id="shareReview" type="button" onclick="shareReview()" style="margin:10px 0;">Share</button>
+<div id="sharePanel" class="share-panel">
+  <strong>Share Step 10 — Review My Answers</strong>
+  <div class="share-actions">
+    <button type="button" onclick="shareByEmail()">Email</button>
+    <button type="button" onclick="shareByText()">Text Message</button>
+    <button type="button" onclick="copyReviewToClipboard()">Copy to Clipboard</button>
+  </div>
+  <div id="shareStatus" class="share-status"></div>
+</div>
+
+<script>
+function getStepReviewText() {
+  const step = 10;
+  let lines = [];
+  lines.push("An Interactive Working Guide to the 12 Steps of NA");
+  lines.push("Step " + step + " — My Review Answers");
+  lines.push("");
+  const root = document.body;
+  // Collect visible question/answer pairs from the current Step 10 review.
+  // Prefer review containers and textarea/input values, while avoiding navigation controls.
+  const fields = Array.from(root.querySelectorAll("textarea, input[type='text'], input:not([type])"));
+  let q = 0;
+  fields.forEach(el => {
+    if (!el.offsetParent) return;
+    const value = (el.value || "").trim();
+    if (!value) return;
+    const prev = el.closest(".question, .q, .card, .section, div");
+    let label = "";
+    if (prev) {
+      const heading = prev.querySelector("h1,h2,h3,h4,strong,label");
+      if (heading) label = heading.textContent.trim();
+    }
+    if (!label) {
+      q++;
+      label = "Answer " + q;
+    }
+    lines.push(label + ":");
+    lines.push(value);
+    lines.push("");
+  });
+  // If the review page has generated text, include it as a fallback.
+  if (lines.length <= 4) {
+    const review = document.querySelector("#review, .review, [id*='review']");
+    if (review) {
+      const clone = review.cloneNode(true);
+      clone.querySelectorAll("button, script, style").forEach(x => x.remove());
+      const body = clone.innerText.trim();
+      if (body) lines.push(body);
+    }
+  }
+  return lines.join("\n").trim();
+}
+
+function shareReview() {
+  const panel = document.getElementById("sharePanel");
+  if (panel) panel.classList.toggle("show");
+}
+
+function shareByEmail() {
+  const body = encodeURIComponent(getStepReviewText());
+  window.location.href = "mailto:?subject=" + encodeURIComponent("NA Step 10 — My Review Answers") + "&body=" + body;
+}
+
+function shareByText() {
+  const body = encodeURIComponent(getStepReviewText());
+  // sms: works across common iOS/Android configurations; the user selects the recipient.
+  window.location.href = "sms:?&body=" + body;
+}
+
+async function copyReviewToClipboard() {
+  const text = getStepReviewText();
+  try {
+    await navigator.clipboard.writeText(text);
+    const status = document.getElementById("shareStatus");
+    if (status) status.textContent = "Review answers copied to the clipboard.";
+  } catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand("copy");
+      const status = document.getElementById("shareStatus");
+      if (status) status.textContent = "Review answers copied to the clipboard.";
+    } finally {
+      document.body.removeChild(ta);
+    }
+  }
+}
+</script>
+</body></html>

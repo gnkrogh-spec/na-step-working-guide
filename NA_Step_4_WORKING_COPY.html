@@ -1,0 +1,1032 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff"><title>An Interactive Working Guide to the 12 Steps of NA — Step 4</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f3f5;color:#202124;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.app{max-width:760px;margin:auto;min-height:100vh;background:#fff}header{position:sticky;top:0;z-index:5;background:#fffffff5;backdrop-filter:blur(10px);border-bottom:1px solid #ddd;padding:14px 18px}
+.title{font-size:22px;font-weight:750}.sub{font-size:13px;color:#666;margin-top:2px}.progress{height:4px;background:#eee}.bar{height:100%;background:#444;width:0;transition:.2s}
+main{padding:22px 18px 120px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#666;font-weight:750;margin-bottom:8px}
+h1{font-size:29px;line-height:1.18;margin:0 0 18px}.reading{font-size:17px;line-height:1.68;white-space:pre-line;color:#303238}
+.card{background:#fafafa;border:1px solid #ddd;border-radius:14px;padding:18px;margin-bottom:20px}
+.question{font-size:21px;line-height:1.45;font-weight:650;margin:12px 0 18px}textarea{width:100%;min-height:300px;border:1px solid #aaa;border-radius:12px;padding:15px;font:17px/1.5 inherit;resize:vertical;outline:none}
+textarea:focus{border-color:#333;box-shadow:0 0 0 3px #0001}button{border:0;border-radius:10px;padding:12px 15px;background:#222;color:#fff;font-size:15px;cursor:pointer}
+button.secondary{background:#e8e9ec;color:#222}button:disabled{opacity:.35;cursor:default}.bottom{position:fixed;z-index:10;bottom:0;left:0;right:0;background:#fffffff8;border-top:1px solid #ddd;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;justify-content:center}
+.status{font-size:12px;color:#666;margin-top:8px}.resume{border:1px solid #ddd;border-radius:14px;padding:16px;background:#fafafa;margin:18px 0}
+
+.share-panel{display:none;margin-top:16px;padding:16px;border:1px solid #ddd;border-radius:12px;background:#fafafa}
+.share-panel.show{display:block}
+.share-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.share-actions button{min-width:150px}
+.share-status{margin-top:10px;font-size:.92rem;color:#555}
+</style></head><body><div class="app">
+<header><div class="title">An Interactive Working Guide to the 12 Steps of NA</div><div class="sub"></div></header>
+<div class="progress"><div id="bar" class="bar"></div></div><main id="main"></main>
+<div class="bottom"><button id="home" class="secondary">Home</button><button id="back" class="secondary">← Back</button><button id="next">Begin Step 4 →</button></div>
+</div>
+<script>
+const INTRO="The Fourth Step is a method for learning about ourselves, and it is as much about finding our character assets as it is about identifying the exact nature of our wrongs. The inventory process is also an avenue to freedom. We have been prohibited from being free for so long-probably all our lives. Many of us have discovered, as we worked the Fourth Step, that our problems didn't begin the first time we took drugs, but long before, when the seeds of our addiction were actually planted. We may have felt isolated and different long before we took drugs. In fact, the way we felt and the forces that drove us are completely enmeshed with our addiction; it was our desire to change the way we felt and to subdue those forces that led us to take our first drug. Our inventory will lay bare the unresolved pain and conflicts in our past so that we are no longer at their mercy. We'll have a choice. We'll have achieved a measure of freedom. This portion of the Step Working Guides actually has two distinct sections. The first helps us prepare to work the Fourth Step by guiding us through an exploration of our motives for working this step and what this step means to us. The second part is a guide for actually taking a searching and fearless moral inventory.";
+const SECTIONS=[{"name": "Motivation", "reading": "Though our motivation for working the Fourth Step is not as important as actually working the Fourth Step, we may find it helpful to examine and dispel any reservations we have about this step, and think about some of the benefits we will get as a result of working this step.", "count": 3}, {"name": "Searching and Fearless", "reading": "This is the phrase that has most puzzled many of us. We probably understand what \"searching\" means, but what about \"fearless\"? How can we get over all our fear? That might take years, we think; but we need to work on this inventory right away. Taking a fearless inventory means going ahead despite our fear. It means having the courage to take this action no matter how we feel about it. It means having the courage to be honest, even when we're cringing inside and swearing that we'll take what we're writing to the grave. It means having the determination to be thorough, even when it seems that we've written enough. It means having the faith to trust this process and trust our Higher Power to give us whatever quality we need to walk through the process. Let's face it: This step does involve a lot of work. But we can take heart from the fact that there's rarely a deadline on completing this step. We can do it in manageable sections, a little at a time, until we are done. The only thing that's important is that we work on it consistently. There are times when our clean time can actually work against us: when we fail to acknowledge our fear of taking an inventory. Many of us who have worked the Fourth Step numerous times and know it's ultimately one of the most loving things we can do for ourselves may still find ourselves avoiding this task. We may think that since we know how good this process is, we shouldn't have any fear of it. But we need to give ourselves permission to be afraid, if that's what we feel. We may also have fears that stem from our previous experiences with the Fourth Step. We know that an inventory means change in our lives. We know that if our inventories reveal destructive patterns, we can't continue to practice the same behaviors without a great deal of pain. Sometimes this means having to let go of something in our lives - some behavior we think we can't survive without; a relationship; or perhaps a resentment we've nursed so carefully that it's actually become, in a sick way, a source of reassurance and comfort. The fear of letting go of something we've come to depend on, no matter how much we've begun to suspect it isn't good for us, is an absolutely valid fear. We just can't let it stop us. We have to face it and act with courage. We may also have to overcome a barrier that grows from an unwillingness to reveal more of our disease. Many of our members with clean time have shared that an inventory taken in later recovery revealed that their addiction had spread its tentacles so completely through their lives that virtually no area was left untouched. This realization is often initially met with feelings of dismay and perplexity. We wonder how we could still be so sick. Hasn't all this effort in recovery resulted in more than surface healing? Of course it has. We just need some time to remember that. Our sponsor will be happy to remind us. After we've had time to accept what our inventories are revealing, we feel a sense of hope rising to replace the feelings of dismay. After all, an inventory always initiates a process of change and freedom. Why shouldn't it this time, too?", "count": 2}, {"name": "A Moral Inventory", "reading": "Many of us have a multitude of unpleasant associations connected to the word \"moral.\" It may conjure up memories of an overly rigid code of behavior we were expected to adhere to. It may make us think of people we consider \"moral,\" people we think of as better than ourselves. Hearing this word may also awaken our tendency toward rebellion against society's morals and our resentment of authorities who were never satisfied with our morality. Whether any of this is true for us, as individuals, is a matter to be determined by us, as individuals. If any of the preceding seems to fit, we can alleviate our discomfort with the word \"moral\" by thinking about it in a different way. In Narcotics Anonymous, in this step, the word \"moral\" has nothing to do with specific codes of behavior, society's norms, or the judgment of some authority figure. A moral inventory is something we can use to discover our own individual morality, our own values and principles. We don't have to relate them in any way to the values and principles of others.", "count": 3}, {"name": "An Inventory of Ourselves", "reading": "The Fourth Step asks us to take an inventory of ourselves, not of other people. Yet when we begin writing and looking at our resentments, fears, behavior, beliefs, and secrets, we will find that most of these are connected to another person, or sometimes to an organization or institution. It's important to understand that we are free to write whatever we need to about others, as long as it leads us to finding our part in the situation. In fact, most of us can't separate our part from their part at first. Our sponsor will help us with this.", "count": 0}, {"name": "Spiritual Principles", "reading": "In the Fourth Step, we will call on all of the spiritual principles we began to practice in the first three steps. First of all, we have to be willing to work a Fourth Step. We'll need to be meticulously honest with ourselves, thinking about everything we write down and asking ourselves if it's true or not. We'll need to be courageous enough to face our fear and walk through it. Last, but not least, our faith and trust will carry us through when we're facing a difficult moment and feel like giving up.", "count": 1}, {"name": "The Inventory", "reading": "Get a notebook or whatever means of recording your inventory you and your sponsor have agreed is acceptable. Get comfortable. Remove any distractions from the place where you plan to work on your inventory. Pray for the ability to be searching, fearless, and thorough. Don't forget to stay in touch with your sponsor throughout this process. Finally, feel free to go beyond what's asked in the following questions. Anything you think of is inventory material.", "count": 0}, {"name": "Resentments", "reading": "We have resentments when we re-feel old feelings, when we are unable to let go, when we cannot forgive and forget something that has upset us. We list our resentments in the Fourth Step for a number of reasons. First, doing so will help us let go of old anger that is affecting our lives today. Second, exploring our resentments will help us identify the ways in which we set ourselves up to be disappointed in others, especially when our expectations were too high. Finally, making a list of our resentments will reveal patterns that kept us trapped in a cycle of anger, or self-pity, or both.", "count": 9}, {"name": "Feelings", "reading": "We want to examine our feelings for much the same reason that we want to examine our resentments: It will help us discover our part in our own lives. In addition, most of us have forgotten how to feel by the time we get clean. Even if we've been around awhile, we're still uncovering new information about the ways we've shut down our feelings.", "count": 7}, {"name": "Guilt, Shame", "reading": "There are actually two types of guilt or shame: one real, one imagined. The first grows directly out of our conscience-we feel guilty because we've done something that goes against our principles, or we harmed someone and feel shame over it. Imagined guilt results from any number of situations that are not our fault, situations we had no part in creating. We need to look at our guilt and shame so that we can separate these situations. We need to own what is truly ours and let go of what is not.", "count": 4}, {"name": "Fear", "reading": "If we could look at the disease of addiction stripped of its primary symptoms - that is, apart from drug use or other compulsive behavior - and without its most obvious characteristics, we would find a swamp of self-centered fear. We're afraid of being hurt, or maybe of just having to feel too intensely, so we live a sort of half-life, going through the motions of living but never being fully alive. We're afraid of everything that might make us feel, so we isolate and withdraw. We're afraid that people won't like us, so we use drugs to be more comfortable with ourselves. We're afraid we'll get caught at something and have to pay a price, so we lie or cheat or hurt others to protect ourselves. We're afraid of being alone, so we use and exploit others to avoid feeling lonely or rejected or abandoned. We're afraid we won't have enough-of anything - so we selfishly pursue what we want, not caring about the harm we cause in the process. Sometimes, if we've gained things we care about in recovery, we're afraid we'll lose what we have, and so we begin compromising our principles to protect it. Self-centered, self-seeking fear-we need to uproot it so it no longer has the power to destroy.", "count": 5}, {"name": "Relationships", "reading": "We need to write about our relationships in the Fourth Step - all of our relationships, not just the romantic ones - so that we can find out where our choices, beliefs, and behaviors have resulted in unhealthy or destructive relationships. We need to look at our relationships with relatives, spouses or partners, friends and former friends, co-workers and former co-workers, neighbors, people from school, people from clubs and civic organizations and the organizations themselves, authority figures such as the police, institutions, and anyone or anything else we can possibly think of. We should also examine our relationship with a Higher Power. We may be tempted to skip the relationships that didn't last long-a one-night sexual involvement, for instance, or perhaps an argument with a teacher whose class we then dropped. But these relationships are important, too. If we think of it or have feelings about it, it's inventory material.", "count": 22}, {"name": "Sex", "reading": "This is a very uncomfortable area for most of us. In fact, we may be tempted to stop here, thinking, \"Okay, this has gone far enough! There's no way I'm cataloging my sexual behavior!\" But we have to get over such unwillingness quickly. Thinking about the reason why we need to do this should help. As it says in It Works: How and Why, \"We want to be at peace with our own sexuality.\" That's why we need to include our sexual beliefs and behaviors in our inventories. It's important to remind ourselves at this point that we are not taking our inventory to compare ourselves with what we think is \"normal\" for others, but only to identify our own values, principles, and morals.", "count": 10}, {"name": "Abuse", "reading": "We must exercise extreme caution before beginning this section. In fact, we may need to postpone this section to a later time in our recovery. We should utilize all the resources at hand to make the decision about whether to begin this section now: our own sense of whether or not we're ready to withstand the pain this work will cause us, discussion with our sponsor, and prayer. Perhaps our sponsor will be able to help us through this, or we may need to seek additional help. If we do decide to go ahead with this section, we should be aware that working on this area of our Fourth Step will probably be the most painful work we'll do in recovery. Recording the times when we were neglected or hurt by the people who were supposed to love and protect us is certain to cause some of the most painful feelings we will ever have to go through. It is important to do so when we re ready, however. As long as we keep the pain wrapped up inside us, a secret, it may be causing us to act in ways we don't want, or it can contribute to a negative self-image or other destructive beliefs. Getting the truth out begins a process that can lead to the relief of our pain. We were not to blame.\n\nIt is also possible that we have physically, mentally, or verbally abused others. Recounting these times is bound to cause us to feel a great deal of shame. We cannot afford to let that shame become despair. It is important that we face our behavior, accept responsibility for it, and work to change it. Writing about it here is the first step toward doing that. Working the rest of the steps will help us make amends for what we've done to others.", "count": 7}, {"name": "Assets", "reading": "Most of the preceding questions have been directed at helping us identify the exact nature of our wrongs1 information we'll need for the Fifth Step. It's also important that we take a look at things that we've done right or that have had a positive impact on ourselves and others. We want to do this for a couple of reasons. First, we want to have a complete picture of ourselves from working the Fourth Step, not a one-sided picture. Second, we want to know what character traits and behaviors we want more of in our lives.", "count": 7}, {"name": "Secrets", "reading": "Before we finish this Fourth Step, we should stop and reflect: Is there anything we've missed, either intentionally or not? Is there something we think is so bad that we just can't possibly include it in our inventory? If so, we should be reassured by the fact that a multitude of NA members have worked this step, and there has never yet been a situation in anyone's Fourth Step that was so unique that we had to create a new term to describe it. Keeping secrets is threatening to our recovery. As long as we are keeping a secret, we are actually building a reservation in our program.\n\nAnother question we should ask ourselves now is, is there anything in this inventory that is either an exaggeration of what actually happened or something that's not true at all? Almost all of us came to NA and had trouble separating fact from fiction in our own lives. Most of us had accumulated \"war stories\" that were so embroidered, they may have contained only a fraction of truth. We made them up because we wanted to impress people. We didn't think we had anything to feel good about that was true, so we made up lies in an attempt to build ourselves up. But we don't have to do that anymore. We're building true self-worth in the process of working Step Four, not false self-worth based on some phony image. Now is the time to tell the truth about ourselves.", "count": 2}, {"name": "Moving On", "reading": "Finishing a Fourth Step is many things - maybe a letdown, maybe exhilarating, maybe uncomfortable. However we feel otherwise, we should definitely feel good about what we've accomplished. The work we've done in this step will provide the foundation for the work we'll do in Steps Five through Nine. Now is the time to contact our sponsor and make arrangements to work Step Five. Step Five", "count": 0}];
+const QUESTIONS=[{"sectionIndex": 0, "text": "Do I have any reservations about working this step? What are they?"}, {"sectionIndex": 0, "text": "What are some of the benefits that could come from making a searching and fearless moral inventory of myself?"}, {"sectionIndex": 0, "text": "Why shouldn't I procrastinate about working this step? What are the benefits of not procrastinating?"}, {"sectionIndex": 1, "text": "Am I afraid of working this step? What is my fear?"}, {"sectionIndex": 1, "text": "What does it mean to me to be searching and fearless? (Am I working with my sponsor and talking to other addicts? What other action am I taking to reassure myself that I can handle whatever is revealed in this inventory?"}, {"sectionIndex": 2, "text": "Am I disturbed by the word \"moral\"? Why?"}, {"sectionIndex": 2, "text": "Am I disturbed by thinking about society's expectations and afraid that I can't, won't, and will never be able to conform to them?"}, {"sectionIndex": 2, "text": "What values and principles are important to me?"}, {"sectionIndex": 4, "text": "How is my decision to work Step Four a demonstration of courage? Trust? Faith? Honesty? Willingness?"}, {"sectionIndex": 6, "text": "What people do I resent? Explain the situations that led to the resentment."}, {"sectionIndex": 6, "text": "What institutions (school, government, religious, correctional, civic) do I resent? Explain the situations that led to the resentment."}, {"sectionIndex": 6, "text": "What was my motivation, or what did I believe, that led me to act as I did in these situations?"}, {"sectionIndex": 6, "text": "How has my dishonesty contributed to my resentments?"}, {"sectionIndex": 6, "text": "How has my inability or unwillingness to experience certain feelings led me to develop resentments?"}, {"sectionIndex": 6, "text": "How has my behavior contributed to my resentments?"}, {"sectionIndex": 6, "text": "Am I afraid of looking at my part in the situations that caused my resentments? Why?"}, {"sectionIndex": 6, "text": "How have my resentments affected my relationships with myself, with others, and with a Higher Power?"}, {"sectionIndex": 6, "text": "What recurring themes do I notice in my resentments?"}, {"sectionIndex": 7, "text": "How do I identify my individual feelings?"}, {"sectionIndex": 7, "text": "What feelings do I have the most trouble allowing myself to feel?"}, {"sectionIndex": 7, "text": "Why have I tried to shut off my feelings?"}, {"sectionIndex": 7, "text": "What means have I used to deny how I really felt?"}, {"sectionIndex": 7, "text": "Who or what triggered a feeling? What was the feeling? What were the situations? What was my part in each situation?"}, {"sectionIndex": 7, "text": "What was my motivation, or what did I believe, that led me to act as I did in these situations?"}, {"sectionIndex": 7, "text": "What do I do with my feelings once I've identified them?"}, {"sectionIndex": 8, "text": "Who or what do I feel guilty or ashamed about? Explain the situations that led to these feelings."}, {"sectionIndex": 8, "text": "Which of these situations have caused me to feel shame, though I had no part in creating them?"}, {"sectionIndex": 8, "text": "In the situations I did have a part in, what was my motivation, or what did I believe, that led me to act as I did?"}, {"sectionIndex": 8, "text": "How has my behavior contributed to my guilt and shame?"}, {"sectionIndex": 9, "text": "Who or what do I fear? Why?"}, {"sectionIndex": 9, "text": "What have I done to cover my fear?"}, {"sectionIndex": 9, "text": "How have I responded negatively or destructively to my fear?"}, {"sectionIndex": 9, "text": "What do I most fear looking at and exposing about myself? What do I think will happen if I do?"}, {"sectionIndex": 9, "text": "How have I cheated myself because of my fear?"}, {"sectionIndex": 10, "text": "What conflicts in my personality make it difficult for me to maintain friendships and/or romantic relationships?"}, {"sectionIndex": 10, "text": "How has my fear of being hurt affected my friendships and romantic relationships?"}, {"sectionIndex": 10, "text": "How have I sacrificed platonic friendships in favor of romantic relationships?"}, {"sectionIndex": 10, "text": "In what ways did I compulsively seek relationships?"}, {"sectionIndex": 10, "text": "In my relationships with family, do I sometimes feel as though we're locked into repeating the same patterns over and over without any hope of change? What are those patterns? What is my part in perpetuating them?"}, {"sectionIndex": 10, "text": "How have I avoided intimacy with my friends, partners or spouses, and family?"}, {"sectionIndex": 10, "text": "Have I had problems making commitments? Describe."}, {"sectionIndex": 10, "text": "Have I ever destroyed a relationship because I believed I was going to get hurt anyway so I should get out before that could happen? Describe."}, {"sectionIndex": 10, "text": "To what degree do I consider the feelings of others in my relationships? Equal to my own? More important than my own? Of minor importance? Not at all?"}, {"sectionIndex": 10, "text": "Have I felt like a victim in any of my relationships? (Note: This question is focused on uncovering how we set ourselves up to be victims or how too-high expectations contributed to our being disappointed in people, not on listing instances where we were actually abused.) Describe."}, {"sectionIndex": 10, "text": "What have my relationships with my neighbors been like? Do I notice any patterns appearing that carried through no matter where I lived?"}, {"sectionIndex": 10, "text": "How do I feel about the people with and for whom I've worked? How have my thinking, beliefs, and behavior caused problems for me at work?"}, {"sectionIndex": 10, "text": "How do I feel about the people I went to school with (both in childhood and currently)? Did I feel less than or better than the other students? Did I believe I had to compete for attention from the instructor? Did I respect authority figures or rebel against them?"}, {"sectionIndex": 10, "text": "Have I ever joined any clubs or membership organizations? (Hint: NA is a membership organization.) How did I feel about the other people in the club or organization? Have I made friends in these organizations? Have I joined clubs with high expectations, only to quit in a short time? What were my expectations, and why weren't they fulfilled? What was my part in these situations?"}, {"sectionIndex": 10, "text": "Have I ever been in a mental hospital or prison or otherwise been held against my will? What effect has that had on my personality? What were my interactions with the authorities like? Did I follow the rules? Did I ever break the rules and then resent the authorities when I got caught?"}, {"sectionIndex": 10, "text": "Did early experiences with trust and intimacy hurt me and cause me to withdraw? Describe."}, {"sectionIndex": 10, "text": "Have I ever let a relationship go even when the potential existed to resolve conflicts and work through problems? Why?"}, {"sectionIndex": 10, "text": "Did I become a different person depending on who I was around? Describe."}, {"sectionIndex": 10, "text": "Have I discovered things about my personality (perhaps in previous inventories) that I didn't like, and then found myself overcompensating for that behavior? (For instance, we may have uncovered a pattern of immature dependence on others and then overcompensated for this by becoming overly self-sufficient.) Describe."}, {"sectionIndex": 10, "text": "What defects are most often at play in my relationships (dishonesty, selfishness, control, manipulation, etc.)?"}, {"sectionIndex": 10, "text": "How can I change my behavior so that I can begin having healthy relationships?"}, {"sectionIndex": 10, "text": "Have I had any kind of a relationship with a Higher Power? How has this changed in my lifetime? What kind of a relationship do I have with my Higher Power now?"}, {"sectionIndex": 11, "text": "How was my sexual behavior based in selfishness?"}, {"sectionIndex": 11, "text": "Have I confused sex with love? What were the results of acting on that confusion?"}, {"sectionIndex": 11, "text": "How have I used sex to try to avoid loneliness or fill a spiritual void?"}, {"sectionIndex": 11, "text": "In what ways did I compulsively seek or avoid sex?"}, {"sectionIndex": 11, "text": "Have any of my sexual practices left me feeling ashamed and guilty? What were they? Why did I feel that way?"}, {"sectionIndex": 11, "text": "Have any of my sexual practices hurt myself or others?"}, {"sectionIndex": 11, "text": "Am I comfortable with my sexuality? If not, why not?"}, {"sectionIndex": 11, "text": "Am I comfortable with others' sexuality? If not, why not?"}, {"sectionIndex": 11, "text": "Is sex a prerequisite in all or most of my relationships?"}, {"sectionIndex": 11, "text": "What does a healthy relationship mean to me?"}, {"sectionIndex": 12, "text": "Have I ever been abused? By whom? What feelings did I or do I now have about it?"}, {"sectionIndex": 12, "text": "Has being abused affected my relationships with others? How?"}, {"sectionIndex": 12, "text": "If I have felt victimized for much of life because of being abused in childhood, what steps can I take to be restored to spiritual wholeness? Can my Higher Power help? How?"}, {"sectionIndex": 12, "text": "Have I ever abused anyone? Who and how?"}, {"sectionIndex": 12, "text": "What was I feeling and thinking right before I caused the harm?"}, {"sectionIndex": 12, "text": "Did I blame my victim or make excuses for my behavior? Describe."}, {"sectionIndex": 12, "text": "Do I trust my Higher Power to work in my life and provide me with what I need so I don't have to harm anyone again? Am I willing to live with the painful feelings until they are changed through working the steps?"}, {"sectionIndex": 13, "text": "What qualities do I have that I like? That others like? That work well for me? How have I shown concern for myself and others?"}, {"sectionIndex": 13, "text": "Which spiritual principles am I practicing in my life? How has doing so changed my life?"}, {"sectionIndex": 13, "text": "How has my faith and trust in a Higher Power grown?"}, {"sectionIndex": 13, "text": "What is my relationship with my sponsor based on? How do I see that positive experience translating into other relationships?"}, {"sectionIndex": 13, "text": "What goals have I accomplished? Do I have other goals I am taking action to reach? What are they, and what action am I taking?"}, {"sectionIndex": 13, "text": "What are my values? Which ones am I committed to living by, and how?"}, {"sectionIndex": 13, "text": "How am I showing my gratitude for my recovery?"}, {"sectionIndex": 14, "text": "Are there any secrets that I haven't written about yet? What are they?"}, {"sectionIndex": 14, "text": "Is there anything in this inventory that isn't true, or are there any stories I've told over and over again that aren't true?"}];
+const PREFIX="step-four-complete-v1-";
+const STATE="step-four-v1-resume-state";
+let mode="intro",si=0,qi=0;
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]})}
+function cleanReading(s){return s.replace(/\s+/g," ").trim();}
+function saveAnswer(){const a=document.getElementById("answer");if(a)localStorage.setItem(PREFIX+qi,a.value)}
+function getState(){try{return JSON.parse(localStorage.getItem(STATE)||"null")}catch(e){return null}}
+function saveState(){localStorage.setItem(STATE,JSON.stringify({mode:mode,si:si,qi:qi}))}
+function hasAnswers(){return QUESTIONS.some((_,i)=>localStorage.getItem(PREFIX+i))}
+function update(){document.getElementById("bar").style.width=(mode==="intro"?0:mode==="reading"?((si)/SECTIONS.length*100):((qi+1)/QUESTIONS.length*100))+"%";}
+
+function getResumeState(){
+ try{
+   const raw=localStorage.getItem(STATE);
+   return raw ? JSON.parse(raw) : null;
+ }catch(e){ return null; }
+}
+function saveResumeState(){
+ if(mode==="question" || mode==="reading"){
+   localStorage.setItem(STATE,JSON.stringify({mode:mode,si:si,qi:qi}));
+ }
+}
+function toc(){
+ mode="toc";
+ main.innerHTML='<div class="eyebrow">Narcotics Anonymous</div><h1>Table of Contents</h1>'+
+   '<div class="card"><div class="reading">Choose a step to begin or continue your work. You can return here at any time.</div></div>'+
+   '<div id="tocList"></div>';
+ const list=document.getElementById("tocList");
+ const steps=["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve"];
+ steps.forEach(function(name,idx){
+   const n=idx+1;
+   const b=document.createElement("button");
+   b.textContent="Step "+name;
+   b.style.cssText="display:block;width:100%;text-align:left;margin:10px 0;padding:16px 18px;font-size:17px";
+   b.onclick=function(){window.location.href="NA_Step_"+n+"_WORKING_COPY.html"};
+   list.appendChild(b);
+ });
+ back.disabled=true;
+ next.textContent="Begin Step Four →";
+ update();
+}
+function intro(){
+ mode="intro";
+  document.querySelector("header .sub").textContent="Step Four";
+  document.title="An Interactive Working Guide to the 12 Steps of NA — Step Four";
+ const saved=getResumeState();
+ let resumeText="";
+ if(saved && saved.mode!=="intro"){
+   if(saved.mode==="question"){
+     const q=QUESTIONS[saved.qi];
+     resumeText=q.section+" — Question "+q.number+" of "+q.count;
+   } else {
+     resumeText=SECTIONS[saved.si].name+" — Reading";
+   }
+ }
+ main.innerHTML=
+   '<div class="eyebrow">Step 4</div><h1>Step 4</h1>'+
+   '<div class="card"><div class="reading">'+esc(cleanReading(INTRO))+'</div></div>'+
+   (resumeText?
+     '<div class="resume" style="border:1px solid #ddd;border-radius:14px;padding:16px;background:#fafafa;margin:18px 0">'+
+       '<div class="eyebrow">Continue Where You Left Off</div>'+
+       '<div style="font-size:17px;line-height:1.4;margin-bottom:12px">'+esc(resumeText)+'</div>'+
+       '<button id="continue">Continue Step 4 →</button>'+
+     '</div>':'');
+ if(saved && resumeText){
+   document.getElementById("continue").onclick=function(){
+     mode=saved.mode; si=saved.si; qi=saved.qi; render();
+   };
+ }
+ back.disabled=true;
+ next.textContent=resumeText?"Restart Step 4":"Begin Step 4 →";
+ update();
+}
+function reading(){
+ mode="reading";saveResumeState();const s=SECTIONS[si];
+ main.innerHTML='<div class="eyebrow">Section '+(si+1)+' of '+SECTIONS.length+'</div><h1>'+esc(s.name)+'</h1><div class="card"><div class="reading">'+esc(cleanReading(s.reading))+'</div></div><button id="begin">Begin this section’s questions →</button>';
+ document.getElementById("begin").onclick=function(){qi=QUESTIONS.findIndex(q=>q.sectionIndex===si);mode="question";render()};
+ back.disabled=si===0;next.textContent="Questions →";update();
+}
+function question(){
+ mode="question";saveResumeState();const q=QUESTIONS[qi],ans=localStorage.getItem(PREFIX+qi)||"";
+ main.innerHTML='<div class="eyebrow">'+esc(q.section)+' • Question '+q.number+' of '+q.count+'</div><div class="question">• '+esc(q.text)+'</div><textarea id="answer" placeholder="Type your answer here...">'+esc(ans)+'</textarea><div class="status">Saved automatically on this device.</div>';
+ const a=document.getElementById("answer");a.addEventListener("input",function(){localStorage.setItem(PREFIX+qi,a.value);saveState()});
+ back.disabled=qi===0;next.textContent=qi===QUESTIONS.length-1?"Finish Step 4":"Save & Next →";update();
+}
+function render(){
+  if(mode==="welcome")welcome();
+  else if(mode==="toc")toc();
+  else if(mode==="intro")intro();
+  else if(mode==="reading")reading();
+  else question();
+  saveResumeState();
+  update();
+}
+home.onclick=function(){if(mode==="question")saveAnswer();mode="intro";render()};
+back.onclick=function(){
+ if(mode==="question"){saveAnswer();const current=QUESTIONS[qi].sectionIndex,first=QUESTIONS.findIndex(q=>q.sectionIndex===current);if(qi===first){si=current;mode="reading"}else qi--;render()}
+ else if(mode==="reading"){if(si===0)mode="intro";else si--;render()}
+ else if(mode==="toc"){mode="welcome";render()}
+};
+next.onclick=function(){
+  if(mode==="intro"){
+   const saved=getResumeState();
+   if(saved && next.textContent==="Restart Step 4"){
+     if(confirm("Restart Step 4? Your saved answers will remain on this device.")){
+       si=0;qi=0;mode="reading";render();
+     }
+   }else{
+     si=0;qi=0;mode="reading";render();
+   }
+   return;
+}
+ if(mode==="reading"){qi=QUESTIONS.findIndex(q=>q.sectionIndex===si);mode="question";render();return}
+ saveAnswer();
+ if(qi<QUESTIONS.length-1){const old=QUESTIONS[qi].sectionIndex;qi++;if(QUESTIONS[qi].sectionIndex!==old){si=QUESTIONS[qi].sectionIndex;mode="reading"}render()}
+ else{alert("Step 4 is complete. Your answers remain saved on this device. Moving to Step 5.");window.location.href="NA_Step_5_WORKING_COPY.html"}
+};
+render();
+</script>
+<script>
+(function(){
+  function reviewAnswers(){
+    var overlay=document.createElement("div");
+    overlay.id="reviewOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99999;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="Step 4 — Review My Answers";
+    overlay.appendChild(h);
+
+    // Review / Share tabs for the Review My Answers page.
+    var tabBar=document.createElement("div");
+    tabBar.style.cssText="display:flex;gap:8px;margin:14px 0 20px;border-bottom:1px solid #ddd;padding-bottom:10px";
+    var reviewTab=document.createElement("button");
+    reviewTab.textContent="Review My Answers";
+    reviewTab.className="secondary";
+    var shareTab=document.createElement("button");
+    shareTab.textContent="Share";
+    shareTab.className="secondary";
+    tabBar.appendChild(reviewTab); tabBar.appendChild(shareTab);
+    overlay.appendChild(tabBar);
+
+    var reviewContent=document.createElement("div");
+    overlay.appendChild(reviewContent);
+
+    var shareContent=document.createElement("div");
+    shareContent.style.display="none";
+    shareContent.className="card";
+    var shareTitle=document.createElement("h2");
+    shareTitle.textContent="Share Step 4 — My Review Answers";
+    shareContent.appendChild(shareTitle);
+    var shareIntro=document.createElement("p");
+    shareIntro.textContent="Choose how you would like to share your saved answers with your sponsor or another person.";
+    shareContent.appendChild(shareIntro);
+    var shareButtons=document.createElement("div");
+    shareButtons.style.cssText="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px";
+    var emailBtn=document.createElement("button"); emailBtn.textContent="Email";
+    var textBtn=document.createElement("button"); textBtn.textContent="Text Message";
+    var clipBtn=document.createElement("button"); clipBtn.textContent="Copy to Clipboard";
+    shareButtons.appendChild(emailBtn); shareButtons.appendChild(textBtn); shareButtons.appendChild(clipBtn);
+    shareContent.appendChild(shareButtons);
+    var shareStatus=document.createElement("div");
+    shareStatus.style.cssText="margin-top:12px;color:#666";
+    shareContent.appendChild(shareStatus);
+    overlay.appendChild(shareContent);
+
+    function buildReviewShareText(){
+      var lines=["An Interactive Working Guide to the 12 Steps of NA","Step 4 — My Review Answers",""];
+      var has=false;
+      SECTIONS.forEach(function(section,si){
+        var sectionHas=false;
+        var sectionLines=[];
+        QUESTIONS.forEach(function(q,index){
+          if(q.sectionIndex===si){
+            var a=localStorage.getItem(PREFIX+index)||"";
+            if(a.trim()!==""){
+              has=true; sectionHas=true;
+              sectionLines.push("• "+q.text);
+              sectionLines.push("My Answer:");
+              sectionLines.push(a.trim());
+              sectionLines.push("");
+            }
+          }
+        });
+        if(sectionHas){ lines.push(section.name.toUpperCase()); lines.push(""); lines=lines.concat(sectionLines); }
+      });
+      if(!has) lines.push("No answers have been saved yet.");
+      return lines.join("\n").trim();
+    }
+
+    reviewTab.onclick=function(){ reviewContent.style.display="block"; shareContent.style.display="none"; };
+    shareTab.onclick=function(){ reviewContent.style.display="none"; shareContent.style.display="block"; };
+    emailBtn.onclick=function(){ window.location.href="mailto:?subject="+encodeURIComponent("NA Step 4 — My Review Answers")+"&body="+encodeURIComponent(buildReviewShareText()); };
+    textBtn.onclick=function(){ window.location.href="sms:?&body="+encodeURIComponent(buildReviewShareText()); };
+    clipBtn.onclick=function(){
+      var txt=buildReviewShareText();
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(function(){shareStatus.textContent="Your review answers have been copied to the clipboard.";}).catch(function(){shareStatus.textContent="Clipboard access was not available on this device.";});
+      } else {
+        var ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.left="-9999px"; document.body.appendChild(ta); ta.select();
+        try{document.execCommand("copy"); shareStatus.textContent="Your review answers have been copied to the clipboard.";}catch(e){shareStatus.textContent="Clipboard access was not available on this device.";}
+        document.body.removeChild(ta);
+      }
+    };
+
+    var found=false;
+
+    SECTIONS.forEach(function(section,si){
+      var answered=[];
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          var a=localStorage.getItem(PREFIX+index)||"";
+          if(a.trim()!=="") answered.push({q:q,index:index,a:a});
+        }
+      });
+
+      if(answered.length){
+        found=true;
+        var sh=document.createElement("div");
+        sh.className="eyebrow";
+        sh.style.marginTop="28px";
+        sh.textContent=section.name;
+        reviewContent.appendChild(sh);
+
+        answered.forEach(function(item){
+          var card=document.createElement("div");
+          card.className="card";
+
+          var q=document.createElement("div");
+          q.className="question";
+          q.textContent="• "+item.q.text;
+          card.appendChild(q);
+
+          var label=document.createElement("div");
+          label.className="status";
+          label.textContent="MY ANSWER";
+          label.style.cssText="font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#666;font-weight:750;margin:10px 0 7px";
+          card.appendChild(label);
+
+          var ans=document.createElement("div");
+          ans.style.cssText="white-space:pre-line;font-size:17px;line-height:1.55;border-top:1px solid #ddd;padding-top:10px";
+          ans.textContent=item.a;
+          card.appendChild(ans);
+
+          var edit=document.createElement("button");
+          edit.className="secondary";
+          edit.textContent="Edit Answer";
+          edit.style.marginTop="14px";
+          edit.onclick=function(){
+            overlay.remove();
+            qi=item.index;
+            si=item.q.sectionIndex;
+            mode="question";
+            render();
+          };
+          card.appendChild(edit);
+
+          reviewContent.appendChild(card);
+        });
+      }
+    });
+
+    if(!found){
+      var empty=document.createElement("div");
+      empty.className="card";
+      empty.textContent="You have not saved any answers yet.";
+      reviewContent.appendChild(empty);
+    }
+
+    document.body.appendChild(overlay);
+  }
+
+  function addButton(){
+    if(document.getElementById("reviewAnswersButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var buttons=document.querySelectorAll(".bottom button");
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="reviewAnswersButton";
+    b.className="secondary";
+    b.textContent="Step 4 — Review My Answers";
+    b.onclick=reviewAnswers;
+
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  // The existing app calls render() dynamically, so observe the Home screen.
+  var observer=new MutationObserver(function(){addButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function showProgress(){
+    var overlay=document.createElement("div");
+    overlay.id="progressOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99998;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="My Progress";
+    overlay.appendChild(h);
+
+    var totalAnswered=0, totalQuestions=QUESTIONS.length;
+
+    SECTIONS.forEach(function(section,si){
+      var count=0,total=0;
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          total++;
+          if((localStorage.getItem(PREFIX+index)||"").trim()!=="") count++;
+        }
+      });
+      totalAnswered+=count;
+
+      var card=document.createElement("div");
+      card.className="card";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:8px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var status=document.createElement("div");
+      status.className="status";
+      status.textContent=count+" / "+total+" questions answered";
+      card.appendChild(status);
+
+      var bar=document.createElement("div");
+      bar.style.cssText="height:7px;background:#eee;border-radius:6px;margin-top:12px;overflow:hidden";
+      var fill=document.createElement("div");
+      fill.style.cssText="height:100%;background:#444;width:"+((count/total)*100)+"%";
+      bar.appendChild(fill);
+      card.appendChild(bar);
+
+      card.onclick=function(){
+        overlay.remove();
+        si = si;
+        mode="reading";
+        render();
+      };
+      overlay.appendChild(card);
+    });
+
+    var summary=document.createElement("div");
+    summary.className="card";
+    summary.style.marginTop="24px";
+    summary.innerHTML="<strong>Overall Progress</strong><div style='font-size:17px;margin-top:8px'>"+
+      totalAnswered+" / "+totalQuestions+" questions answered</div>";
+    overlay.insertBefore(summary, overlay.children[2]);
+
+    document.body.appendChild(overlay);
+  }
+
+  function addProgressButton(){
+    if(document.getElementById("progressAnswersButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="progressAnswersButton";
+    b.className="secondary";
+    b.textContent="My Progress";
+    b.onclick=showProgress;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(addProgressButton);
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addProgressButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function showSections(){
+    var overlay=document.createElement("div");
+    overlay.id="sectionNavOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99997;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="Step 4 Sections";
+    overlay.appendChild(h);
+
+    SECTIONS.forEach(function(section, index){
+      var card=document.createElement("div");
+      card.className="card";
+      card.style.cursor="pointer";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:6px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var desc=document.createElement("div");
+      desc.className="status";
+      desc.textContent="Read this section";
+      card.appendChild(desc);
+
+      card.onclick=function(){
+        overlay.remove();
+        si=index;
+        mode="reading";
+        render();
+      };
+      overlay.appendChild(card);
+    });
+
+    document.body.appendChild(overlay);
+  }
+
+  function addSectionButton(){
+    if(document.getElementById("sectionNavButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="sectionNavButton";
+    b.className="secondary";
+    b.textContent="Browse Sections";
+    b.onclick=showSections;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addSectionButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addSectionButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  
+  function restoreAnswers(file){
+    if(!file){
+      alert("No backup file was selected.");
+      return;
+    }
+
+    var reader=new FileReader();
+
+    reader.onerror=function(){
+      alert("Safari could not read that backup file.");
+    };
+
+    reader.onload=function(){
+      try{
+        var data=JSON.parse(reader.result);
+
+        if(!data || !data.answers || typeof data.answers!=="object"){
+          throw new Error("Invalid backup format");
+        }
+
+        var restored=0;
+        if(data.notes && typeof data.notes==="object"){
+          Object.keys(data.notes).forEach(function(si){
+            if(typeof SECTIONS!=="undefined" && SECTIONS[Number(si)]){
+              localStorage.setItem(NOTES_PREFIX+si,String(data.notes[si]||""));
+            }
+          });
+        }
+
+        Object.keys(data.answers).forEach(function(index){
+          var n=Number(index);
+          if(Number.isInteger(n) && typeof QUESTIONS!=="undefined" && QUESTIONS[n]){
+            localStorage.setItem(PREFIX+n,String(data.answers[index]));
+            restored++;
+          }
+        });
+
+        if(restored===0){
+          throw new Error("No matching answers");
+        }
+
+        alert(restored+" saved answer"+(restored===1?"":"s")+" restored.");
+        if(typeof render==="function") render();
+
+      }catch(e){
+        alert("That file could not be restored. Please choose a Step 4 backup file created by this app.");
+      }
+    };
+
+    reader.readAsText(file);
+  }
+  function addBackupButtons(){
+    if(typeof mode==="undefined" || mode!=="intro") return;
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+
+    if(!document.getElementById("restoreAnswersWrap")){
+      var wrap=document.createElement("div");
+      wrap.id="restoreAnswersWrap";
+      wrap.style.cssText="margin-top:8px";
+
+      var label=document.createElement("label");
+      label.className="secondary";
+      label.textContent="Restore My Answers";
+      label.style.cssText="display:inline-block;cursor:pointer";
+
+      var input=document.createElement("input");
+      input.type="file";
+      input.accept=".json,application/json,text/plain";
+      input.style.cssText="display:block;margin-top:8px;max-width:100%";
+      input.onchange=function(){
+        if(input.files && input.files.length){
+          restoreAnswers(input.files[0]);
+        }
+      };
+
+      wrap.appendChild(label);
+      wrap.appendChild(input);
+      nextButton.parentNode.insertBefore(wrap,nextButton);
+    }
+  }
+  var observer=new MutationObserver(function(){addBackupButtons()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addBackupButtons,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function addCompletionSystem(){
+    if(typeof SECTIONS==="undefined" || typeof QUESTIONS==="undefined") return;
+
+    function sectionStats(si){
+      var answered=0,total=0;
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si){
+          total++;
+          if((localStorage.getItem(PREFIX+index)||"").trim()!=="") answered++;
+        }
+      });
+      return {answered:answered,total:total,complete:total>0 && answered===total};
+    }
+
+    // Enhance the existing My Progress overlay after it is opened.
+    var originalShowProgress=window.showProgress;
+    if(typeof originalShowProgress!=="function" || originalShowProgress.__completionEnhanced) return;
+
+    function enhancedProgress(){
+      originalShowProgress();
+
+      setTimeout(function(){
+        var overlay=document.getElementById("progressOverlay");
+        if(!overlay) return;
+
+        var cards=overlay.querySelectorAll(".card");
+        var sectionCards=[];
+        cards.forEach(function(card){
+          var title=card.querySelector("div");
+          if(title && title.textContent && title.textContent!=="Overall Progress"){
+            sectionCards.push(card);
+          }
+        });
+
+        SECTIONS.forEach(function(section,si){
+          var stats=sectionStats(si);
+          var card=sectionCards[si];
+          if(!card) return;
+
+          var badge=card.querySelector(".completionBadge");
+          if(!badge){
+            badge=document.createElement("div");
+            badge.className="completionBadge";
+            badge.style.cssText="font-size:12px;font-weight:750;letter-spacing:.07em;margin-top:9px";
+            card.appendChild(badge);
+          }
+
+          if(stats.complete){
+            badge.textContent="✓ COMPLETED";
+            badge.style.color="#2f6b3f";
+          }else if(stats.answered>0){
+            badge.textContent="IN PROGRESS";
+            badge.style.color="#666";
+          }else{
+            badge.textContent="NOT STARTED";
+            badge.style.color="#999";
+          }
+        });
+
+        var allComplete=SECTIONS.every(function(_,si){return sectionStats(si).complete;});
+        if(allComplete){
+          var done=document.createElement("div");
+          done.className="card";
+          done.style.marginTop="18px";
+          done.innerHTML="<strong>✓ STEP FOUR COMPLETED</strong><div style='margin-top:8px;font-size:16px;line-height:1.5'>You have answered every Step 4 question.</div>";
+          overlay.appendChild(done);
+        }
+      },0);
+    }
+
+    enhancedProgress.__completionEnhanced=true;
+    window.showProgress=enhancedProgress;
+  }
+
+  var observer=new MutationObserver(function(){addCompletionSystem()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addCompletionSystem,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  var NOTES_PREFIX="stepOneNotes_";
+
+  function getNotes(si){
+    return localStorage.getItem(NOTES_PREFIX+si)||"";
+  }
+
+  function saveNote(si,text){
+    localStorage.setItem(NOTES_PREFIX+si,text);
+  }
+
+  function showNotes(){
+    var overlay=document.createElement("div");
+    overlay.id="notesOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99996;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var h=document.createElement("h1");
+    h.textContent="My Step 4 Notes";
+    overlay.appendChild(h);
+
+    var intro=document.createElement("div");
+    intro.className="reading";
+    intro.textContent="Use these notes for thoughts, reflections, or anything you want to remember while working through each section.";
+    overlay.appendChild(intro);
+
+    SECTIONS.forEach(function(section,si){
+      var card=document.createElement("div");
+      card.className="card";
+
+      var title=document.createElement("div");
+      title.style.cssText="font-size:19px;font-weight:700;margin-bottom:10px";
+      title.textContent=section.name;
+      card.appendChild(title);
+
+      var textarea=document.createElement("textarea");
+      textarea.style.cssText="width:100%;min-height:130px;box-sizing:border-box;padding:12px;border:1px solid #ccc;border-radius:8px;font:16px/1.5 inherit;resize:vertical";
+      textarea.placeholder="Write your notes for this section here...";
+      textarea.value=getNotes(si);
+      card.appendChild(textarea);
+
+      var saved=document.createElement("div");
+      saved.style.cssText="font-size:13px;color:#666;margin-top:8px;min-height:18px";
+      card.appendChild(saved);
+
+      var button=document.createElement("button");
+      button.className="secondary";
+      button.textContent="Save Note";
+      button.style.marginTop="10px";
+      button.onclick=function(){
+        saveNote(si,textarea.value);
+        saved.textContent="Saved.";
+        setTimeout(function(){saved.textContent=""},1800);
+      };
+      card.appendChild(button);
+
+      overlay.appendChild(card);
+    });
+
+    document.body.appendChild(overlay);
+  }
+
+  function addNotesButton(){
+    if(document.getElementById("notesButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="notesButton";
+    b.className="secondary";
+    b.textContent="My Step 4 Notes";
+    b.onclick=showNotes;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addNotesButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addNotesButton,100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function confirmClearAnswer(index){
+    if(confirm("Are you sure you want to erase this answer?\n\nThis cannot be undone.")){
+      localStorage.removeItem(PREFIX+index);
+      alert("Answer erased.");
+      if(typeof render==="function") render();
+    }
+  }
+
+  function clearAllNotes(){
+    if(confirm("Are you sure you want to erase ALL of your Step 4 notes?\n\nThis cannot be undone.")){
+      SECTIONS.forEach(function(_,si){localStorage.removeItem("stepOneNotes_"+si);});
+      alert("All Step 4 notes were erased.");
+      if(typeof render==="function") render();
+    }
+  }
+
+  function addClearAnswerButton(){
+    if(typeof mode==="undefined" || mode!=="question") return;
+    if(document.getElementById("clearAnswerButton")) return;
+
+    var textarea=document.querySelector("textarea");
+    if(!textarea) return;
+
+    var container=textarea.parentNode;
+    var index=(typeof qi!=="undefined") ? qi : null;
+    if(index===null) return;
+
+    var b=document.createElement("button");
+    b.id="clearAnswerButton";
+    b.className="secondary";
+    b.textContent="Clear Answer";
+    b.style.marginTop="10px";
+    b.onclick=function(){confirmClearAnswer(index);};
+    container.appendChild(b);
+  }
+
+  function addClearNotesButton(){
+    if(document.getElementById("clearAllNotesButton")) return;
+    if(!document.getElementById("notesOverlay")) return;
+
+    var buttons=document.querySelectorAll("#notesOverlay button");
+    if(!buttons.length) return;
+
+    var b=document.createElement("button");
+    b.id="clearAllNotesButton";
+    b.className="secondary";
+    b.textContent="Clear All Notes";
+    b.style.marginTop="18px";
+    b.onclick=clearAllNotes;
+    document.getElementById("notesOverlay").appendChild(b);
+  }
+
+  var observer=new MutationObserver(function(){
+    addClearAnswerButton();
+    addClearNotesButton();
+  });
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(function(){
+    addClearAnswerButton();
+    addClearNotesButton();
+  },100);
+})();
+</script>
+
+
+<script>
+(function(){
+  function buildSummary(){
+    var overlay=document.createElement("div");
+    overlay.id="summaryOverlay";
+    overlay.style.cssText="position:fixed;inset:0;background:#fff;z-index:99995;overflow:auto;padding:22px 18px 110px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#202124";
+
+    var close=document.createElement("button");
+    close.textContent="← Home";
+    close.className="secondary";
+    close.onclick=function(){overlay.remove()};
+    overlay.appendChild(close);
+
+    var title=document.createElement("h1");
+    title.textContent="Step 4 — Summary";
+    overlay.appendChild(title);
+
+    var answered=0;
+    var total=QUESTIONS.length;
+
+    SECTIONS.forEach(function(section,si){
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex===si && (localStorage.getItem(PREFIX+index)||"").trim()!=="") answered++;
+      });
+    });
+
+    var completed=answered===total && total>0;
+
+    var status=document.createElement("div");
+    status.className="card";
+    status.innerHTML="<strong>"+(completed?"✓ STEP FOUR COMPLETED":"STEP FOUR IN PROGRESS")+
+      "</strong><div style='margin-top:8px;font-size:16px'>"+answered+" of "+total+" questions answered.</div>";
+    overlay.appendChild(status);
+
+    var date=document.createElement("div");
+    date.className="card";
+    date.innerHTML="<strong>Summary Date</strong><div style='margin-top:8px'>"+
+      new Date().toLocaleDateString()+"</div>";
+    overlay.appendChild(date);
+
+    SECTIONS.forEach(function(section,si){
+      var card=document.createElement("div");
+      card.className="card";
+
+      var heading=document.createElement("div");
+      heading.style.cssText="font-size:19px;font-weight:700;margin-bottom:12px";
+      heading.textContent=section.name;
+      card.appendChild(heading);
+
+      var hasContent=false;
+
+      QUESTIONS.forEach(function(q,index){
+        if(q.sectionIndex!==si) return;
+        var a=(localStorage.getItem(PREFIX+index)||"").trim();
+        if(!a) return;
+
+        hasContent=true;
+
+        var qbox=document.createElement("div");
+        qbox.style.cssText="font-weight:700;margin-top:14px";
+        qbox.textContent="• "+q.text;
+        card.appendChild(qbox);
+
+        var abox=document.createElement("div");
+        abox.style.cssText="white-space:pre-line;margin-top:7px;padding:10px;border-left:3px solid #ddd;line-height:1.5";
+        abox.textContent=a;
+        card.appendChild(abox);
+      });
+
+      var note=localStorage.getItem("stepOneNotes_"+si)||"";
+      if(note.trim()){
+        hasContent=true;
+        var nh=document.createElement("div");
+        nh.style.cssText="font-weight:700;margin-top:20px";
+        nh.textContent="My Notes";
+        card.appendChild(nh);
+
+        var nb=document.createElement("div");
+        nb.style.cssText="white-space:pre-line;margin-top:7px;padding:10px;border-left:3px solid #ddd;line-height:1.5";
+        nb.textContent=note;
+        card.appendChild(nb);
+      }
+
+      if(hasContent) overlay.appendChild(card);
+    });
+
+    var print=document.createElement("button");
+    print.className="secondary";
+    print.textContent="Print / Save as PDF";
+    print.style.marginTop="18px";
+    print.onclick=function(){window.print()};
+    overlay.appendChild(print);
+
+    document.body.appendChild(overlay);
+  }
+
+  function addSummaryButton(){
+    if(document.getElementById("summaryButton")) return;
+    if(typeof mode==="undefined" || mode!=="intro") return;
+
+    var nextButton=document.getElementById("next");
+    if(!nextButton) return;
+
+    var b=document.createElement("button");
+    b.id="summaryButton";
+    b.className="secondary";
+    b.textContent="Step 4 Summary";
+    b.onclick=buildSummary;
+    nextButton.parentNode.insertBefore(b,nextButton);
+  }
+
+  var observer=new MutationObserver(function(){addSummaryButton()});
+  observer.observe(document.body,{childList:true,subtree:true});
+  setTimeout(addSummaryButton,100);
+})();
+</script>
+
+
+<button id="shareReview" type="button" onclick="shareReview()" style="margin:10px 0;">Share</button>
+<div id="sharePanel" class="share-panel">
+  <strong>Share Step 4 — Review My Answers</strong>
+  <div class="share-actions">
+    <button type="button" onclick="shareByEmail()">Email</button>
+    <button type="button" onclick="shareByText()">Text Message</button>
+    <button type="button" onclick="copyReviewToClipboard()">Copy to Clipboard</button>
+  </div>
+  <div id="shareStatus" class="share-status"></div>
+</div>
+
+<script>
+function getStepReviewText() {
+  const step = 4;
+  let lines = [];
+  lines.push("An Interactive Working Guide to the 12 Steps of NA");
+  lines.push("Step " + step + " — My Review Answers");
+  lines.push("");
+  const root = document.body;
+  // Collect visible question/answer pairs from the current Step 4 review.
+  // Prefer review containers and textarea/input values, while avoiding navigation controls.
+  const fields = Array.from(root.querySelectorAll("textarea, input[type='text'], input:not([type])"));
+  let q = 0;
+  fields.forEach(el => {
+    if (!el.offsetParent) return;
+    const value = (el.value || "").trim();
+    if (!value) return;
+    const prev = el.closest(".question, .q, .card, .section, div");
+    let label = "";
+    if (prev) {
+      const heading = prev.querySelector("h1,h2,h3,h4,strong,label");
+      if (heading) label = heading.textContent.trim();
+    }
+    if (!label) {
+      q++;
+      label = "Answer " + q;
+    }
+    lines.push(label + ":");
+    lines.push(value);
+    lines.push("");
+  });
+  // If the review page has generated text, include it as a fallback.
+  if (lines.length <= 4) {
+    const review = document.querySelector("#review, .review, [id*='review']");
+    if (review) {
+      const clone = review.cloneNode(true);
+      clone.querySelectorAll("button, script, style").forEach(x => x.remove());
+      const body = clone.innerText.trim();
+      if (body) lines.push(body);
+    }
+  }
+  return lines.join("\n").trim();
+}
+
+function shareReview() {
+  const panel = document.getElementById("sharePanel");
+  if (panel) panel.classList.toggle("show");
+}
+
+function shareByEmail() {
+  const body = encodeURIComponent(getStepReviewText());
+  window.location.href = "mailto:?subject=" + encodeURIComponent("NA Step 4 — My Review Answers") + "&body=" + body;
+}
+
+function shareByText() {
+  const body = encodeURIComponent(getStepReviewText());
+  // sms: works across common iOS/Android configurations; the user selects the recipient.
+  window.location.href = "sms:?&body=" + body;
+}
+
+async function copyReviewToClipboard() {
+  const text = getStepReviewText();
+  try {
+    await navigator.clipboard.writeText(text);
+    const status = document.getElementById("shareStatus");
+    if (status) status.textContent = "Review answers copied to the clipboard.";
+  } catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand("copy");
+      const status = document.getElementById("shareStatus");
+      if (status) status.textContent = "Review answers copied to the clipboard.";
+    } finally {
+      document.body.removeChild(ta);
+    }
+  }
+}
+</script>
+</body></html>
