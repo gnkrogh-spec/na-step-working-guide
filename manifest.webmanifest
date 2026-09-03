@@ -1,0 +1,9 @@
+{
+  "name": "An Interactive Working Guide to the 12 Steps of NA",
+  "short_name": "NA Step Guide",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f7f7",
+  "theme_color": "#111111",
+  "description": "A beta mobile app prototype for working the 12 Steps of Narcotics Anonymous."
+}

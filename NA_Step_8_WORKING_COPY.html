@@ -18,6 +18,84 @@ button.secondary{background:#e8e9ec;color:#222}button:disabled{opacity:.35;curso
 .share-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
 .share-actions button{min-width:150px}
 .share-status{margin-top:10px;font-size:.92rem;color:#555}
+
+@media (max-width: 600px){
+  main{padding-bottom:190px}
+  .bottom{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    padding:8px 10px calc(8px + env(safe-area-inset-bottom));
+    justify-content:stretch;
+  }
+  .bottom button{width:100%;min-height:44px}
+  .bottom #next{grid-column:1 / -1}
+}
+
+/* NA App — compact navigation design target */
+.bottom{
+  position:fixed !important;
+  z-index:10000 !important;
+  left:0 !important; right:0 !important; bottom:0 !important;
+  height:48px !important;
+  min-height:48px !important;
+  max-height:48px !important;
+  padding:4px 10px !important;
+  background:rgba(255,255,255,.97) !important;
+  border-top:1px solid #ddd !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  gap:8px !important;
+  box-sizing:border-box !important;
+}
+.bottom > button{
+  flex:1 1 0 !important;
+  width:auto !important;
+  min-width:0 !important;
+  height:38px !important;
+  min-height:38px !important;
+  max-height:38px !important;
+  margin:0 !important;
+  padding:3px 8px !important;
+  border-radius:7px !important;
+  font-size:13px !important;
+  line-height:1.05 !important;
+}
+#mobileToolsButton{background:#e8e9ec !important;color:#222 !important}
+#naToolsDrawer{
+  position:fixed !important;
+  left:10px !important; right:10px !important; bottom:56px !important;
+  z-index:10001 !important;
+  max-height:65vh !important;
+  overflow:auto !important;
+  background:#fff !important;
+  border:1px solid #d5d5d5 !important;
+  border-radius:14px !important;
+  box-shadow:0 8px 30px rgba(0,0,0,.18) !important;
+  padding:14px !important;
+  display:none;
+}
+#naToolsDrawer.open{display:block !important}
+#naToolsDrawer .tools-title{
+  font-size:18px !important;font-weight:700 !important;margin:0 0 8px !important;
+}
+#naToolsDrawer .tool-item{
+  display:block !important;width:100% !important;
+  margin:6px 0 !important;padding:9px 10px !important;
+  min-height:40px !important;font-size:14px !important;
+}
+#naToolsDrawer #backupPanel{
+  display:block !important;margin:10px 0 0 !important;padding:14px !important;
+}
+@media(max-width:600px){
+  .bottom{height:42px !important;min-height:42px !important;max-height:42px !important;padding:3px 6px !important;gap:4px !important}
+  .bottom > button{height:34px !important;min-height:34px !important;max-height:34px !important;padding:2px 5px !important;font-size:11px !important;border-radius:6px !important}
+  #naToolsDrawer{left:6px !important;right:6px !important;bottom:48px !important;padding:10px !important}
+  #naToolsDrawer .tools-title{font-size:16px !important}
+  main{padding-bottom:58px !important}
+}
+
 </style></head><body><div class="app">
 <header><div class="title">An Interactive Working Guide to the 12 Steps of NA</div><div class="sub"></div></header>
 <div class="progress"><div id="bar" class="bar"></div></div><main id="main"></main>
@@ -856,7 +934,103 @@ render();
     date.className="card";
     date.innerHTML="<strong>Summary Date</strong><div style='margin-top:8px'>"+
       new Date().toLocaleDateString()+"</div>";
+
     overlay.appendChild(date);
+
+    // Share button directly on the Step Summary.
+    var summaryShareCard=document.createElement("div");
+    summaryShareCard.id="summaryShareCard";
+    summaryShareCard.className="card";
+    summaryShareCard.style.cssText="margin-top:16px";
+
+    var shareHeading=document.createElement("strong");
+    shareHeading.textContent="Share My Answers";
+    shareHeading.style.display="block";
+    shareHeading.style.marginBottom="8px";
+    summaryShareCard.appendChild(shareHeading);
+
+    var shareHelp=document.createElement("div");
+    shareHelp.textContent="Share your saved answers by email, text message, or copy them to the clipboard.";
+    shareHelp.style.cssText="font-size:15px;line-height:1.45;margin-bottom:12px";
+    summaryShareCard.appendChild(shareHelp);
+
+    var summaryShareActions=document.createElement("div");
+    summaryShareActions.style.cssText="display:flex;flex-wrap:wrap;gap:8px";
+
+    function buildSummaryShareText(){
+      var lines=["An Interactive Working Guide to the 12 Steps of NA","Step 8 — My Review Answers",""];
+      var any=false;
+      SECTIONS.forEach(function(section,si){
+        var sectionLines=[];
+        QUESTIONS.forEach(function(q,index){
+          if(q.sectionIndex!==si) return;
+          var a=(localStorage.getItem(PREFIX+index)||"").trim();
+          if(a){
+            any=true;
+            sectionLines.push("• "+q.text);
+            sectionLines.push("My Answer:");
+            sectionLines.push(a);
+            sectionLines.push("");
+          }
+        });
+        if(sectionLines.length){
+          lines.push(section.name.toUpperCase());
+          lines.push("");
+          lines=lines.concat(sectionLines);
+        }
+      });
+      if(!any) lines.push("No answers have been saved yet.");
+      return lines.join("\n").trim();
+    }
+
+    var summaryEmail=document.createElement("button");
+    summaryEmail.className="secondary";
+    summaryEmail.textContent="Email";
+    summaryEmail.onclick=function(){
+      window.location.href="mailto:?subject="+encodeURIComponent("NA Step 8 — My Review Answers")+"&body="+encodeURIComponent(buildSummaryShareText());
+    };
+
+    var summaryText=document.createElement("button");
+    summaryText.className="secondary";
+    summaryText.textContent="Text Message";
+    summaryText.onclick=function(){
+      window.location.href="sms:?&body="+encodeURIComponent(buildSummaryShareText());
+    };
+
+    var summaryCopy=document.createElement("button");
+    summaryCopy.className="secondary";
+    summaryCopy.textContent="Copy to Clipboard";
+    summaryCopy.onclick=function(){
+      var txt=buildSummaryShareText();
+      function ok(){summaryShareStatus.textContent="Your review answers have been copied to the clipboard.";}
+      function fail(){summaryShareStatus.textContent="Clipboard access was not available on this device.";}
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(ok).catch(function(){
+          var ta=document.createElement("textarea");
+          ta.value=txt; ta.style.position="fixed"; ta.style.left="-9999px";
+          document.body.appendChild(ta); ta.select();
+          try{document.execCommand("copy"); ok();}catch(e){fail();}
+          document.body.removeChild(ta);
+        });
+      }else{
+        var ta=document.createElement("textarea");
+        ta.value=txt; ta.style.position="fixed"; ta.style.left="-9999px";
+        document.body.appendChild(ta); ta.select();
+        try{document.execCommand("copy"); ok();}catch(e){fail();}
+        document.body.removeChild(ta);
+      }
+    };
+
+    summaryShareActions.appendChild(summaryEmail);
+    summaryShareActions.appendChild(summaryText);
+    summaryShareActions.appendChild(summaryCopy);
+    summaryShareCard.appendChild(summaryShareActions);
+
+    var summaryShareStatus=document.createElement("div");
+    summaryShareStatus.style.cssText="margin-top:9px;color:#666;font-size:14px";
+    summaryShareCard.appendChild(summaryShareStatus);
+
+    overlay.appendChild(summaryShareCard);
 
     SECTIONS.forEach(function(section,si){
       var card=document.createElement("div");
@@ -1029,4 +1203,134 @@ async function copyReviewToClipboard() {
   }
 }
 </script>
+
+<script>
+(function(){
+  const STEP_NO = (document.title.match(/Step (\\d+)/i)||[])[1] || (document.body.innerText.match(/Step (\\d+)/i)||[])[1] || "";
+  const ANSWER_PREFIX = (typeof PREFIX !== "undefined") ? PREFIX : "";
+  const NOTES_PREFIX_LOCAL = (typeof NOTES_PREFIX !== "undefined") ? NOTES_PREFIX : ("step"+STEP_NO+"Notes_");
+  const STATE_KEY_LOCAL = (typeof STATE !== "undefined") ? STATE : "";
+  const STEP_KEYS = {
+    1:{prefix:"step-one-complete-v4-",notes:"stepOneNotes_",state:"step-one-v4-resume-state"},
+    2:{prefix:"step-two-complete-v1-",notes:"stepOneNotes_",state:"step-two-v1-resume-state"},
+    3:{prefix:"step-three-complete-v1-",notes:"stepOneNotes_",state:"step-three-v1-resume-state"},
+    4:{prefix:"step-four-complete-v1-",notes:"stepOneNotes_",state:"step-four-v1-resume-state"},
+    5:{prefix:"step-five-complete-v1-",notes:"stepOneNotes_",state:"step-five-v1-resume-state"},
+    6:{prefix:"step-six-complete-v1-",notes:"stepOneNotes_",state:"step-six-v1-resume-state"},
+    7:{prefix:"step-seven-v1-",notes:"step7Notes_",state:"step-seven-v1-resume-state"},
+    8:{prefix:"step-eight-v1-",notes:"step8Notes_",state:"step-eight-v1-resume-state"},
+    9:{prefix:"step-nine-v1-",notes:"step9Notes_",state:"step-nine-v1-resume-state"},
+    10:{prefix:"step-ten-v1-",notes:"step10Notes_",state:"step-ten-v1-resume-state"},
+    11:{prefix:"step-eleven-v1-",notes:"step11Notes_",state:"step-eleven-v1-resume-state"},
+    12:{prefix:"step-twelve-v1-",notes:"step12Notes_",state:"step-twelve-v1-resume-state"}
+  };
+  function collect(){
+    const data={format:"NA-Step-Working-Guide-Backup",version:1,created:new Date().toISOString(),steps:{}};
+    for(let n=1;n<=12;n++){
+      const cfg=STEP_KEYS[n], answers={}, notes={};
+      for(let i=0;i<localStorage.length;i++){
+        const k=localStorage.key(i);
+        if(k && k.indexOf(cfg.prefix)===0) answers[k.slice(cfg.prefix.length)]=localStorage.getItem(k);
+        if(k && k.indexOf(cfg.notes)===0) notes[k.slice(cfg.notes.length)]=localStorage.getItem(k);
+      }
+      data.steps[n]={answers,notes,state:localStorage.getItem(cfg.state)};
+    }
+    return data;
+  }
+  function download(){
+    const blob=new Blob([JSON.stringify(collect(),null,2)],{type:"application/json"});
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download="NA-Step-Working-Guide-Backup-"+new Date().toISOString().slice(0,10)+".json";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  }
+  function restore(file){
+    const reader=new FileReader();
+    reader.onerror=()=>alert("The backup file could not be read.");
+    reader.onload=()=>{
+      try{
+        const data=JSON.parse(reader.result);
+        if(data.format!=="NA-Step-Working-Guide-Backup" || !data.steps) throw new Error();
+        let restored=0;
+        for(let n=1;n<=12;n++){
+          const cfg=STEP_KEYS[n], s=data.steps[n]||data.steps[String(n)];
+          if(!s) continue;
+          if(s.answers) Object.keys(s.answers).forEach(k=>{localStorage.setItem(cfg.prefix+k,String(s.answers[k]??""));restored++;});
+          if(s.notes) Object.keys(s.notes).forEach(k=>localStorage.setItem(cfg.notes+k,String(s.notes[k]??"")));
+          if(s.state) localStorage.setItem(cfg.state,String(s.state));
+        }
+        if(!restored) throw new Error();
+        alert("Backup restored successfully. "+restored+" answer entries were restored across the workbook.");
+        if(typeof render==="function") render();
+      }catch(e){ alert("That file is not a valid NA Step Working Guide backup."); }
+    };
+    reader.readAsText(file);
+  }
+  function addPanel(){
+    if(typeof mode==="undefined" || mode!=="intro" || document.getElementById("backupPanel")) return;
+    const next=document.getElementById("next"); if(!next) return;
+    const wrap=document.createElement("div"); wrap.id="backupPanel";
+    wrap.style.cssText="margin:18px 0 8px;padding:16px;border:1px solid #ddd;border-radius:14px;background:#f7f7f8;text-align:left";
+    wrap.innerHTML='<div style="font-size:18px;font-weight:700;margin-bottom:6px">Backup & Restore</div><div style="font-size:14px;line-height:1.45;margin-bottom:12px">Your answers save automatically on this device. Create a backup file if you want to keep a copy or move your work to another device.</div>';
+    const exp=document.createElement("button"); exp.className="secondary"; exp.textContent="Export My Answers"; exp.style.margin="4px 6px 4px 0"; exp.onclick=download;
+    const label=document.createElement("label"); label.textContent="Restore My Answers"; label.style.cssText="display:inline-block;border-radius:10px;padding:12px 15px;background:#222;color:#fff;font-size:15px;cursor:pointer;margin:4px 0";
+    const input=document.createElement("input"); input.type="file"; input.accept=".json,application/json,text/plain"; input.style.display="none"; input.onchange=()=>{if(input.files&&input.files[0]) restore(input.files[0]);};
+    label.appendChild(input); wrap.appendChild(exp); wrap.appendChild(label); next.parentNode.insertBefore(wrap,next);
+  }
+  const old=document.createElement('style'); old.textContent='#restoreAnswersWrap{display:none!important}'; document.head.appendChild(old);
+  new MutationObserver(addPanel).observe(document.body,{childList:true,subtree:true}); setTimeout(addPanel,100);
+})();
+</script>
+
+<script id="naCompactNav">
+(function(){
+  function txt(el){return (el.innerText||el.textContent||"").trim().replace(/\s+/g," ");}
+  function setup(){
+    var bottom=document.querySelector(".bottom");
+    if(!bottom)return;
+    var home=document.getElementById("home"), back=document.getElementById("back"), next=document.getElementById("next");
+    if(!home||!back||!next)return;
+
+    var drawer=document.getElementById("naToolsDrawer");
+    if(!drawer){
+      drawer=document.createElement("div");
+      drawer.id="naToolsDrawer";
+      drawer.innerHTML='<div class="tools-title">Step Tools</div>';
+      document.body.appendChild(drawer);
+    }
+    var tools=document.getElementById("mobileToolsButton");
+    if(!tools){
+      tools=document.createElement("button");
+      tools.id="mobileToolsButton";
+      tools.type="button";
+      tools.className="secondary";
+      tools.textContent="Tools";
+      tools.onclick=function(e){e.stopPropagation();drawer.classList.toggle("open");};
+    }
+    if(tools.parentNode!==bottom) bottom.insertBefore(tools,next);
+
+    var primary=[home,back,tools,next];
+    Array.prototype.slice.call(bottom.children).forEach(function(el){
+      if(primary.indexOf(el)!==-1)return;
+      el.classList.add("tool-item");
+      drawer.appendChild(el);
+    });
+
+    var panel=document.getElementById("backupPanel");
+    if(panel && panel.parentNode!==drawer){
+      drawer.appendChild(panel);
+    }
+  }
+  function run(){setup();}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();
+  [100,300,700,1200].forEach(function(ms){setTimeout(run,ms);});
+  new MutationObserver(run).observe(document.body,{childList:true,subtree:true});
+  document.addEventListener("click",function(e){
+    var drawer=document.getElementById("naToolsDrawer"),tools=document.getElementById("mobileToolsButton");
+    if(drawer&&drawer.classList.contains("open")&&!drawer.contains(e.target)&&e.target!==tools)drawer.classList.remove("open");
+  });
+})();
+</script>
+
 </body></html>
