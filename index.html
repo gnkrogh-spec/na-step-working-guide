@@ -6,133 +6,105 @@
 <style>html,body{margin:0;height:100%;background:#111;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}iframe{display:block;width:100%;height:100%;border:0;background:#fff}
 @media (max-width: 600px){
   main{padding-bottom:190px}
-  .bottom{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:8px;
-    padding:8px 10px calc(8px + env(safe-area-inset-bottom));
-    justify-content:stretch;
-  }
+  .bottom{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));justify-content:stretch}
   .bottom button{width:100%;min-height:44px}
   .bottom #next{grid-column:1 / -1}
 }
-
-/* NA App — compact navigation design target */
-.bottom{
-  position:fixed !important;
-  z-index:10000 !important;
-  left:0 !important; right:0 !important; bottom:0 !important;
-  height:48px !important;
-  min-height:48px !important;
-  max-height:48px !important;
-  padding:4px 10px !important;
-  background:rgba(255,255,255,.97) !important;
-  border-top:1px solid #ddd !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:space-between !important;
-  gap:8px !important;
-  box-sizing:border-box !important;
-}
-.bottom > button{
-  flex:1 1 0 !important;
-  width:auto !important;
-  min-width:0 !important;
-  height:38px !important;
-  min-height:38px !important;
-  max-height:38px !important;
-  margin:0 !important;
-  padding:3px 8px !important;
-  border-radius:7px !important;
-  font-size:13px !important;
-  line-height:1.05 !important;
-}
+.bottom{position:fixed !important;z-index:10000 !important;left:0 !important;right:0 !important;bottom:0 !important;height:48px !important;min-height:48px !important;max-height:48px !important;padding:4px 10px !important;background:rgba(255,255,255,.97) !important;border-top:1px solid #ddd !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:8px !important;box-sizing:border-box !important}
+.bottom > button{flex:1 1 0 !important;width:auto !important;min-width:0 !important;height:38px !important;min-height:38px !important;max-height:38px !important;margin:0 !important;padding:3px 8px !important;border-radius:7px !important;font-size:13px !important;line-height:1.05 !important}
 #mobileToolsButton{background:#e8e9ec !important;color:#222 !important}
-#naToolsDrawer{
-  position:fixed !important;
-  left:10px !important; right:10px !important; bottom:56px !important;
-  z-index:10001 !important;
-  max-height:65vh !important;
-  overflow:auto !important;
-  background:#fff !important;
-  border:1px solid #d5d5d5 !important;
-  border-radius:14px !important;
-  box-shadow:0 8px 30px rgba(0,0,0,.18) !important;
-  padding:14px !important;
-  display:none;
-}
+#naToolsDrawer{position:fixed !important;left:10px !important;right:10px !important;bottom:56px !important;z-index:10001 !important;max-height:65vh !important;overflow:auto !important;background:#fff !important;border:1px solid #d5d5d5 !important;border-radius:14px !important;box-shadow:0 8px 30px rgba(0,0,0,.18) !important;padding:14px !important;display:none}
 #naToolsDrawer.open{display:block !important}
-#naToolsDrawer .tools-title{
-  font-size:18px !important;font-weight:700 !important;margin:0 0 8px !important;
-}
-#naToolsDrawer .tool-item{
-  display:block !important;width:100% !important;
-  margin:6px 0 !important;padding:9px 10px !important;
-  min-height:40px !important;font-size:14px !important;
-}
-#naToolsDrawer #backupPanel{
-  display:block !important;margin:10px 0 0 !important;padding:14px !important;
-}
-@media(max-width:600px){
-  .bottom{height:42px !important;min-height:42px !important;max-height:42px !important;padding:3px 6px !important;gap:4px !important}
-  .bottom > button{height:34px !important;min-height:34px !important;max-height:34px !important;padding:2px 5px !important;font-size:11px !important;border-radius:6px !important}
-  #naToolsDrawer{left:6px !important;right:6px !important;bottom:48px !important;padding:10px !important}
-  #naToolsDrawer .tools-title{font-size:16px !important}
-  main{padding-bottom:58px !important}
-}
-
+#naToolsDrawer .tools-title{font-size:18px !important;font-weight:700 !important;margin:0 0 8px !important}
+#naToolsDrawer .tool-item{display:block !important;width:100% !important;margin:6px 0 !important;padding:9px 10px !important;min-height:40px !important;font-size:14px !important}
+#naToolsDrawer #backupPanel{display:block !important;margin:10px 0 0 !important;padding:14px !important}
+@media(max-width:600px){.bottom{height:42px !important;min-height:42px !important;max-height:42px !important;padding:3px 6px !important;gap:4px !important}.bottom > button{height:34px !important;min-height:34px !important;max-height:34px !important;padding:2px 5px !important;font-size:11px !important;border-radius:6px !important}#naToolsDrawer{left:6px !important;right:6px !important;bottom:48px !important;padding:10px !important}#naToolsDrawer .tools-title{font-size:16px !important}main{padding-bottom:58px !important}}
 </style>
 </head><body><iframe src="./NA_Step_1_WORKING_COPY.html" title="NA Step Working Guide"></iframe>
 <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});</script>
-
 <script id="naCompactNav">
 (function(){
-  function txt(el){return (el.innerText||el.textContent||"").trim().replace(/\s+/g," ");}
   function setup(){
-    var bottom=document.querySelector(".bottom");
-    if(!bottom)return;
-    var home=document.getElementById("home"), back=document.getElementById("back"), next=document.getElementById("next");
-    if(!home||!back||!next)return;
-
+    var bottom=document.querySelector(".bottom"); if(!bottom)return;
+    var home=document.getElementById("home"), back=document.getElementById("back"), next=document.getElementById("next"); if(!home||!back||!next)return;
     var drawer=document.getElementById("naToolsDrawer");
-    if(!drawer){
-      drawer=document.createElement("div");
-      drawer.id="naToolsDrawer";
-      drawer.innerHTML='<div class="tools-title">Step Tools</div>';
-      document.body.appendChild(drawer);
-    }
+    if(!drawer){drawer=document.createElement("div");drawer.id="naToolsDrawer";drawer.innerHTML='<div class="tools-title">Step Tools</div>';document.body.appendChild(drawer)}
     var tools=document.getElementById("mobileToolsButton");
-    if(!tools){
-      tools=document.createElement("button");
-      tools.id="mobileToolsButton";
-      tools.type="button";
-      tools.className="secondary";
-      tools.textContent="Tools";
-      tools.onclick=function(e){e.stopPropagation();drawer.classList.toggle("open");};
-    }
-    if(tools.parentNode!==bottom) bottom.insertBefore(tools,next);
-
+    if(!tools){tools=document.createElement("button");tools.id="mobileToolsButton";tools.type="button";tools.className="secondary";tools.textContent="Tools";tools.onclick=function(e){e.stopPropagation();drawer.classList.toggle("open")}}
+    if(tools.parentNode!==bottom)bottom.insertBefore(tools,next);
     var primary=[home,back,tools,next];
-    Array.prototype.slice.call(bottom.children).forEach(function(el){
-      if(primary.indexOf(el)!==-1)return;
-      el.classList.add("tool-item");
-      drawer.appendChild(el);
-    });
-
-    var panel=document.getElementById("backupPanel");
-    if(panel && panel.parentNode!==drawer){
-      drawer.appendChild(panel);
-    }
+    Array.prototype.slice.call(bottom.children).forEach(function(el){if(primary.indexOf(el)!==-1)return;el.classList.add("tool-item");drawer.appendChild(el)});
+    var panel=document.getElementById("backupPanel"); if(panel&&panel.parentNode!==drawer)drawer.appendChild(panel);
   }
-  function run(){setup();}
+  function run(){setup()}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();
-  [100,300,700,1200].forEach(function(ms){setTimeout(run,ms);});
+  [100,300,700,1200].forEach(function(ms){setTimeout(run,ms)});
   new MutationObserver(run).observe(document.body,{childList:true,subtree:true});
-  document.addEventListener("click",function(e){
-    var drawer=document.getElementById("naToolsDrawer"),tools=document.getElementById("mobileToolsButton");
-    if(drawer&&drawer.classList.contains("open")&&!drawer.contains(e.target)&&e.target!==tools)drawer.classList.remove("open");
-  });
+  document.addEventListener("click",function(e){var drawer=document.getElementById("naToolsDrawer"),tools=document.getElementById("mobileToolsButton");if(drawer&&drawer.classList.contains("open")&&!drawer.contains(e.target)&&e.target!==tools)drawer.classList.remove("open")});
 })();
 </script>
 
+<script id="naReviewShareFix">
+(function(){
+  function cleanText(s){return (s||"").replace(/\s+/g," ").trim()}
+  function isShareElement(el){
+    if(!el||el.id==="naSingleReviewShare")return false;
+    var id=(el.id||"").toLowerCase(), cls=(typeof el.className==="string"?el.className:"").toLowerCase();
+    return id.indexOf("share")!==-1||cls.indexOf("share")!==-1||id==="summarysharecard";
+  }
+  function getReviewHost(doc){
+    var els=Array.prototype.slice.call(doc.querySelectorAll("h1,h2,h3,h4,h5,h6,button,[role='tab'],.card,section,div"));
+    for(var i=0;i<els.length;i++){
+      var t=cleanText(els[i].textContent);
+      if(t==="Review My Answers"||t.indexOf("Review My Answers")===0){
+        var p=els[i];
+        for(var j=0;j<5&&p&&p!==doc.body;j++,p=p.parentElement){
+          if(p.matches&&p.matches(".card,section"))return p;
+        }
+        return els[i].parentElement||els[i];
+      }
+    }
+    return null;
+  }
+  function answerText(doc){
+    var out=["NA Step Working Guide — Step One","My Answers","\n"];
+    var tas=Array.prototype.slice.call(doc.querySelectorAll("textarea"));
+    var n=0;
+    tas.forEach(function(ta){
+      var v=(ta.value||"").trim(); if(!v)return;
+      n++;
+      var host=ta.closest?ta.closest(".card,section,article,div"):null;
+      var q=host?host.querySelector(".question,h2,h3,h4,h5,h6,label"):null;
+      var label=q?cleanText(q.textContent):"Answer "+n;
+      out.push(label+":\n"+v+"\n");
+    });
+    if(n===0)out.push("No saved answers were found on this review page.");
+    return out.join("\n").trim();
+  }
+  function install(doc){
+    if(!doc||!doc.body)return;
+    var existing=Array.prototype.slice.call(doc.querySelectorAll("[id*='share' i],[class*='share' i]"));
+    existing.forEach(function(el){
+      if(el.id!=="naSingleReviewShare")el.remove();
+    });
+    var host=getReviewHost(doc);
+    if(!host)return;
+    var old=doc.getElementById("naSingleReviewShare");
+    if(old)old.remove();
+    var box=doc.createElement("div");
+    box.id="naSingleReviewShare";
+    box.style.cssText="margin-top:16px;padding:16px;border:1px solid #ddd;border-radius:12px;background:#fafafa";
+    box.innerHTML='<div style="font-size:18px;font-weight:700;margin-bottom:6px">Share My Answers</div><div style="font-size:14px;color:#666;line-height:1.45">Share the answers you have saved in this Step One guide.</div><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px"><button type="button" data-share="text">Text Message</button><button type="button" data-share="email">Email</button><button type="button" data-share="copy">Copy to Clipboard</button></div><div data-share-status style="margin-top:10px;font-size:13px;color:#666"></div>';
+    host.appendChild(box);
+    var status=box.querySelector("[data-share-status]");
+    function setStatus(s){status.textContent=s}
+    box.querySelector('[data-share="text"]').onclick=function(){var text=answerText(doc);window.location.href="sms:?&body="+encodeURIComponent(text);setStatus("Opening your text-message app…")};
+    box.querySelector('[data-share="email"]').onclick=function(){var text=answerText(doc);window.location.href="mailto:?subject="+encodeURIComponent("My NA Step One Answers")+"&body="+encodeURIComponent(text);setStatus("Opening your email app…")};
+    box.querySelector('[data-share="copy"]').onclick=function(){var text=answerText(doc);if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){setStatus("Copied to clipboard.")}).catch(function(){fallback(text)})}else fallback(text)};
+    function fallback(text){var ta=doc.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity="0";doc.body.appendChild(ta);ta.focus();ta.select();try{doc.execCommand("copy");setStatus("Copied to clipboard.")}catch(e){setStatus("Copy was not available on this device.")}ta.remove()}
+  }
+  function start(){var frame=document.querySelector("iframe");if(!frame)return;function go(){try{var doc=frame.contentDocument||frame.contentWindow.document;install(doc);new MutationObserver(function(){clearTimeout(frame._shareTimer);frame._shareTimer=setTimeout(function(){install(doc)},80)}).observe(doc.body,{childList:true,subtree:true})}catch(e){}}frame.addEventListener("load",go);if(frame.contentDocument&&frame.contentDocument.body)go()}
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start);else start();
+})();
+</script>
 </body></html>
