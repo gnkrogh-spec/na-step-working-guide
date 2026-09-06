@@ -47,6 +47,8 @@
 (function(){
   function cleanText(s){return (s||"").replace(/\s+/g," ").trim()}
   function getReviewHost(doc){
+    var overlay=doc.getElementById("reviewOverlay");
+    if(overlay)return overlay;
     var els=Array.prototype.slice.call(doc.querySelectorAll("h1,h2,h3,h4,h5,h6,button,[role='tab'],.card,section,div"));
     for(var i=0;i<els.length;i++){
       var t=cleanText(els[i].textContent);
@@ -65,17 +67,19 @@
   }
   function install(doc){
     if(!doc||!doc.body)return;
-    Array.prototype.slice.call(doc.querySelectorAll("[id*='share' i],[class*='share' i]")).forEach(function(el){if(el.id!=="naSingleReviewShare")el.remove()});
-    var host=getReviewHost(doc);if(!host)return;var old=doc.getElementById("naSingleReviewShare");if(old)old.remove();
-    var box=doc.createElement("div");box.id="naSingleReviewShare";box.style.cssText="margin-top:16px;padding:16px;border:1px solid #ddd;border-radius:12px;background:#fafafa";
+    var host=getReviewHost(doc);if(!host)return;
+    var old=doc.getElementById("naSingleReviewShare");if(old)old.remove();
+    var box=doc.createElement("div");box.id="naSingleReviewShare";box.style.cssText="margin:16px 0;padding:16px;border:1px solid #ddd;border-radius:12px;background:#fafafa";
     box.innerHTML='<div style="font-size:18px;font-weight:700;margin-bottom:6px">Share My Answers</div><div style="font-size:14px;color:#666;line-height:1.45">Share the answers you have saved in this Step One guide.</div><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px"><button type="button" data-share="text">Text Message</button><button type="button" data-share="email">Email</button><button type="button" data-share="copy">Copy to Clipboard</button></div><div data-share-status style="margin-top:10px;font-size:13px;color:#666"></div>';
-    host.appendChild(box);var status=box.querySelector("[data-share-status]");function setStatus(s){status.textContent=s}
+    var first=host.querySelector("h1");
+    if(first&&first.parentNode===host)host.insertBefore(box,first.nextSibling);else host.appendChild(box);
+    var status=box.querySelector("[data-share-status]");function setStatus(s){status.textContent=s}
     box.querySelector('[data-share="text"]').onclick=function(){var text=answerText(doc);window.location.href="sms:?&body="+encodeURIComponent(text);setStatus("Opening your text-message app…")};
-    box.querySelector('[data-share="email"]').onclick=function(){var text=answerText(doc);window.location.href="mailto:?subject="+encodeURIComponent("My NA Step One Answers")+"&body="+encodeURIComponent(text);setStatus("Opening your email app…")};
+    box.querySelector('[data-share="email"]').onclick=function(){var text=answerText(doc);window.location.href="mailto:?subject="+encodeURIComponent("NA Step One — My Answers")+"&body="+encodeURIComponent(text);setStatus("Opening your email app…")};
     box.querySelector('[data-share="copy"]').onclick=function(){var text=answerText(doc);if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){setStatus("Copied to clipboard.")}).catch(function(){fallback(text)})}else fallback(text)};
     function fallback(text){var ta=doc.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity="0";doc.body.appendChild(ta);ta.focus();ta.select();try{doc.execCommand("copy");setStatus("Copied to clipboard.")}catch(e){setStatus("Copy was not available on this device.")}ta.remove()}
   }
-  function start(){var frame=document.querySelector("iframe");if(!frame)return;function go(){try{var doc=frame.contentDocument||frame.contentWindow.document;install(doc);new MutationObserver(function(){clearTimeout(frame._shareTimer);frame._shareTimer=setTimeout(function(){install(doc)},80)}).observe(doc.body,{childList:true,subtree:true})}catch(e){}}frame.addEventListener("load",go);if(frame.contentDocument&&frame.contentDocument.body)go()}
+  function start(){var frame=document.querySelector("iframe");if(!frame)return;function go(){try{var doc=frame.contentDocument||frame.contentWindow.document;install(doc);if(!doc._naShareObserver){doc._naShareObserver=true;new MutationObserver(function(){clearTimeout(frame._shareTimer);frame._shareTimer=setTimeout(function(){install(doc)},80)}).observe(doc.body,{childList:true,subtree:true})}}catch(e){}}frame.addEventListener("load",go);if(frame.contentDocument&&frame.contentDocument.body)go()}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start);else start();
 })();
 </script>
