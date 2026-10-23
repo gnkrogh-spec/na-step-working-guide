@@ -1282,7 +1282,7 @@ async function copyReviewToClipboard() {
     reader.readAsText(file);
   }
   function addPanel(){
-    if(typeof mode==="undefined" || mode!=="intro" || document.getElementById("backupPanel")) return;
+    if(typeof mode==="undefined" || !["welcome","toc","intro"].includes(mode) || document.getElementById("backupPanel")) return;
     const next=document.getElementById("next"); if(!next) return;
     const wrap=document.createElement("div"); wrap.id="backupPanel";
     wrap.style.cssText="margin:18px 0 8px;padding:16px;border:1px solid #ddd;border-radius:14px;background:#f7f7f8;text-align:left";
