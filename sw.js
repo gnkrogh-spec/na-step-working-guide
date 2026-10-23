@@ -1,4 +1,4 @@
-const CACHE = 'na-step-guide-prototype-4';
+const CACHE = 'na-step-guide-prototype-5';
 const FILES = [
   './index.html','./manifest.webmanifest','./share-fix-v2.js',
   './NA_Step_1_WORKING_COPY.html','./NA_Step_2_WORKING_COPY.html','./NA_Step_3_WORKING_COPY.html',
