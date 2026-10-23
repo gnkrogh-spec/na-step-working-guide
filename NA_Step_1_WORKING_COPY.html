@@ -1291,7 +1291,7 @@ async function copyReviewToClipboard() {
     const label=document.createElement("label"); label.textContent="Restore My Answers"; label.style.cssText="display:inline-block;border-radius:10px;padding:12px 15px;background:#222;color:#fff;font-size:15px;cursor:pointer;margin:4px 0";
     const input=document.createElement("input"); input.type="file"; input.accept=".json,application/json,text/plain"; input.style.display="block"; input.style.marginTop="8px"; input.style.maxWidth="100%"; input.onchange=()=>{if(input.files&&input.files[0]) restore(input.files[0]);};
     label.appendChild(input); wrap.appendChild(exp); wrap.appendChild(label);
-    const main=document.querySelector("main"); if(main) main.appendChild(wrap); else next.parentNode.insertBefore(wrap,next);
+    const main=document.querySelector("main"); if(main) main.insertBefore(wrap,main.firstChild); else next.parentNode.insertBefore(wrap,next);
   }
   const old=document.createElement('style'); old.textContent='#restoreAnswersWrap{display:none!important}'; document.head.appendChild(old);
   new MutationObserver(addPanel).observe(document.body,{childList:true,subtree:true}); setTimeout(addPanel,100);
