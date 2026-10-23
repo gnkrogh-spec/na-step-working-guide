@@ -45,7 +45,6 @@
     if(tools.parentNode!==bottom)bottom.insertBefore(tools,next);
     var primary=[home,back,tools,next];
     Array.prototype.slice.call(bottom.children).forEach(function(el){if(primary.indexOf(el)!==-1)return;el.classList.add("tool-item");drawer.appendChild(el)});
-    var panel=doc.getElementById("backupPanel");if(panel&&panel.parentNode!==drawer)drawer.appendChild(panel);
     if(!doc.__naToolsOutsideClickBound){doc.__naToolsOutsideClickBound=true;doc.addEventListener("click",function(e){var d=doc.getElementById("naToolsDrawer"),t=doc.getElementById("mobileToolsButton");if(d&&d.classList.contains("open")&&!d.contains(e.target)&&e.target!==t)d.classList.remove("open")})}
   }
   function run(){setup()}
