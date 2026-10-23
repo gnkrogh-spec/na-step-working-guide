@@ -25,22 +25,35 @@
 <script id="naCompactNav">
 (function(){
   function setup(){
-    var bottom=document.querySelector(".bottom"); if(!bottom)return;
-    var home=document.getElementById("home"), back=document.getElementById("back"), next=document.getElementById("next"); if(!home||!back||!next)return;
-    var drawer=document.getElementById("naToolsDrawer");
-    if(!drawer){drawer=document.createElement("div");drawer.id="naToolsDrawer";drawer.innerHTML='<div class="tools-title">Step Tools</div>';document.body.appendChild(drawer)}
-    var tools=document.getElementById("mobileToolsButton");
-    if(!tools){tools=document.createElement("button");tools.id="mobileToolsButton";tools.type="button";tools.className="secondary";tools.textContent="Tools";tools.onclick=function(e){e.stopPropagation();drawer.classList.toggle("open")}}
+    var frame=document.querySelector("iframe");
+    if(!frame)return;
+    var doc;
+    try{doc=frame.contentDocument||frame.contentWindow.document}catch(e){return}
+    if(!doc||!doc.body)return;
+    var bottom=doc.querySelector(".bottom"); if(!bottom)return;
+    var home=doc.getElementById("home"), back=doc.getElementById("back"), next=doc.getElementById("next");
+    if(!home||!back||!next)return;
+    if(!doc.getElementById("naToolsStyle")){
+      var style=doc.createElement("style");style.id="naToolsStyle";
+      style.textContent='#mobileToolsButton{background:#e8e9ec!important;color:#222!important}#naToolsDrawer{display:none;position:fixed!important;left:10px!important;right:10px!important;bottom:56px!important;z-index:10001!important;max-height:65vh!important;overflow:auto!important;background:#fff!important;border:1px solid #d5d5d5!important;border-radius:14px!important;box-shadow:0 8px 30px rgba(0,0,0,.22)!important;padding:12px!important;color:#222!important}#naToolsDrawer.open{display:block!important}#naToolsDrawer .tools-title{font-size:18px!important;font-weight:700!important;margin:0 0 8px!important}#naToolsDrawer .tool-item{display:block!important;width:100%!important;margin:6px 0!important;padding:9px 10px!important;min-height:40px!important;font-size:14px!important}#naToolsDrawer #backupPanel{display:block!important;margin:10px 0 0!important;padding:14px!important}@media(max-width:600px){#naToolsDrawer{left:6px!important;right:6px!important;bottom:48px!important;padding:10px!important}#naToolsDrawer .tools-title{font-size:16px!important}}';
+      doc.head.appendChild(style);
+    }
+    var drawer=doc.getElementById("naToolsDrawer");
+    if(!drawer){drawer=doc.createElement("div");drawer.id="naToolsDrawer";drawer.innerHTML='<div class="tools-title">Tools</div>';doc.body.appendChild(drawer)}
+    var tools=doc.getElementById("mobileToolsButton");
+    if(!tools){tools=doc.createElement("button");tools.id="mobileToolsButton";tools.type="button";tools.className="secondary";tools.textContent="Tools";tools.onclick=function(e){e.stopPropagation();drawer.classList.toggle("open")}}
     if(tools.parentNode!==bottom)bottom.insertBefore(tools,next);
     var primary=[home,back,tools,next];
     Array.prototype.slice.call(bottom.children).forEach(function(el){if(primary.indexOf(el)!==-1)return;el.classList.add("tool-item");drawer.appendChild(el)});
-    var panel=document.getElementById("backupPanel"); if(panel&&panel.parentNode!==drawer)drawer.appendChild(panel);
+    var panel=doc.getElementById("backupPanel");if(panel&&panel.parentNode!==drawer)drawer.appendChild(panel);
+    if(!doc.__naToolsOutsideClickBound){doc.__naToolsOutsideClickBound=true;doc.addEventListener("click",function(e){var d=doc.getElementById("naToolsDrawer"),t=doc.getElementById("mobileToolsButton");if(d&&d.classList.contains("open")&&!d.contains(e.target)&&e.target!==t)d.classList.remove("open")})}
   }
   function run(){setup()}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",run);else run();
-  [100,300,700,1200].forEach(function(ms){setTimeout(run,ms)});
+  [100,300,700,1200,2000].forEach(function(ms){setTimeout(run,ms)});
+  var frame=document.querySelector("iframe");
+  if(frame)frame.addEventListener("load",function(){[0,100,400].forEach(function(ms){setTimeout(run,ms)})});
   new MutationObserver(run).observe(document.body,{childList:true,subtree:true});
-  document.addEventListener("click",function(e){var drawer=document.getElementById("naToolsDrawer"),tools=document.getElementById("mobileToolsButton");if(drawer&&drawer.classList.contains("open")&&!drawer.contains(e.target)&&e.target!==tools)drawer.classList.remove("open")});
 })();
 </script>
 <script id="naReviewShareFix">
