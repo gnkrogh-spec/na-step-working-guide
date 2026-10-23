@@ -20,7 +20,7 @@
 #naToolsDrawer #backupPanel{display:block !important;margin:10px 0 0 !important;padding:14px !important}
 @media(max-width:600px){.bottom{height:42px !important;min-height:42px !important;max-height:42px !important;padding:3px 6px !important;gap:4px !important}.bottom > button{height:34px !important;min-height:34px !important;max-height:34px !important;padding:2px 5px !important;font-size:11px !important;border-radius:6px !important}#naToolsDrawer{left:6px !important;right:6px !important;bottom:48px !important;padding:10px !important}#naToolsDrawer .tools-title{font-size:16px !important}main{padding-bottom:58px !important}}
 </style>
-</head><body><iframe src="./NA_Step_1_WORKING_COPY.html?v=remove-extra-panel-20261023h" title="NA Step Working Guide"></iframe>
+</head><body><iframe src="./NA_Step_1_WORKING_COPY.html?v=remove-opening-backup-20261023i" title="NA Step Working Guide"></iframe>
 <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(()=>{});</script>
 <script id="naCompactNav">
 (function(){
@@ -133,6 +133,25 @@
  function start(){var f=document.querySelector("iframe");if(!f)return;f.addEventListener("load",function(){setTimeout(install,100);setTimeout(install,500)});install();setInterval(install,500)}
  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start);else start()
 })();
+<script id="naRemoveOpeningBackupPanel">
+(function(){
+ function clean(){
+  var f=document.querySelector("iframe");if(!f)return;
+  var d;try{d=f.contentDocument||f.contentWindow.document}catch(e){return}
+  if(!d||!d.body)return;
+  var main=d.getElementById("main"),h=main&&main.querySelector("h1");
+  if(!h||!/^The Narcotics Anonymous Working Guide$/i.test((h.textContent||"").trim()))return;
+  var ids=["backupPanel","restoreAnswersWrap","naHomeRestorePanel"];
+  ids.forEach(function(id){var el=d.getElementById(id);if(el)el.remove()});
+  Array.prototype.slice.call(main.querySelectorAll("section,div,.card")).forEach(function(el){
+   var head=el.querySelector("h1,h2,h3,strong");
+   if(head&&/^Backup\s*&\s*Restore$/i.test((head.textContent||"").trim()))el.remove();
+  });
+ }
+ function start(){var f=document.querySelector("iframe");if(!f)return;f.addEventListener("load",function(){setTimeout(clean,100);setTimeout(clean,500)});clean();setInterval(clean,500)}
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",start);else start();
+})();
+</script>
 </script>
 
 </body></html>
