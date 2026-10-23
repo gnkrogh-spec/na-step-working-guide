@@ -1281,20 +1281,7 @@ async function copyReviewToClipboard() {
     };
     reader.readAsText(file);
   }
-  function addPanel(){
-    if(typeof mode==="undefined" || !["welcome","toc","intro"].includes(mode) || document.getElementById("backupPanel")) return;
-    const next=document.getElementById("next"); if(!next) return;
-    const wrap=document.createElement("div"); wrap.id="backupPanel";
-    wrap.style.cssText="margin:18px 0 8px;padding:16px;border:1px solid #ddd;border-radius:14px;background:#f7f7f8;text-align:left";
-    wrap.innerHTML='<div style="font-size:18px;font-weight:700;margin-bottom:6px">Backup & Restore</div><div style="font-size:14px;line-height:1.45;margin-bottom:12px">Your answers save automatically on this device. Create a backup file if you want to keep a copy or move your work to another device.</div>';
-    const exp=document.createElement("button"); exp.className="secondary"; exp.textContent="Export My Answers"; exp.style.margin="4px 6px 4px 0"; exp.onclick=download;
-    const label=document.createElement("label"); label.textContent="Restore My Answers"; label.style.cssText="display:inline-block;border-radius:10px;padding:12px 15px;background:#222;color:#fff;font-size:15px;cursor:pointer;margin:4px 0";
-    const input=document.createElement("input"); input.type="file"; input.accept=".json,application/json,text/plain"; input.style.display="block"; input.style.marginTop="8px"; input.style.maxWidth="100%"; input.onchange=()=>{if(input.files&&input.files[0]) restore(input.files[0]);};
-    label.appendChild(input); wrap.appendChild(exp); wrap.appendChild(label);
-    const main=document.querySelector("main"); if(main) main.insertBefore(wrap,main.firstChild); else next.parentNode.insertBefore(wrap,next);
-  }
-  const old=document.createElement('style'); old.textContent='#restoreAnswersWrap{display:none!important}'; document.head.appendChild(old);
-  new MutationObserver(addPanel).observe(document.body,{childList:true,subtree:true}); setTimeout(addPanel,100);
+  // Removed the extra welcome/TOC Backup & Restore panel; the dedicated TOC Restore Answers button remains in index.html.
 })();
 </script>
 
