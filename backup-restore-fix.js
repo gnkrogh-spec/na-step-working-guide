@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   var STORAGE = {
-    1:{answers:'step-one-complete-v4-',notes:'stepOneNotes_',state:'step-one-v4-resume-state'},
+    1:{answers:'step-one-complete-v4-',notes:'stepOneNotes_',state:'step-one-v5-resume-state'},
     2:{answers:'step-two-complete-v1-',notes:'stepOneNotes_',state:'step-two-v1-resume-state'},
     3:{answers:'step-three-complete-v1-',notes:'stepOneNotes_',state:'step-three-v1-resume-state'},
     4:{answers:'step-four-complete-v1-',notes:'stepOneNotes_',state:'step-four-v1-resume-state'},
@@ -66,7 +66,7 @@
               restored++;
             });
           });
-          if(s.state) localStorage.setItem(k.state,String(s.state));
+          if(s.state){ localStorage.setItem(k.state,String(s.state)); if(n==='1') localStorage.setItem('step-one-v4-resume-state',String(s.state)); }
         });
         if(!restored) throw new Error('empty');
         alert('Restore complete: '+restored+' saved answer/note entries restored across your NA workbook.');
