@@ -1,6 +1,6 @@
-const CACHE = 'na-step-guide-prototype-10';
+const CACHE = 'na-step-guide-prototype-11';
 const FILES = [
-  './index.html','./manifest.webmanifest','./share-fix-v2.js',
+  './index.html','./manifest.webmanifest','./share-fix-v2.js','./backup-restore-fix.js',
   './NA_Step_1_WORKING_COPY.html','./NA_Step_2_WORKING_COPY.html','./NA_Step_3_WORKING_COPY.html',
   './NA_Step_4_WORKING_COPY.html','./NA_Step_5_WORKING_COPY.html','./NA_Step_6_WORKING_COPY.html',
   './NA_Step_7_WORKING_COPY.html','./NA_Step_8_WORKING_COPY.html','./NA_Step_9_WORKING_COPY.html',
@@ -12,7 +12,10 @@ async function fixedHtmlResponse(response){
   try{
     let html=await response.text();
     if(!html.includes('share-fix-v2.js')){
-      html=html.replace(/<\/body>/i,'<script src="./share-fix-v2.js?v=2"></script>\n</body>');
+      html=html.replace(/<\/body>/i,'<script src="./share-fix-v2.js?v=2"><\/script>\n</body>');
+    }
+    if(!html.includes('backup-restore-fix.js')){
+      html=html.replace(/<\/body>/i,'<script src="./backup-restore-fix.js?v=1"><\/script>\n</body>');
     }
     return new Response(html,{status:response.status,statusText:response.statusText,headers:response.headers});
   }catch(e){ return response; }
